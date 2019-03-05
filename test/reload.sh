@@ -18,7 +18,7 @@ else
 fi
 
 i=0
-pg_isready -d postgres -h localhost -p 5432 -U postgres -t 60
+pg_isready -d postgres -h localhost -p 5433 -U postgres -t 60
 PG_EXIT=$?
 while [[ "${i}" -lt "5" && ${PG_EXIT} != 0 ]]
 do
@@ -30,7 +30,7 @@ do
         exit 1
     fi
     ((i++))
-    pg_isready -d postgres -h localhost -p 5432 -U postgres -t 60
+    pg_isready -d postgres -h localhost -p 5433 -U postgres -t 60
     PG_EXIT=$?
 done
 
