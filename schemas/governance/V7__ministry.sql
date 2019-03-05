@@ -8,13 +8,13 @@ INSERT INTO entity (id,tablename,description,schema,lastupdated) VALUES
     "entity": "ministry",
     "lastupdated": "date",
     "attributes": {
-      "minidtryid": {
+      "id": {
         "description": "PRIMARY KEY",
         "descriptors": {
           "type": "INTEGER"
         }
       },
-      "ministryname": {
+      "name": {
         "description": "Name of ministry",
         "descriptors": {
           "type": "VARCHAR",

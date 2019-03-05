@@ -8,7 +8,7 @@ INSERT INTO entity (id,tablename,description,schema,lastupdated) VALUES
     "entity": "title",
     "lastupdated": "date",
     "attributes": {
-      "titleid": {
+      "id": {
         "description": "PRIMARY KEY",
         "descriptors": {
           "type": "INTEGER"

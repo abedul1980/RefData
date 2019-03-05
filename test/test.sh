@@ -17,7 +17,7 @@ else
   fi
 fi
 
-docker run -e POSTGRES_PASSWORD=${PGPASSWORD} -d -p 5432:5432 --name postgres postgres:10-alpine
+docker run -e POSTGRES_PASSWORD=${PGPASSWORD} -d -p 5433:5432 --name refdata postgres:10-alpine
 if [[ "$?" != 0 ]]
 then
     echo "Error: running docker"
@@ -25,7 +25,7 @@ then
 fi
 
 i=0
-pg_isready -d postgres -h localhost -p 5432 -U postgres -t 60
+pg_isready -d postgres -h localhost -p 5433 -U postgres -t 60
 PG_EXIT=$?
 while [[ "${i}" -lt "5" && ${PG_EXIT} != 0 ]]
 do
@@ -48,7 +48,7 @@ then
     exit 1
 fi
 
-psql postgresql://postgres@localhost:5432/postgres < bootstrap.sql
+psql postgresql://postgres@localhost:5433/postgres < bootstrap.sql
 if [[ "$?" != 0 ]]
 then
     echo "Error: with bootstrapping database"
@@ -62,6 +62,13 @@ then
     exit 1
 fi
 
+yasha -v ../schemas/reference/bulkload/var.yaml ../schemas/reference/bulkload/bulkload.j2 -o ../schemas/reference/R__bulkload.sql
+if [[ "$?" != 0 ]]
+then
+    echo "yasha conversion of csv's to bulk load file failed"
+    exit 1
+fi
+
 flyway -configFiles=flyway_reference_docker.conf migrate
 if [[ "$?" != 0 ]]
 then
@@ -71,6 +78,11 @@ fi
 
 if [[ "${DEBUG}" == "f" || "${DEBUG}" == "false" ]]
 then
-    docker stop postgres
-    docker rm postgres
+    rm ../schemas/reference/R_bulkload.sql
+fi
+
+if [[ "${DEBUG}" == "f" || "${DEBUG}" == "false" ]]
+then
+    docker stop refdata
+    docker rm refdata
 fi

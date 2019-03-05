@@ -4,15 +4,29 @@ This repo is part of the RefData project workstream, for more details please see
 
 
 ### Local Testing
-Currently this repository can be tested using local docker. To do this run
+Currently this repository can be tested using local docker, but first you need to install the Python yasha module which is 
+required in order to include the bulk load files. 
 
-```sql
-test/test.sh
+To do this run
+
+```bash
+pip install yasha
 ```
 
-If you would like the database to exist after the build test, prefix it with the environment variable DEBUG=true
+To build the database in debug mode in order to have the docker instance persist run
+
+```bash
+DEBUG=true test/test.sh
+```
 
 
+To clean up the environment run
+```bash
+docker stop refdata
+docker rm refdata
+```
+
+The postgres instance for testing is exposed on port 5433 to avoid conflict with other local running instances.
 
 
 

@@ -8,7 +8,7 @@ INSERT INTO entity (id,tablename,description,schema,lastupdated) VALUES
     "entity": "gender",
     "lastupdated": "date",
     "attributes": {
-      "genderid": {
+      "id": {
         "description": "PRIMARY KEY",
         "descriptors": {
           "type": "INTEGER"

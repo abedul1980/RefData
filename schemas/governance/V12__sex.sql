@@ -16,7 +16,7 @@ INSERT INTO entity (id,tablename,description,schema,lastupdated) VALUES
           "maximum_length": 1
         }
       },
-      "sexname": {
+      "name": {
         "description": "Sex descriptor",
         "descriptors": {
           "type": "VARCHAR",

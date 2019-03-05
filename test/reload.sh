@@ -17,13 +17,6 @@ else
   fi
 fi
 
-docker run -e POSTGRES_PASSWORD=${PGPASSWORD} -d -p 5432:5432 --name postgres postgres:10-alpine
-if [[ "$?" != 0 ]]
-then
-    echo "Error: running docker"
-    exit 1
-fi
-
 i=0
 pg_isready -d postgres -h localhost -p 5432 -U postgres -t 60
 PG_EXIT=$?
@@ -40,27 +33,6 @@ do
     pg_isready -d postgres -h localhost -p 5432 -U postgres -t 60
     PG_EXIT=$?
 done
-
-flyway -configFiles=flyway_init_docker.conf migrate
-if [[ "$?" != 0 ]]
-then
-    echo "Error: initialising database"
-    exit 1
-fi
-
-psql postgresql://postgres@localhost:5432/postgres < bootstrap.sql
-if [[ "$?" != 0 ]]
-then
-    echo "Error: with bootstrapping database"
-    exit 1
-fi
-
-flyway -configFiles=flyway_governance_docker.conf migrate
-if [[ "$?" != 0 ]]
-then
-    echo "Error: migration of governance db failed"
-    exit 1
-fi
 
 yasha -v ../schemas/reference/bulkload/var.yaml ../schemas/reference/bulkload/bulkload.j2 -o ../schemas/reference/R__bulkload.sql
 if [[ "$?" != 0 ]]
@@ -79,10 +51,4 @@ fi
 if [[ "${DEBUG}" == "f" || "${DEBUG}" == "false" ]]
 then
     rm ../schemas/reference/R_bulkload.sql
-fi
-
-if [[ "${DEBUG}" == "f" || "${DEBUG}" == "false" ]]
-then
-    docker stop postgres
-    docker rm postgres
 fi

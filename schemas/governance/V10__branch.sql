@@ -8,13 +8,13 @@ INSERT INTO entity (id,tablename,description,schema,lastupdated) VALUES
     "entity": "branch",
     "lastupdated": "date",
     "attributes": {
-      "branchid": {
+      "id": {
         "description": "PRIMARY KEY",
         "descriptors": {
           "type": "INTEGER"
         }
       },
-      "branchname": {
+      "name": {
         "description": "Name of branch or region",
         "descriptors": {
           "type": "VARCHAR",
@@ -43,7 +43,7 @@ INSERT INTO entity (id,tablename,description,schema,lastupdated) VALUES
         },
         "references":{
           "entity": "directorate",
-          "attribute": "directorateid",
+          "attribute": "id",
           "href": "https://{data_url}/"
         }
       }

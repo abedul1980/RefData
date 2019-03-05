@@ -8,13 +8,13 @@ INSERT INTO entity (id,tablename,description,schema,lastupdated) VALUES
     "entity": "directorate",
     "lastupdated": "date",
     "attributes": {
-      "directorateid": {
+      "id": {
         "description": "PRIMARY KEY",
         "descriptors": {
           "type": "INTEGER"
         }
       },
-      "directoratename": {
+      "name": {
         "description": "Name of directorate",
         "descriptors": {
           "type": "VARCHAR",
@@ -32,7 +32,7 @@ INSERT INTO entity (id,tablename,description,schema,lastupdated) VALUES
           "keyfield": "true/false"
         }
       },
-      "departmentd": {
+      "departmentid": {
         "description": "link to department table",
         "descriptors": {
           "type": "INTEGER",
@@ -42,7 +42,7 @@ INSERT INTO entity (id,tablename,description,schema,lastupdated) VALUES
         },
         "references":{
           "entity": "department",
-          "attribute": "departmentid",
+          "attribute": "id",
           "href": "https://{data_url}/"
         }
       }
