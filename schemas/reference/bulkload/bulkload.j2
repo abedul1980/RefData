@@ -1,0 +1,160 @@
+/*
+  MINISTRY
+*/
+
+CREATE TEMP TABLE tmp_ministry AS SELECT * FROM ministry WITH NO DATA;
+
+COPY tmp_ministry FROM STDIN CSV HEADER;
+{% include ministry %}
+
+\.
+
+INSERT INTO ministry
+  SELECT  *
+    FROM tmp_ministry
+  ON CONFLICT (id) DO
+    UPDATE
+      SET name = EXCLUDED.name;
+
+DROP TABLE tmp_ministry;
+
+
+
+/*
+ DEPARTMENT
+*/
+
+CREATE TEMP TABLE tmp_department AS SELECT * FROM department WITH NO DATA;
+
+COPY tmp_department FROM STDIN CSV HEADER;
+{% include department %}
+
+\.
+
+INSERT INTO department
+  SELECT  *
+  FROM tmp_department
+ON CONFLICT (id) DO
+UPDATE
+  SET
+    name = EXCLUDED.name,
+    ministryid = EXCLUDED.ministryid;
+
+DROP TABLE tmp_department;
+
+
+
+/*
+ DIRECTORATE
+*/
+
+CREATE TEMP TABLE tmp_directorate AS SELECT * FROM directorate WITH NO DATA;
+
+COPY tmp_directorate FROM STDIN CSV HEADER;
+{% include directorate %}
+
+\.
+
+INSERT INTO directorate
+  SELECT  *
+  FROM tmp_directorate
+ON CONFLICT (id) DO
+UPDATE
+  SET
+    name = EXCLUDED.name,
+    departmentid = EXCLUDED.departmentid;
+
+DROP TABLE tmp_directorate;
+
+
+
+/*
+ BRANCH
+*/
+
+CREATE TEMP TABLE tmp_branch AS SELECT * FROM branch WITH NO DATA;
+
+COPY tmp_branch FROM STDIN CSV HEADER;
+{% include branch %}
+
+\.
+
+INSERT INTO branch
+  SELECT  *
+  FROM tmp_branch
+ON CONFLICT (id) DO
+UPDATE
+  SET
+    name = EXCLUDED.name,
+    directorateid = EXCLUDED.directorateid;
+
+DROP TABLE tmp_branch;
+
+
+
+/*
+ GENDER
+*/
+
+CREATE TEMP TABLE tmp_gender AS SELECT * FROM gender WITH NO DATA;
+
+COPY tmp_gender FROM STDIN CSV HEADER;
+{% include gender %}
+
+\.
+
+INSERT INTO gender
+  SELECT  *
+  FROM tmp_gender
+ON CONFLICT (id) DO
+UPDATE
+  SET
+    gender = EXCLUDED.gender;
+
+DROP TABLE tmp_gender;
+
+
+
+/*
+ SEX
+*/
+
+CREATE TEMP TABLE tmp_sex AS SELECT * FROM sex WITH NO DATA;
+
+COPY tmp_sex FROM STDIN CSV HEADER;
+{% include sex %}
+
+\.
+
+INSERT INTO sex
+  SELECT  *
+  FROM tmp_sex
+ON CONFLICT (sexcharacter) DO
+UPDATE
+  SET
+    name = EXCLUDED.name;
+
+DROP TABLE tmp_sex;
+
+
+
+/*
+ TITLE
+*/
+
+CREATE TEMP TABLE tmp_title AS SELECT * FROM title WITH NO DATA;
+
+COPY tmp_title FROM STDIN CSV HEADER;
+{% include title %}
+
+\.
+
+INSERT INTO title
+  SELECT  *
+  FROM tmp_title
+ON CONFLICT (id) DO
+UPDATE
+  SET
+    title = EXCLUDED.title;
+
+DROP TABLE tmp_title;
