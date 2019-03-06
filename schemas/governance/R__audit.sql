@@ -6,7 +6,7 @@ CREATE OR REPLACE VIEW audit AS (
     entity.schema,
     (
       SELECT
-        jsonagg( changelogs.*) AS changelogs
+        json_agg( changelogs.*) AS changelogs
       FROM (
         SELECT
           changelog2.id,
@@ -19,7 +19,7 @@ CREATE OR REPLACE VIEW audit AS (
           changelog2.governanceapprover,
           (
             SELECT
-              jsonagg( reviews.*) AS reviewers
+              json_agg( reviews.*) AS reviewers
             FROM (
               SELECT reviews1.id,
                 reviews1.datetime,

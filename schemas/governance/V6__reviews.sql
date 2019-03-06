@@ -1,5 +1,5 @@
 CREATE TABLE reviews(
-  id UUID DEFAULT uuidgeneratev4() NOT NULL PRIMARY KEY,
+  id UUID DEFAULT uuid_generate_v4() NOT NULL PRIMARY KEY,
   changelogid UUID REFERENCES changelog(id) NOT NULL,
   comment TEXT NOT NULL,
   approve BOOLEAN NOT NULL,
