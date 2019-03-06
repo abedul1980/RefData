@@ -50,5 +50,5 @@ fi
 
 if [[ "${DEBUG}" == "f" || "${DEBUG}" == "false" ]]
 then
-    rm ../schemas/reference/R_bulkload.sql
+    rm ../schemas/reference/R__bulkload.sql
 fi

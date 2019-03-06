@@ -4,4 +4,4 @@ CREATE TABLE entityapprovers (
   email character varying(60) NOT NULL
 );
 
-GRANT SELECT,UPDATE,INSERT ON entityapprovers TO ${service_user};
+GRANT SELECT,UPDATE,INSERT ON entityapprovers TO ${serviceuser};

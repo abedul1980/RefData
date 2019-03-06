@@ -2,21 +2,21 @@
   MINISTRY
 */
 
-CREATE TEMP TABLE tmp_ministry AS SELECT * FROM ministry WITH NO DATA;
+CREATE TEMP TABLE tmpministry AS SELECT * FROM ministry WITH NO DATA;
 
-COPY tmp_ministry FROM STDIN CSV HEADER;
+COPY tmpministry FROM STDIN CSV HEADER;
 {% include ministry %}
 
 \.
 
 INSERT INTO ministry
   SELECT  *
-    FROM tmp_ministry
+    FROM tmpministry
   ON CONFLICT (id) DO
     UPDATE
       SET name = EXCLUDED.name;
 
-DROP TABLE tmp_ministry;
+DROP TABLE tmpministry;
 
 
 
@@ -24,23 +24,23 @@ DROP TABLE tmp_ministry;
  DEPARTMENT
 */
 
-CREATE TEMP TABLE tmp_department AS SELECT * FROM department WITH NO DATA;
+CREATE TEMP TABLE tmpdepartment AS SELECT * FROM department WITH NO DATA;
 
-COPY tmp_department FROM STDIN CSV HEADER;
+COPY tmpdepartment FROM STDIN CSV HEADER;
 {% include department %}
 
 \.
 
 INSERT INTO department
   SELECT  *
-  FROM tmp_department
+  FROM tmpdepartment
 ON CONFLICT (id) DO
 UPDATE
   SET
     name = EXCLUDED.name,
     ministryid = EXCLUDED.ministryid;
 
-DROP TABLE tmp_department;
+DROP TABLE tmpdepartment;
 
 
 
@@ -48,23 +48,23 @@ DROP TABLE tmp_department;
  DIRECTORATE
 */
 
-CREATE TEMP TABLE tmp_directorate AS SELECT * FROM directorate WITH NO DATA;
+CREATE TEMP TABLE tmpdirectorate AS SELECT * FROM directorate WITH NO DATA;
 
-COPY tmp_directorate FROM STDIN CSV HEADER;
+COPY tmpdirectorate FROM STDIN CSV HEADER;
 {% include directorate %}
 
 \.
 
 INSERT INTO directorate
   SELECT  *
-  FROM tmp_directorate
+  FROM tmpdirectorate
 ON CONFLICT (id) DO
 UPDATE
   SET
     name = EXCLUDED.name,
     departmentid = EXCLUDED.departmentid;
 
-DROP TABLE tmp_directorate;
+DROP TABLE tmpdirectorate;
 
 
 
@@ -72,23 +72,23 @@ DROP TABLE tmp_directorate;
  BRANCH
 */
 
-CREATE TEMP TABLE tmp_branch AS SELECT * FROM branch WITH NO DATA;
+CREATE TEMP TABLE tmpbranch AS SELECT * FROM branch WITH NO DATA;
 
-COPY tmp_branch FROM STDIN CSV HEADER;
+COPY tmpbranch FROM STDIN CSV HEADER;
 {% include branch %}
 
 \.
 
 INSERT INTO branch
   SELECT  *
-  FROM tmp_branch
+  FROM tmpbranch
 ON CONFLICT (id) DO
 UPDATE
   SET
     name = EXCLUDED.name,
     directorateid = EXCLUDED.directorateid;
 
-DROP TABLE tmp_branch;
+DROP TABLE tmpbranch;
 
 
 
@@ -96,22 +96,22 @@ DROP TABLE tmp_branch;
  GENDER
 */
 
-CREATE TEMP TABLE tmp_gender AS SELECT * FROM gender WITH NO DATA;
+CREATE TEMP TABLE tmpgender AS SELECT * FROM gender WITH NO DATA;
 
-COPY tmp_gender FROM STDIN CSV HEADER;
+COPY tmpgender FROM STDIN CSV HEADER;
 {% include gender %}
 
 \.
 
 INSERT INTO gender
   SELECT  *
-  FROM tmp_gender
+  FROM tmpgender
 ON CONFLICT (id) DO
 UPDATE
   SET
     gender = EXCLUDED.gender;
 
-DROP TABLE tmp_gender;
+DROP TABLE tmpgender;
 
 
 
@@ -119,22 +119,22 @@ DROP TABLE tmp_gender;
  SEX
 */
 
-CREATE TEMP TABLE tmp_sex AS SELECT * FROM sex WITH NO DATA;
+CREATE TEMP TABLE tmpsex AS SELECT * FROM sex WITH NO DATA;
 
-COPY tmp_sex FROM STDIN CSV HEADER;
+COPY tmpsex FROM STDIN CSV HEADER;
 {% include sex %}
 
 \.
 
 INSERT INTO sex
   SELECT  *
-  FROM tmp_sex
+  FROM tmpsex
 ON CONFLICT (sexcharacter) DO
 UPDATE
   SET
     name = EXCLUDED.name;
 
-DROP TABLE tmp_sex;
+DROP TABLE tmpsex;
 
 
 
@@ -142,19 +142,19 @@ DROP TABLE tmp_sex;
  TITLE
 */
 
-CREATE TEMP TABLE tmp_title AS SELECT * FROM title WITH NO DATA;
+CREATE TEMP TABLE tmptitle AS SELECT * FROM title WITH NO DATA;
 
-COPY tmp_title FROM STDIN CSV HEADER;
+COPY tmptitle FROM STDIN CSV HEADER;
 {% include title %}
 
 \.
 
 INSERT INTO title
   SELECT  *
-  FROM tmp_title
+  FROM tmptitle
 ON CONFLICT (id) DO
 UPDATE
   SET
     title = EXCLUDED.title;
 
-DROP TABLE tmp_title;
+DROP TABLE tmptitle;

@@ -12,18 +12,18 @@ INSERT INTO entity (id,tablename,description,schema,lastupdated) VALUES
         "description": "PRIMARY KEY",
         "descriptors": {
           "type": "VARCAHR",
-          "minimum_length": 1,
-          "maximum_length": 1
+          "minimumlength": 1,
+          "maximumlength": 1
         }
       },
       "name": {
         "description": "Sex descriptor",
         "descriptors": {
           "type": "VARCHAR",
-          "minimum_length": 3,
-          "maximum_length": 20,
+          "minimumlength": 3,
+          "maximumlength": 20,
           "required": "true/false",
-          "keyfield": "true/false"
+          "summaryview": "true/false"
         }
       }
     }

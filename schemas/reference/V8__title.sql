@@ -5,6 +5,6 @@ CREATE TABLE title (
 );
 
 -- GRANTs
-GRANT SELECT ON title TO ${anon_user};
-GRANT SELECT ON title TO ${service_user};
-GRANT SELECT ON title TO ${readonly_user};
+GRANT SELECT ON title TO ${anonuser};
+GRANT SELECT ON title TO ${serviceuser};
+GRANT SELECT ON title TO ${readonlyuser};

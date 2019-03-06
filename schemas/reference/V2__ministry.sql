@@ -4,7 +4,7 @@ CREATE TABLE ministry (
 );
 
 
-GRANT SELECT ON ministry TO ${service_user};
-GRANT SELECT ON ministry TO ${readonly_user};
+GRANT SELECT ON ministry TO ${serviceuser};
+GRANT SELECT ON ministry TO ${readonlyuser};
 
 

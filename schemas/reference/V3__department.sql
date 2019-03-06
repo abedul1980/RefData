@@ -5,5 +5,5 @@ CREATE TABLE department (
 );
 
 
-GRANT SELECT ON department TO ${service_user};
-GRANT SELECT ON department TO ${readonly_user};
+GRANT SELECT ON department TO ${serviceuser};
+GRANT SELECT ON department TO ${readonlyuser};

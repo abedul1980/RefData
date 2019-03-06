@@ -3,7 +3,7 @@ CREATE TABLE governancestatus (
   status CHARACTER VARYING(20) NOT NULL
 );
 
-GRANT SELECT ON governancestatus TO ${service_user};
+GRANT SELECT ON governancestatus TO ${serviceuser};
 
 COPY governancestatus FROM stdin CSV HEADER;
 id,status

@@ -6,50 +6,50 @@ CREATE OR REPLACE VIEW audit AS (
     entity.schema,
     (
       SELECT
-        json_agg( changelogs.*) AS changelogs
+        jsonagg( changelogs.*) AS changelogs
       FROM (
         SELECT
-          changelog_2.id,
-          changelog_2.datetime,
-          changelog_2.changerequested,
-          changelog_2.requestor,
-          changelog_2.governancestatusid,
-          changelog_2.governancedate,
-          changelog_2.governancecomment,
-          changelog_2.governanceapprover,
+          changelog2.id,
+          changelog2.datetime,
+          changelog2.changerequested,
+          changelog2.requestor,
+          changelog2.governancestatusid,
+          changelog2.governancedate,
+          changelog2.governancecomment,
+          changelog2.governanceapprover,
           (
             SELECT
-              json_agg( reviews.*) AS reviewers
+              jsonagg( reviews.*) AS reviewers
             FROM (
-              SELECT reviews_1.id,
-                reviews_1.datetime,
-                reviews_1.comment,
-                reviews_1.email,
-                reviews_1.approve
+              SELECT reviews1.id,
+                reviews1.datetime,
+                reviews1.comment,
+                reviews1.email,
+                reviews1.approve
               FROM (
-                  reviews reviews_1
-              LEFT JOIN changelog changelog_1 ON ((changelog_1.id = reviews_1.changelogid)))
+                  reviews reviews1
+              LEFT JOIN changelog changelog1 ON ((changelog1.id = reviews1.changelogid)))
               GROUP BY
-                reviews_1.id,
-                reviews_1.datetime,
-                reviews_1.comment,
-                reviews_1.email,
-                reviews_1.approve)
+                reviews1.id,
+                reviews1.datetime,
+                reviews1.comment,
+                reviews1.email,
+                reviews1.approve)
               reviews ) AS reviews
           FROM (
-              changelog changelog_2
-          LEFT JOIN entity entity_1 ON (((entity_1.tablename):: text = (changelog_2.tablename):: text )))
+              changelog changelog2
+          LEFT JOIN entity entity1 ON (((entity1.tablename):: text = (changelog2.tablename):: text )))
           GROUP BY
-            changelog_2.datetime,
-            changelog_2.requestor,
-            changelog_2.changerequested,
-            changelog_2.governancestatusid,
-            changelog_2.governancedate,
-            changelog_2.governancecomment,
-            changelog_2.governanceapprover,
-            changelog_2.id)
+            changelog2.datetime,
+            changelog2.requestor,
+            changelog2.changerequested,
+            changelog2.governancestatusid,
+            changelog2.governancedate,
+            changelog2.governancecomment,
+            changelog2.governanceapprover,
+            changelog2.id)
            changelogs ) AS changelogs
     FROM entity entity
   );
 
-GRANT SELECT ON audit to ${readonly_user};
+GRANT SELECT ON audit to ${readonlyuser};

@@ -1,3 +1,4 @@
 schemas/reference/.hidden/*
 schemas/reference/R_bulkload.sql
+postgrest/*
 .idea/*

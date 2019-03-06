@@ -7,4 +7,4 @@ CREATE TABLE entity (
 );
 
 
-GRANT SELECT,UPDATE,INSERT ON entity TO ${service_user};
+GRANT SELECT,UPDATE,INSERT ON entity TO ${serviceuser};

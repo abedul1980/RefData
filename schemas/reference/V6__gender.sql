@@ -5,6 +5,6 @@ CREATE TABLE gender (
 );
 
 -- GRANTs
-GRANT SELECT ON gender TO ${anon_user};
-GRANT SELECT ON gender TO ${service_user};
-GRANT SELECT ON gender TO ${readonly_user};
+GRANT SELECT ON gender TO ${anonuser};
+GRANT SELECT ON gender TO ${serviceuser};
+GRANT SELECT ON gender TO ${readonlyuser};

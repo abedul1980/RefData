@@ -5,5 +5,5 @@ CREATE TABLE branch (
 );
 
 
-GRANT SELECT ON branch TO ${service_user};
-GRANT SELECT ON branch TO ${readonly_user};
+GRANT SELECT ON branch TO ${serviceuser};
+GRANT SELECT ON branch TO ${readonlyuser};

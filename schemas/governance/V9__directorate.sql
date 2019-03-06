@@ -18,10 +18,10 @@ INSERT INTO entity (id,tablename,description,schema,lastupdated) VALUES
         "description": "Name of directorate",
         "descriptors": {
           "type": "VARCHAR",
-          "minimum_length": 5,
-          "maximum_length": 60,
+          "minimumlength": 5,
+          "maximumlength": 60,
           "required": "true/false",
-          "keyfield": "true/false"
+          "summaryview": "true/false"
         }
       },
       "attributeactive": {
@@ -29,7 +29,7 @@ INSERT INTO entity (id,tablename,description,schema,lastupdated) VALUES
         "descriptors": {
           "type": "BOOLEAN",
           "required": "true/false",
-          "keyfield": "true/false"
+          "summaryview": "true/false"
         }
       },
       "departmentid": {
@@ -43,7 +43,7 @@ INSERT INTO entity (id,tablename,description,schema,lastupdated) VALUES
         "references":{
           "entity": "department",
           "attribute": "id",
-          "href": "https://{data_url}/"
+          "href": "https://{dataurl}/"
         }
       }
     }

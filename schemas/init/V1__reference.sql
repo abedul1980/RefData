@@ -1,5 +1,5 @@
-CREATE ROLE ${reference_ownername} WITH CREATEROLE LOGIN ENCRYPTED PASSWORD '${reference_ownerpassword}';
-CREATE ROLE ${governance_ownername} WITH CREATEROLE LOGIN ENCRYPTED PASSWORD '${governance_ownerpassword}';
-GRANT ${reference_ownername} TO ${master_user};
-GRANT ${governance_ownername} TO ${master_user};
-CREATE DATABASE ${reference_dbname} OWNER ${governance_ownername};
+CREATE ROLE ${referenceownername} WITH CREATEROLE LOGIN ENCRYPTED PASSWORD '${referenceownerpassword}';
+CREATE ROLE ${governanceownername} WITH CREATEROLE LOGIN ENCRYPTED PASSWORD '${governanceownerpassword}';
+GRANT ${referenceownername} TO ${masteruser};
+GRANT ${governanceownername} TO ${masteruser};
+CREATE DATABASE ${referencedbname} OWNER ${governanceownername};
