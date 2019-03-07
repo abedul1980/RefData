@@ -55,12 +55,12 @@ then
     exit 1
 fi
 
-flyway -configFiles=flyway_governance_docker.conf migrate
-if [[ "$?" != 0 ]]
-then
-    echo "Error: migration of governance db failed"
-    exit 1
-fi
+#flyway -configFiles=flyway_governance_docker.conf migrate
+#if [[ "$?" != 0 ]]
+#then
+#    echo "Error: migration of governance db failed"
+#    exit 1
+#fi
 
 yasha -v ../schemas/reference/bulkload/var.yaml ../schemas/reference/bulkload/bulkload.j2 -o ../schemas/reference/R__bulkload.sql
 if [[ "$?" != 0 ]]

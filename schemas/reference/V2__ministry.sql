@@ -3,6 +3,9 @@ CREATE TABLE ministry (
   name CHARACTER VARYING(60) NOT NULL
 );
 
+COMMENT ON TABLE ministry IS '{"description": "Government ministries", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON COLUMN ministry.id IS '{"description": "database unique identity record", "summaryview": "false"}';
+COMMENT ON COLUMN ministry.name IS '{"description": "Name of branch or region", "summaryview": "true"}';
 
 GRANT SELECT ON ministry TO ${serviceuser};
 GRANT SELECT ON ministry TO ${readonlyuser};
