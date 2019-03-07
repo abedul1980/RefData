@@ -40,3 +40,10 @@ Each Table must contain a comment in JSON format containing the following entiti
 Each Column must contain a comment in JSON format containing the following entities:
 * description
 * summaryview
+
+Optional entities for column comments:
+* minimumlength
+* maximumlength
+* minimumvalue
+* maximumvalue
+
