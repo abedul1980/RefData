@@ -30,3 +30,13 @@ The postgres instance for testing is exposed on port 5433 to avoid conflict with
 
 
 
+### Database schema design
+
+Each Table must contain a comment in JSON format containing the following entities:
+* description
+* schemalastupdated
+* dataversion
+
+Each Column must contain a comment in JSON format containing the following entities:
+* description
+* summaryview
