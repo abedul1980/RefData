@@ -1,0 +1,97 @@
+version: '3'
+
+volumes:
+  postgres_data_keycloak:
+      driver: local
+  postgres_data_refdata:
+      driver: local
+
+services:
+  postgres_keycloak:
+      image: postgres:10-alpine
+      volumes:
+        - postgres_data_keycloak:/var/lib/postgresql/data
+      environment:
+        POSTGRES_DB: keycloak
+        POSTGRES_USER: keycloak
+        POSTGRES_PASSWORD: password
+      ports:
+        - 5434:5432
+  postgres_refdata:
+      image: postgres:10-alpine
+      volumes:
+        - postgres_data_refdata:/var/lib/postgresql/data
+      environment:
+        POSTGRES_DB: postgres
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: mysecretpassword
+      ports:
+        - 5433:5432
+  keycloak:
+      image: jboss/keycloak
+      environment:
+        DB_VENDOR: POSTGRES
+        DB_ADDR: postgres_keycloak
+        DB_DATABASE: keycloak
+        DB_USER: keycloak
+        DB_PASSWORD: password
+        KEYCLOAK_USER: admin
+        KEYCLOAK_PASSWORD: secret
+        KEYCLOAK_IMPORT: /tmp/realm.json
+      ports:
+        - 8080:8080
+      volumes:
+        - ${PWD}/realm.json:/tmp/realm.json
+      depends_on:
+        - postgres_keycloak
+  flyway:
+      build: test/
+      environment:
+        PGPASSWORD: mysecretpassword
+        POSTGRES_DB: postgres
+        POSTGRES_USER: postgres
+        POSTGRES_SERVER: postgres_refdata
+        POSTGRES_PORT: 5432
+      volumes:
+        - ${PWD}:/source
+      depends_on:
+        - postgres_refdata
+  postgrest_reference:
+      image: quay.io/ukhomeofficedigital/postgrest:ho
+      environment:
+        PGRST_DB_URI: "postgres://authenticatorreference:auth1234@postgres_refdata:5432/reference"
+        PGRST_DB_ANON_ROLE: webanon
+        PGRST_SECRET_IS_BASE64: "false"
+        PGRST_JWT_AUD: postgrest-refdata
+        PGRST_ROLE_CLAIM_KEY: .refdbrole
+        PGRST_DB_SCHEMA: reference
+        PGRST_SERVER_PROXY_URI: "http://localhost:3001/"
+        KEYCLOAK_URL: "http://keycloak:8080"
+        KEYCLOAK_REALM: refdata
+      command: /bin/getKeycloakKey.sh
+      ports:
+        - 3001:3000
+      depends_on:
+        - postgres_refdata
+        - keycloak
+  postgrest_governance:
+      image: quay.io/ukhomeofficedigital/postgrest:ho
+      environment:
+        PGRST_DB_URI: "postgres://authenticatorgovernance:auth1234@postgres_refdata:5432/reference"
+        PGRST_DB_ANON_ROLE: webanongovernance
+        PGRST_SECRET_IS_BASE64: "false"
+        PGRST_JWT_AUD: postgrest-governance
+        PGRST_ROLE_CLAIM_KEY: .govdbrole
+        PGRST_DB_SCHEMA: governance
+        PGRST_SERVER_PROXY_URI: "http://localhost:3002/"
+        KEYCLOAK_URL: "http://keycloak:8080"
+        KEYCLOAK_REALM: refdata
+      command: /bin/getKeycloakKey.sh
+      ports:
+        - 3002:3000
+      depends_on:
+        - postgres_refdata
+        - keycloak
+
+
+# OpenAPI viewer container

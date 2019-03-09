@@ -42,6 +42,7 @@ Each Column must contain a comment in JSON format containing the following entit
 * summaryview
 
 Optional entities for column comments:
+* aliases (comma separated list)
 * minimumlength
 * maximumlength
 * minimumvalue
