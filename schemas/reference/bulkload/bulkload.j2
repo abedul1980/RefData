@@ -158,3 +158,155 @@ UPDATE
     title = EXCLUDED.title;
 
 DROP TABLE tmptitle;
+
+
+
+/*
+ ETHNICITY
+*/
+
+CREATE TEMP TABLE tmpethnicity AS SELECT * FROM ethnicity WITH NO DATA;
+
+COPY tmpethnicity FROM STDIN CSV HEADER;
+{% include ethnicity %}
+
+\.
+
+INSERT INTO ethnicity
+  SELECT  *
+  FROM tmpethnicity
+ON CONFLICT (id) DO
+UPDATE
+  SET
+    ethnicity = EXCLUDED.ethnicity,
+    subethnicity = EXCLUDED.subethnicity;
+
+DROP TABLE tmpethnicity;
+
+
+
+/*
+ MARITAL
+*/
+
+CREATE TEMP TABLE tmpmarital AS SELECT * FROM marital WITH NO DATA;
+
+COPY tmpmarital FROM STDIN CSV HEADER;
+{% include marital %}
+
+\.
+
+INSERT INTO marital
+  SELECT  *
+  FROM tmpmarital
+ON CONFLICT (id) DO
+UPDATE
+  SET
+    code = EXCLUDED.code,
+    description = EXCLUDED.description;
+
+DROP TABLE tmpmarital;
+
+
+
+/*
+ RELIGION
+*/
+
+CREATE TEMP TABLE tmpreligion AS SELECT * FROM religion WITH NO DATA;
+
+COPY tmpreligion FROM STDIN CSV HEADER;
+{% include religion %}
+
+\.
+
+INSERT INTO religion
+  SELECT  *
+  FROM tmpreligion
+ON CONFLICT (id) DO
+UPDATE
+  SET
+    name = EXCLUDED.name;
+
+DROP TABLE tmpreligion;
+
+
+
+/*
+ COUNTRY
+*/
+
+CREATE TEMP TABLE tmpcountry AS SELECT * FROM country WITH NO DATA;
+
+COPY tmpcountry FROM STDIN CSV HEADER;
+{% include country %}
+
+\.
+
+INSERT INTO country
+  SELECT  *
+  FROM tmpcountry
+ON CONFLICT (id) DO
+UPDATE
+  SET
+    iso31661alpha3 = EXCLUDED.iso31661alpha3,
+    name = EXCLUDED.name,
+    continent = EXCLUDED.continent,
+    dial = EXCLUDED.dial,
+    iso31661numeric = EXCLUDED.iso31661numeric;
+
+DROP TABLE tmpcountry;
+
+
+
+/*
+ NATIONALITY
+*/
+
+CREATE TEMP TABLE tmpnationality AS SELECT * FROM nationality WITH NO DATA;
+
+COPY tmpnationality FROM STDIN CSV HEADER;
+{% include nationality %}
+
+\.
+
+INSERT INTO nationality
+  SELECT  *
+  FROM tmpnationality
+ON CONFLICT (id) DO
+UPDATE
+  SET
+    iso31661alpha3 = EXCLUDED.iso31661alpha3,
+    iso31661alpha2 = EXCLUDED.iso31661alpha2,
+    nationality = EXCLUDED.nationality,
+    visarequired = EXCLUDED.visarequired,
+    evwoptional = EXCLUDED.evwoptional,
+    diplomaticexception = EXCLUDED.diplomaticexception,
+    specialexception = EXCLUDED.specialexception;
+
+DROP TABLE tmpnationality;
+
+
+
+/*
+ CURRENCY
+*/
+
+CREATE TEMP TABLE tmpcurrency AS SELECT * FROM currency WITH NO DATA;
+
+COPY tmpcurrency FROM STDIN CSV HEADER;
+{% include currency %}
+
+\.
+
+INSERT INTO currency
+  SELECT  *
+  FROM tmpcurrency
+ON CONFLICT (id) DO
+UPDATE
+  SET
+    countryid = EXCLUDED.countryid,
+    currency = EXCLUDED.currency,
+    "currency code" = EXCLUDED."currency code";
+
+DROP TABLE tmpcurrency;

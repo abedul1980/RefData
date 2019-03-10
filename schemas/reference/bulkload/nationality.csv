@@ -1,0 +1,322 @@
+id,"nationality","iso3166alpha3","iso3166alpha2","visarequired","evwoptional","diplomaticexception","specialexception"
+1,"Afghanistan","AFG","AF",true,false,false,false
+2,"French Arar and Issas","AFI","",false,false,false,false
+3,"Åland Islands","ALA","AX",false,false,false,false
+4,"Albania","ALB","AL",true,false,false,false
+5,"Algeria","DZA","DZ",true,false,false,false
+6,"American Samoa","ASM","AS",false,false,false,false
+7,"Andorra","AND","AD",false,false,false,false
+8,"Angola","AGO","AO",true,false,false,false
+9,"Anguilla","AIA","AI",false,false,false,false
+10,"Antarctica","ATA","AQ",false,false,false,false
+11,"Antigua and Barbuda","ATF","AG",false,false,false,false
+12,"Argentina","ARG","AR",false,false,false,false
+13,"Armenia","ARM","AM",true,false,false,false
+14,"Aruba","ABW","AW",false,false,false,false
+15,"Aruba","ABN",,false,false,false,false
+16,"Australia","AUS","AU",false,false,false,false
+17,"Austria","AUT","AU",false,false,false,false
+18,"Azerbaijan","AZE","AZ",true,false,false,false
+19,"Bahamas","BHS","BS",false,false,false,false
+20,"Bahraini","BHR","BH",true,false,true,true
+21,"Bangladesh","BGD","BD",true,false,false,false
+22,"Barbados","BRB","BB",false,false,false,false
+23,"Belarus","BLR","BY",true,false,false,false
+24,"Belgium","BEL","BE",false,false,false,false
+25,"Belize","BLZ","BZ",false,false,false,false
+26,"Benin","BEN","BJ",true,false,false,false
+27,"Bermuda","BMU","BM",false,false,false,false
+28,"Bhutan","BTN","BT",true,false,false,false
+29,"Bolivia, Plurinational State of","BOL","BO",true,false,false,false
+30,"Bonaire Sint Eustatius and Saba","BES","BQ",false,false,false,false
+31,"Bosnia and Herzegovina","BIH","BA",true,false,false,false
+32,"Botswana","BWA","BW",false,false,false,false
+33,"Bouvet Island","BVT","BV",false,false,false,false
+34,"Brazil","BRA","BR",false,false,false,false
+35,"British Indian Ocean Territory","IOT","IO",false,false,false,false
+36,"Brunei Darussalam","BRN","BN",false,false,false,false
+37,"Bulgaria","BGR","BG",false,false,false,false
+38,"Burkina Faso","BFA","BF",true,false,false,false
+39,"Burundi","BDI","BI",true,false,false,false
+40,"Burma (Myanmar)","BUR",,true,false,false,false
+41,"Byelorussian SSR","BYS",,false,false,false,false
+42,"Cabo Verde","CPV","CV",true,false,false,false
+43,"Cambodia","KHM","KH",true,false,false,false
+44,"Cameroon","CMR","CM",true,false,false,false
+45,"Canadian","CAN","CA",false,false,false,false
+46,"Canton and Enderbury Islands","CTE",,false,false,false,false
+47,"Cayman Islands","CYM","KY",false,false,false,false
+48,"Central African Republic","CAF","CF",true,false,false,false
+49,"Chad","TCD","TD",true,false,false,false
+50,"Chile","CHL","CL",false,false,false,false
+51,"China","CHN","CN",true,false,false,false
+52,"Christmas Island","CXR","CX",false,false,false,false
+53,"Cocos (Keeling) Islands","CCK","CC",false,false,false,false
+54,"Colombia","COL","CO",true,false,false,false
+55,"Comoros","COM","KM",true,false,false,false
+56,"Congo","COG","CG",true,false,false,false
+57,"Congo, Democratic Republic of","COD","CD",true,false,false,false
+58,"Democratic Republic of Congo","ZAR",,true,false,false,false
+59,"Cook Island","COK","CK",false,false,false,false
+60,"Costa Rican","CRI","CR",false,false,false,false
+61,"Côte d’Ivoire","CIV","CI",true,false,false,false
+62,"Croatia","HRV","HR",false,false,false,false
+63,"Curaçao","CUW","CW",false,false,false,false
+64,"Cyprus","CYP","CY",false,false,false,false
+65,"Czechoslavakia","CSK",,false,false,false,false
+66,"Czech Republic","CZE","CZ",false,false,false,false
+67,"Dahomey","DHY",,false,false,false,false
+68,"Denmark","DNK","DK",false,false,false,false
+69,"Djibouti","DJI","DJ",true,false,false,false
+70,"Dominica","DMA","DM",false,false,false,false
+71,"Dominican Republic","DOM","DO",true,false,false,false
+72,"Dronning Maud land","ATN",,false,false,false,false
+73,"Ecuador","ECU","EC",true,false,false,false
+74,"Equatoral Guinea","GNQ",,true,false,false,false
+75,"Egypt","EGY","EG",true,false,false,false
+76,"El Salvador","SLV","SV",false,false,false,false
+77,"Equatorial Guinea","GNQ","GQ",true,false,false,false
+78,"Eritrea","ERI","ER",true,false,false,false
+79,"Estonia","EST","EE",false,false,false,false
+80,"Ethiopia","ETH","ET",true,false,false,false
+81,"Falkland Islands (Malvinas)","FLK","FK",false,false,false,false
+82,"Faroe Islands","FRO","FO",false,false,false,false
+83,"Fiji","FJI","FJ",true,false,false,false
+84,"Finland","FIN","FI",false,false,false,false
+85,"France","FRA","FR",false,false,false,false
+86,"French Guiana","GUF","GF",false,false,false,false
+87,"French Metropolitian","FXX",,false,false,false,false
+88,"French Polynesia","PYF","PF",false,false,false,false
+89,"French Southern Territories","ATF","TF",false,false,false,false
+90,"Gabon","GAB","GA",true,false,false,false
+91,"Gambia","GMB","GM",true,false,false,false
+92,"Georgia","GEO","GE",true,false,false,false
+93,"Germany","D","DE",false,false,false,false
+94,"German Democratic Republic","DDR",,false,false,false,false
+95,"Germany","DEU",,false,false,false,false
+96,"Ghana","GHA","GH",true,false,false,false
+97,"Gilvet and Ellice Islands","GEL",,false,false,false,false
+98,"Gibraltar","GIB","GI",false,false,false,false
+99,"Greece","GRC","GR",false,false,false,false
+100,"Greenland","GRL","GL",false,false,false,false
+101,"Grenada","GRD","GD",false,false,false,false
+102,"Guadeloupe","GLP","GP",false,false,false,false
+103,"Guam","GUM","GU",false,false,false,false
+104,"Guatemala","GTM","GT",false,false,false,false
+105,"Guernsey","GGY","GG",false,false,false,false
+106,"Guinea","GIN","GN",true,false,false,false
+107,"Guinea-Bissau","GNB","GW",true,false,false,false
+108,"Guyana","GUY","GY",true,false,false,false
+109,"Haiti","HTI","HT",true,false,false,false
+110,"Heard Island and McDonald Islands","HMD","HM",false,false,false,false
+111,"Holy See (Vatican City State)","VAT","VT",false,false,true,false
+112,"Honduras","HND","HN",false,false,false,false
+113,"Hong Kong Special Administrative Region of China","HKG","HK",false,false,false,false
+114,"Hungary","HUN","HU",false,false,false,false
+115,"Iceland","ISL","IS",false,false,false,false
+116,"India","IND","IN",true,false,false,false
+117,"Indonesia","IDN","ID",true,false,true,false
+118,"Iran  (Islamic Republic of)","IRN","IR",true,false,false,false
+119,"Iraq","IRQ","IQ",true,false,false,false
+120,"Ireland","IRL","IE",false,false,false,false
+121,"Isle of man","IMN","IM",false,false,false,false
+122,"Israel","ISR","IL",false,false,false,false
+123,"Italy","ITA","IT",false,false,false,false
+124,"Jamaica","JAM","JM",true,false,false,false
+125,"Japan","JPN","JP",false,false,false,false
+126,"Jersey","JEY","JE",false,false,false,false
+127,"Jordan","JOR","JO",true,false,false,false
+128,"Johnston Island","JTN",,false,false,false,false
+129,"Kazakhstan","KAZ","KZ",true,false,false,false
+130,"Kenya","KEN","KE",true,false,false,false
+131,"Kiribati","KIR","KE",false,false,false,false
+132,"Korea, Democratic People’s Republic of (north)","PRK","KP",true,false,false,false
+133,"Korea, Republic of","KOR","KR",false,false,false,false
+134,"Kosovo","KOS",,true,false,false,false
+135,"Kosovo","RKS",,true,false,false,false
+136,"Kosovo","XXK",,true,false,false,false
+137,"Kuwait","KWT","KW",true,true,true,true
+138,"Kuwait Bidoons","XKW",,true,false,false,false
+139,"Kyrgyzstan","KGZ","KG",true,false,false,false
+140,"Lao People’s Democratic Republic","LAO","LA",true,false,false,false
+141,"Latvia","LVA","LV",false,false,false,false
+142,"Lebanon","LBN","LB",true,false,false,false
+143,"Lesotho","LSO","LS",true,false,false,false
+144,"Liberia","LBR","LR",true,false,false,false
+145,"Libyan","LBY","LY",true,false,false,false
+146,"Liechtenstein","LIE","LI",false,false,false,false
+147,"Lithuania","LTU","LT",false,false,false,false
+148,"Luxembourg","LUX","LU",false,false,false,false
+149,"Macao Special Administrative Region of China","MAC","MO",false,false,false,false
+150,"Macedonia, the former Yugoslav Republic of","MKD","MK",true,false,false,false
+151,"Madagascar","MDG","MG",true,false,false,false
+152,"Malawi","MWI","MW",true,false,false,false
+153,"Malaysia","MYS","MY",false,false,false,false
+154,"Maldives","MDV","MV",false,false,false,false
+155,"Mali","MLI","ML",true,false,false,false
+156,"Malta","MLT","MT",false,false,false,false
+157,"Marshall Islands","MHL","MH",false,false,false,false
+158,"Martinique","MTQ","MQ",false,false,false,false
+159,"Mauritania","MRT","MR",true,false,false,false
+160,"Mauritius","MUS","MU",false,false,false,false
+161,"Mayotte","MYT","YT",false,false,false,false
+162,"Mexico","MEX","MX",false,false,false,false
+163,"Micronesia (Federated States of)","FSM","FM",false,false,false,false
+164,"Midway Islands","MID",,false,false,false,false
+165,"Moldova, Republic of","MDA","MD",false,false,false,false
+166,"Moldova","MOA",,true,false,false,false
+167,"Moldova","MOL",,false,false,false,false
+168,"Monaco","MCO","MC",false,false,false,false
+169,"Mongolia","MNG","MN",true,false,false,false
+170,"Montenegro Republic of","MNE","ME",false,false,false,false
+171,"Montenegro","MTG",,true,false,false,false
+172,"Montserrat","MSR",,false,false,false,false
+173,"Morocco","MAR","MA",false,false,false,false
+174,"Mozambique","MOZ","MZ",true,false,false,false
+175,"Myanmar","MMR","MM",true,false,false,false
+176,"Namibia","NAM","NA",false,false,false,false
+177,"Nauru","NRU","NR",false,false,false,false
+178,"Nepal","NPL","NP",true,false,false,false
+179,"Netherlands","NLD","NL",false,false,false,false
+180,"Netherlands Antilles","ANT","AN",false,false,false,false
+181,"Neutral Zone","NTZ","NT",false,false,false,false
+182,"New Caledonia","NCL","NC",false,false,false,false
+183,"New Hebrides","NHB",,false,false,false,false
+184,"New Zealander","NZL","NZ",false,false,false,false
+185,"Nicaragua","NIC","NI",false,false,false,false
+186,"Niger","NER","NE",true,false,false,false
+187,"Nigeria","NGA","NG",true,false,false,false
+188,"Niue","NIU","NU",false,false,false,false
+189,"Norfolk Island","NFK","NF",false,false,false,false
+190,"Northern Mariana Islands","MNP","MP",false,false,false,false
+191,"Norway","NOR","NO",false,false,false,false
+192,"Oman","OMN","OM",true,true,true,true
+193,"Pacific Islands, Trust Territory of the","PCI",,false,false,false,false
+194,"Pakistan","PAK","PK",true,false,false,false
+195,"Palau","PLW","PW",false,false,false,false
+196,"Palestine, State of","PSE","PS",false,false,false,false
+197,"Palestine Authoirity","PSE",,false,false,false,false
+198,"Panama","PAN","PA",false,false,false,false
+199,"Panama Canal Zone","PCZ",,false,false,false,false
+200,"Papua New Guinea","PNG","PG",false,false,false,false
+201,"Paraguay","PRY","PY",false,false,false,false
+202,"Peru","PER","PE",true,false,false,false
+203,"Philippines","PHL","PH",true,false,false,false
+204,"Pitcairn","PCN","PN",false,false,false,false
+205,"Poland","POL","PL",false,false,false,false
+206,"Portugal","PRT","PT",false,false,false,false
+207,"Puerto Rico","PRI","PR",false,false,false,false
+208,"Qatar","QAT","QA",true,true,true,true
+209,"Réunion","REU","RE",false,false,false,false
+210,"Romania","ROU","RO",false,false,false,false
+211,"Romania","ROM",,false,false,false,false
+212,"Russian Federation","RUS","RU",true,false,false,false
+213,"Rwanda","RWA","RW",true,false,false,false
+214,"Saint Barthélemy","BML","BL",false,false,false,false
+215,"Saint Helena, Ascension and Tristan da Cunha","SHN","SH",false,false,false,false
+216,"Saint Kitts and Nevis","KNA","KN",false,false,false,false
+217,"Saint Lucia","LCA","LC",false,false,false,false
+218,"Saint Martin (French part)","MAF","MF",false,false,false,false
+219,"Saint Pierre and Miquelon","SPM","PM",false,false,false,false
+220,"Saint Vincent and the Grenadines","VCT","VC",false,false,false,false
+221,"Samoan","WSM","WS",false,false,false,false
+222,"San Marino","SMR","SM",false,false,false,false
+223,"Sao Tome and Principe","STP","ST",true,false,false,false
+224,"Saudi Arabia","SAU","SA",true,false,false,false
+225,"Senegal","SEN","SN",true,false,false,false
+226,"Serbia","SRB","RS",true,false,false,false
+227,"Serbia and Monyinrgro","SCG",,true,false,false,false
+228,"Seychelles","SYC","SC",false,false,false,false
+229,"Sierra Leone","SLE","SL",true,false,false,false
+230,"Sikkim","SKM",,false,false,false,false
+231,"Singapore","SGP","SG",false,false,false,false
+232,"Sint Maarten (Dutch part)","SXM","SX",false,false,false,false
+233,"Slovakia","SVK","SK",false,false,false,false
+234,"Slovenia","SVN","SI",false,false,false,false
+235,"Solomon Islander","SLB","SB",false,false,false,false
+236,"Somalia","SOM","SO",true,false,false,false
+237,"South Africa","ZAF","ZA",true,false,true,false
+238,"South Georgia and the South Sandwich Islands","SGS","GS",false,false,false,false
+239,"Southern Rhodesia","REU",,false,false,false,false
+240,"South Sudan","SSD","SS",true,false,false,false
+241,"South Sudan","XSS",,true,false,false,false
+242,"Soviet Union (USSR)","SUN",,true,false,false,false
+243,"Spain","ESP","ES",false,false,false,false
+244,"Sri Lanka","LKA","LK",true,false,false,false
+245,"Sudan","SDN","SD",true,false,false,false
+246,"Suriname","SUR","SR",true,false,false,false
+247,"Svalbard and Jan Mayen","SJM","SJ",false,false,false,false
+248,"Swaziland","SWZ","SZ",true,false,false,false
+249,"Sweden","SWE","SE",false,false,false,false
+250,"Switzerland","CHE","CH",false,false,false,false
+251,"Syrian Arab Republic","SYR","SY",true,false,false,false
+252,"Taiwan Province of China","TWN","TW",false,false,false,false
+253,"Tanzanian","TJK","TJ",true,false,false,false
+254,"Tanzania, United Republic of","TZA","TZ",true,false,false,false
+255,"Thailand","THA","TH",true,false,false,false
+256,"Timor-Leste","TLS","TL",false,false,false,false
+257,"Togo","TGO","TG",true,false,false,false
+258,"Tokelau","TKL","TK",false,false,false,false
+259,"Tonga","TON","TO",false,false,false,false
+260,"Trinidad and Tobago","TTO","TT",false,false,false,false
+261,"Tunisia","TUN","TN",true,false,false,false
+262,"Turkey","TUR","TR",true,false,true,false
+263,"Turkmenistan","TKM","TM",true,false,false,false
+264,"Turks and Caicos Islands","TCA","TC",false,false,false,false
+265,"Tuvalu","TUV","TV",false,false,false,false
+266,"Uganda","UGA","UG",true,false,false,false
+267,"Ukraine","UKR","UA",true,false,false,false
+268,"Upper Volta","HVO",,false,false,false,false
+269,"United States","USA","US",false,false,false,false
+270,"United States Minor Outlying Islands","UMI","UM",false,false,false,false
+271,"United Stated Miscellaneuos Pacific Islands","PUS",,false,false,false,false
+272,"Uruguay","URY","UY",false,false,false,false
+273,"Uzbekistan","UZB","UZ",true,false,false,false
+274,"Vanuatu","VUT","VU",false,false,false,false
+275,"Venezuela, Bolivarian Republic of","VEN","VE",true,false,false,false
+276,"Viet Nam","VNM","VN",true,false,true,false
+277,"Viet nam Democratic Republic of","VDR",,false,false,false,false
+278,"Virgin Islands (British)","VGB","VG",false,false,false,false
+279,"Virgin Islands (U.S.)","VIR","VI",false,false,false,false
+280,"Wake Island","WAK",,false,false,false,false
+281,"Wallis and Futuna","WLF","WF",false,false,false,false
+282,"Western Sahara","ESH","EH",false,false,false,false
+283,"Western Sahara (Provisioinal Name)","AAA",,false,false,false,false
+284,"Yemen","YEM","YE",true,false,false,false
+285,"Yemen Democratic","YMD",,false,false,false,false
+286,"Yugoslavia","YUG",,false,false,false,false
+287,"Zambia","ZMB","ZM",true,false,false,false
+288,"Zimbabwe","ZWE","ZW",true,false,false,false
+289,"Zimbabwe","ZIM",,true,false,false,false
+290,"United Kingdom",,"GB",false,false,false,false
+291,"British Citizen","GBR",,false,false,false,false
+292,"British Overseas Territories Citizen","GBD",,false,false,false,false
+293,"British National (Overseas)","GBN",,false,false,false,false
+294,"British Overseas Citizen","GBO",,false,false,false,false
+295,"British Protected person","GBP",,false,false,false,false
+296,"British Subject","GBS",,false,false,false,false
+297,"British Antarctic Territoty","ATB",,false,false,false,false
+298,"European Union","EUE",,false,false,false,false
+299,"United Nations Organization or one of its officials","UNO","ZZ",false,false,false,false
+300,"United Nations specialized agency or one of its officials","UNA","ZZ",false,false,false,false
+301,"Resident of Kosovo to whom a travel document has been issued by the United Nations Interim Administration Mission in Kosovo (UNMIK)","UNK",,false,false,false,false
+302,"African Development Bank (ADB)","XBZ",,false,false,false,false
+303,"African Export-Import Bank (AFREXIM bank)","XIM",,false,false,false,false
+304,"Caribbean Community or one of its emissaries (CARICOM)","XCC",,false,false,false,false
+305,"Council of Europe","XCE",,false,false,false,false
+306,"Common Market for Eastern and Southern Africa (COMESA)","XCO",,false,false,false,false
+307,"Economic Community of West African States (ECOWAS)","XEC",,false,false,false,false
+308,"International Criminal Police Organization (INTERPOL)","XPO",,false,false,false,false
+309,"Sovereign Military Order of Malta or one of its emissaries","XOM",,false,false,false,false
+310,"Southern African Development Community","XDC",,false,false,false,false
+311,"Stateless person as defined in Article 1 of the 1954 Convention Relating to the Status of Stateless Persons","XXA",,false,false,false,false
+312,"Refugee, as defined in Article 1 of the 1951 Convention Relating to the Status of Refugees as amended by the 1967 Protocol","XXB",,false,false,false,false
+313,"Refugee, other than as defined under the code XXB","XXC",,false,false,false,false
+314,"Person of unspecified nationality for whom issuing State does not consider it necessary to specify any of the codes XXA XXB or XXC above whatever that person’s status may be. This category may include a person who is neither stateless nor a refugee but who is of unknown nationality and legally residing in the State of issue.","XXX",,false,false,false,false
+315,"Stateless Hongkong","XXH",,false,false,false,false
+316,"Stateless Palestinian","XXP",,false,false,false,false
+317,"Turkish Republic of Northern Cyprus","XXT",,false,false,false,false
+318,"Officially Stateless","XYZ",,false,false,false,false
+319,"Natioinality Currently Unknown","ZZZ",,false,false,false,false
+320,"Cuba","CUB","CU",true,false,false,false
+321,"United Arab Emirates","ARE",,true,true,true,true
