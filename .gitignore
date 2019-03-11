@@ -1,4 +1,4 @@
-schemas/reference/.hidden/*
+.hidden/*
 schemas/reference/R__bulkload.sql
 postgrest/*
 .idea/*

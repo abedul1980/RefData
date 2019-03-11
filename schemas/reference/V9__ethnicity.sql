@@ -11,6 +11,6 @@ COMMENT ON COLUMN ethnicity.ethnicity IS '{"description": "Ethnicity high level 
 COMMENT ON COLUMN ethnicity.subethnicity IS '{"description": "Ethnicity low level descriptor", "summaryview": "true"}';
 
 -- GRANTs
-GRANT SELECT ON ethnicity TO ${anon_user};
-GRANT SELECT ON ethnicity TO ${service_user};
-GRANT SELECT ON ethnicity TO ${readonly_user};
+GRANT SELECT ON ethnicity TO ${anonuser};
+GRANT SELECT ON ethnicity TO ${serviceuser};
+GRANT SELECT ON ethnicity TO ${readonlyuser};
