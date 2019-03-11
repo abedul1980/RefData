@@ -276,8 +276,8 @@ INSERT INTO nationality
 ON CONFLICT (id) DO
 UPDATE
   SET
-    iso31661alpha3 = EXCLUDED.iso31661alpha3,
-    iso31661alpha2 = EXCLUDED.iso31661alpha2,
+    iso3166alpha3 = EXCLUDED.iso3166alpha3,
+    iso3166alpha2 = EXCLUDED.iso3166alpha2,
     nationality = EXCLUDED.nationality,
     visarequired = EXCLUDED.visarequired,
     evwoptional = EXCLUDED.evwoptional,
@@ -307,6 +307,6 @@ UPDATE
   SET
     countryid = EXCLUDED.countryid,
     currency = EXCLUDED.currency,
-    "currency code" = EXCLUDED."currency code";
+    currencycode = EXCLUDED.currencycode;
 
 DROP TABLE tmpcurrency;

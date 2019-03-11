@@ -1,7 +1,7 @@
 -- CHANGE name=init-religion-table
 CREATE TABLE religion (
   id INTEGER NOT NULL PRIMARY KEY,
-  nname CHARACTER VARYING(50) NOT NULL
+  name CHARACTER VARYING(50) NOT NULL
 );
 
 COMMENT ON TABLE religion IS '{"description": "Religions", "schemalastupdated": "10/03/2019", "dataversion": 1}';
