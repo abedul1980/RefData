@@ -4,29 +4,20 @@ This repo is part of the RefData project workstream, for more details please see
 
 
 ### Local Testing
-Currently this repository can be tested using local docker, but first you need to install the Python yasha module which is 
-required in order to include the bulk load files. 
+This repo has a docker-compose file which allows you to setup a local testing environment. As part of the tests it will run the following images:
+* keycloak on port 8080 with user admin and password secret
+* postgres for keycloak (internal)
+* postgres for governance and reference data on port 5433
+* postgrest to expose the reference data API on port 3001
+* postgrest to expose the governance data API on port 3002
 
-To do this run
+See the docker-compose.yml for passwords/secrets which allow access to keycloak and postgres.
 
-```bash
-pip install yasha
-```
+Postgrest can be accessed via postman and it exports a full OpenAPI 3.0 json spec at '/'. You do however, need to supply an OAUTH token in order to see the protected tables.
+To see the full reference data schema, ensure you setup a user in keycloak RedData realm, then authenticate with the refdata-ui client-id. 
+To see the governance data schema use the refdata-api client-id and client-secret to create the bearer token.
 
-To build the database in debug mode in order to have the docker instance persist run
-
-```bash
-DEBUG=true test/test.sh
-```
-
-
-To clean up the environment run
-```bash
-docker stop refdata
-docker rm refdata
-```
-
-The postgres instance for testing is exposed on port 5433 to avoid conflict with other local running instances.
+Both postgrest schema's can be loaded in to Postman as collections.
 
 
 
