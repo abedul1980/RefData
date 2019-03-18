@@ -4,8 +4,8 @@ CREATE TABLE gender (
 );
 
 COMMENT ON TABLE gender IS '{"description": "Self identifying gender lists", "schemalastupdated": "06/03/2019", "dataversion": 1}';
-COMMENT ON COLUMN gender.id IS '{"description": "database unique identity record", "summaryview": "false"}';
-COMMENT ON COLUMN gender.gender IS '{"description": "Name of gender", "summaryview": "true"}';
+COMMENT ON COLUMN gender.id IS '{"label": "Identifier", "description": "database unique identity record", "summaryview": "false"}';
+COMMENT ON COLUMN gender.gender IS '{"label": "Gender", "description": "Name of gender", "summaryview": "true"}';
 
 -- GRANTs
 GRANT SELECT ON gender TO ${anonuser};

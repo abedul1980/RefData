@@ -1,5 +1,5 @@
-"legtypeid","routingdescription"
-"1","Air"
-"2","Sea"
-"3","Rail"
-"4","Land"
+id,description
+1,Air
+2,Sea
+3,Rail
+4,Land

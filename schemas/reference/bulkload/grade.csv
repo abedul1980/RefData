@@ -1,4 +1,4 @@
-"gradetypeid","gradename","parentgradetypeid"
+id,name,parentgradetypeid
 "373979c1-2360-46be-b712-0409ac068059","SCS4",
 "36c80dfe-0aae-455b-9445-2e1c09dcafdc","SCS3","373979c1-2360-46be-b712-0409ac068059"
 "1b041cda-b151-4769-b76a-d42d67b0b960","SCS2","36c80dfe-0aae-455b-9445-2e1c09dcafdc"

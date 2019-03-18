@@ -1,4 +1,4 @@
-id,"nationality","iso3166alpha3","iso3166alpha2","visarequired","evwoptional","diplomaticexception","specialexception"
+id,"nationality","iso31661alpha3","iso31661alpha2","visarequired","evwoptional","diplomaticexception","specialexception"
 1,"Afghanistan","AFG","AF",true,false,false,false
 2,"French Arar and Issas","AFI","",false,false,false,false
 3,"Åland Islands","ALA","AX",false,false,false,false

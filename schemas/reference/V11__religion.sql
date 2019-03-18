@@ -5,8 +5,8 @@ CREATE TABLE religion (
 );
 
 COMMENT ON TABLE religion IS '{"description": "Religions", "schemalastupdated": "10/03/2019", "dataversion": 1}';
-COMMENT ON COLUMN religion.id IS '{"description": "database unique identity record", "summaryview": "false"}';
-COMMENT ON COLUMN religion.name IS '{"description": "Religion name", "summaryview": "true"}';
+COMMENT ON COLUMN religion.id IS '{"label": "Identifier", "description": "database unique identity record", "summaryview": "false"}';
+COMMENT ON COLUMN religion.name IS '{"label": "Name", "description": "Religion name", "summaryview": "true"}';
 
 -- GRANTs
 GRANT SELECT ON religion TO ${anonuser};

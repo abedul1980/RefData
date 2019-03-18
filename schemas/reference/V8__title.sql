@@ -4,8 +4,8 @@ CREATE TABLE title (
 );
 
 COMMENT ON TABLE title IS '{"description": "Person titles", "schemalastupdated": "06/03/2019", "dataversion": 1}';
-COMMENT ON COLUMN title.id IS '{"description": "database unique identity record", "summaryview": "false"}';
-COMMENT ON COLUMN title.title IS '{"description": "Name of title", "summaryview": "true"}';
+COMMENT ON COLUMN title.id IS '{"label": "Identifier", "description": "database unique identity record", "summaryview": "false"}';
+COMMENT ON COLUMN title.title IS '{"label": "Title", "description": "Name of title", "summaryview": "true"}';
 
 -- GRANTs
 GRANT SELECT ON title TO ${anonuser};

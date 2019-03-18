@@ -1,4 +1,4 @@
-"instrumentid","typeoffinancialinstrument","description"
+id,type,description
 "1","Cash","Notes and Coins"
 "2","Banker's Drafts","NULL"
 "3","Bearer Bonds","NULL"

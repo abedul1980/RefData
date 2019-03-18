@@ -8,9 +8,9 @@ CREATE TABLE currency (
 
 
 COMMENT ON TABLE currency IS '{"description": "Currencies", "schemalastupdated": "10/03/2019", "dataversion": 1}';
-COMMENT ON COLUMN currency.id IS '{"description": "database unique identity record", "summaryview": "false"}';
-COMMENT ON COLUMN currency.currency IS '{"description": "Currency name", "summaryview": "true"}';
-COMMENT ON COLUMN currency.currencycode IS '{"description": "Currency code", "summaryview": "true"}';
+COMMENT ON COLUMN currency.id IS '{"label": "Identifier", "description": "database unique identity record", "summaryview": "false"}';
+COMMENT ON COLUMN currency.currency IS '{"label": "Currency", "description": "Currency name", "summaryview": "true"}';
+COMMENT ON COLUMN currency.currencycode IS '{"label": "Code", "description": "Currency code", "summaryview": "true"}';
 
 -- GRANTs
 GRANT SELECT ON currency TO ${anonuser};

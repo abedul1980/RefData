@@ -6,9 +6,9 @@ CREATE TABLE ethnicity (
 );
 
 COMMENT ON TABLE ethnicity IS '{"description": "Ethnicity breakdowns", "schemalastupdated": "10/03/2019", "dataversion": 1}';
-COMMENT ON COLUMN ethnicity.id IS '{"description": "database unique identity record", "summaryview": "false"}';
-COMMENT ON COLUMN ethnicity.ethnicity IS '{"description": "Ethnicity high level descriptor", "summaryview": "true"}';
-COMMENT ON COLUMN ethnicity.subethnicity IS '{"description": "Ethnicity low level descriptor", "summaryview": "true"}';
+COMMENT ON COLUMN ethnicity.id IS '{"label": "Identifier", "description": "database unique identity record", "summaryview": "false"}';
+COMMENT ON COLUMN ethnicity.ethnicity IS '{"label": "Ethnicity", "description": "Ethnicity high level descriptor", "summaryview": "true"}';
+COMMENT ON COLUMN ethnicity.subethnicity IS '{"label": "Sub Ethnicity", "description": "Ethnicity low level descriptor", "summaryview": "true"}';
 
 -- GRANTs
 GRANT SELECT ON ethnicity TO ${anonuser};

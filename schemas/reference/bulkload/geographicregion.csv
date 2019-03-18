@@ -1,4 +1,4 @@
-"geographicregionid","subregioncode","subregionname","subcountry"
+id,code,name,country
 "1","02","Canillo","AD"
 "2","03","Encamp","AD"
 "3","04","La Massana","AD"

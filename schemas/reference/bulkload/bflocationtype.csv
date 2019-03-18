@@ -1,4 +1,4 @@
-"bflocationtypeid","seaport","railterminal","airport","postexchange","multimodal","fixedtransport","bordercrossing","roadterminal","portclassification","description"
+id,seaport,railterminal,airport,postexchange,multimodal,fixedtransport,bordercrossing,roadterminal,portclassification,description
 "ba4fc46f-2f05-49aa-af8f-de604550f9e5","t","f","f","f","f","f","f","f","1","Large Port with Border Force presence - PCP"
 "b13ece4b-4056-482e-8a35-1c4842cd17d0","t","f","f","f","f","f","f","f","2","Significant Port with Border Force presence - no PCP"
 "bb3439d7-4a32-4626-adbe-06fed5ecce32","t","f","f","f","f","f","f","f","3","Small Port with no Border Force presence - with berthing"
