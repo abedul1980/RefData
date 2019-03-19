@@ -249,11 +249,14 @@ INSERT INTO country
 ON CONFLICT (id) DO
 UPDATE
   SET
+    iso31661alpha2 = EXCLUDED.iso31661alpha2,
     iso31661alpha3 = EXCLUDED.iso31661alpha3,
     name = EXCLUDED.name,
     continent = EXCLUDED.continent,
     dial = EXCLUDED.dial,
-    iso31661numeric = EXCLUDED.iso31661numeric;
+    iso31661numeric = EXCLUDED.iso31661numeric,
+    validfrom = EXCLUDED.validfrom,
+    validto = EXCLUDED.validto;
 
 DROP TABLE tmpcountry;
 
@@ -276,13 +279,16 @@ INSERT INTO nationality
 ON CONFLICT (id) DO
 UPDATE
   SET
-    iso3166alpha3 = EXCLUDED.iso3166alpha3,
-    iso3166alpha2 = EXCLUDED.iso3166alpha2,
+    iso31661alpha3 = EXCLUDED.iso31661alpha3,
+    iso31661alpha2 = EXCLUDED.iso31661alpha2,
     nationality = EXCLUDED.nationality,
     visarequired = EXCLUDED.visarequired,
     evwoptional = EXCLUDED.evwoptional,
     diplomaticexception = EXCLUDED.diplomaticexception,
-    specialexception = EXCLUDED.specialexception;
+    specialexception = EXCLUDED.specialexception,
+    countryid = EXCLUDED.countryid,
+    validfrom = EXCLUDED.validfrom,
+    validto = EXCLUDED.validto;
 
 DROP TABLE tmpnationality;
 
@@ -305,9 +311,12 @@ INSERT INTO currency
 ON CONFLICT (id) DO
 UPDATE
   SET
-    countryid = EXCLUDED.countryid,
+    iso31661alpha2 = EXCLUDED.iso31661alpha2,
     currency = EXCLUDED.currency,
-    currencycode = EXCLUDED.currencycode;
+    currencycode = EXCLUDED.currencycode,
+    countryid = EXCLUDED.countryid,
+    validfrom = EXCLUDED.validfrom,
+    validto = EXCLUDED.validto;
 
 DROP TABLE tmpcurrency;
 
@@ -364,7 +373,7 @@ UPDATE
     portclassification = EXCLUDED.portclassification,
     description = EXCLUDED.description;
 
-DROP TABLE tmpbflocationtypes;
+DROP TABLE tmpbflocationtype;
 
 
 
@@ -605,7 +614,10 @@ UPDATE
   SET
     code = EXCLUDED.code,
     name = EXCLUDED.name,
-    country = EXCLUDED.country;
+    iso31661alpha2 = EXCLUDED.iso31661alpha2,
+    countryid = EXCLUDED.countryid,
+    validfrom = EXCLUDED.validfrom,
+    validto = EXCLUDED.validto;
 
 DROP TABLE tmpgeographicregion;
 
@@ -652,14 +664,17 @@ INSERT INTO icao
 ON CONFLICT (id) DO
 UPDATE
   SET
-    countryid = EXCLUDED.countryid,
     name = EXCLUDED.name,
     iata = EXCLUDED.iata,
     municipality = EXCLUDED.municipality,
     icao = EXCLUDED.icao,
     geolat = EXCLUDED.geolat,
     geolong = EXCLUDED.geolong,
-    type = EXCLUDED.type;
+    type = EXCLUDED.type,
+    iso31661alpha2 = EXCLUDED.iso31661alpha2,
+    countryid = EXCLUDED.countryid,
+    validfrom = EXCLUDED.validfrom,
+    validto = EXCLUDED.validto;
 
 DROP TABLE tmpicao;
 
@@ -843,7 +858,6 @@ INSERT INTO unlocode
 ON CONFLICT (id) DO
 UPDATE
   SET
-    countryid = EXCLUDED.countryid,
     geolong = EXCLUDED.geolong,
     geolat = EXCLUDED.geolat,
     name = EXCLUDED.name,
@@ -858,7 +872,12 @@ UPDATE
     fixedtransport = EXCLUDED.fixedtransport,
     bordercrossing = EXCLUDED.bordercrossing,
     subdivision = EXCLUDED.subdivision,
-    roadterminal = EXCLUDED.roadterminal;
+    roadterminal = EXCLUDED.roadterminal,
+    iso31661alpha2 = EXCLUDED.iso31661alpha2,
+    countryid = EXCLUDED.countryid,
+    validfrom = EXCLUDED.validfrom,
+    validto = EXCLUDED.validto;
+;
 
 DROP TABLE tmpunlocode;
 

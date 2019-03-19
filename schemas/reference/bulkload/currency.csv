@@ -1,183 +1,183 @@
-id,"countryid","currency","currency code"
-1,"AE","Dirham","AED"
-2,"AL","Lek","ALL"
-3,"AM","Dram","AMD"
-4,"AO","Readj Kwanza","AOA"
-5,"AR","Peso","ARS"
-6,"AU","Dollar","AUD"
-7,"AW","Florin","AWG"
-8,"AZ","New Manat","AZN"
-9,"BA","Marka","BAM"
-10,"BB","Dollar","BBD"
-11,"BD","Taka","BDT"
-12,"BG","Lev","BGN"
-13,"BH","Dinar","BHD"
-14,"BI","Franc","BIF"
-15,"BM","Dollar (US)","BMD"
-16,"BN","Dollar","BND"
-17,"BO","Boliviano","BOB"
-18,"BR","Real","BRL"
-19,"BS","Dollar","BSD"
-20,"BT","Ngultrum","BTN"
-21,"BW","Pula","BWP"
-22,"BY","Rouble","BYN"
-23,"BZ","Dollar","BZD"
-24,"CA","Dollar","CAD"
-25,"CD","Congo Fr","CDF"
-26,"CH","Franc","CHF"
-27,"CL","Peso","CLP"
-28,"CN","Yuan","CNY"
-29,"CO","Peso","COP"
-30,"CR","Colon","CRC"
-31,"CU","Peso","CUP"
-32,"CV","Escudo","CVE"
-33,"CZ","Koruna","CZK"
-34,"DJ","Franc","DJF"
-35,"DK","Krone","DKK"
-36,"DO","Peso","DOP"
-37,"DZ","Dinar","DZD"
-38,"EC","Dollar","ECS"
-39,"EG","Pound","EGP"
-40,"ER","Nakfa","ERN"
-41,"ET","Birr","ETB"
-42,"AT","Euro","EUR"
-43,"BE","Euro","EUR"
-44,"CY","Euro","EUR"
-45,"DE","Euro","EUR"
-46,"ES","Euro","EUR"
-47,"FR","Euro","EUR"
-48,"GR","Euro","EUR"
-49,"IE","Euro","EUR"
-50,"IT","Euro","EUR"
-51,"LT","Euro","EUR"
-52,"LU","Euro","EUR"
-53,"LV","Euro","EUR"
-54,"MT","Euro","EUR"
-55,"NL","Euro","EUR"
-56,"PT","Euro","EUR"
-57,"SI","Euro","EUR"
-58,"SK","Euro","EUR"
-59,"FJ","Dollar","FJD"
-60,"GB","Pound","GBP"
-61,"GE","Lari","GEL"
-62,"GH","Cedi","GHS"
-63,"GM","Dalasi","GMD"
-64,"GN","Franc","GNF"
-65,"GT","Quetzal","GTQ"
-66,"GY","Dollar","GYD"
-67,"HK","Dollar","HKD"
-68,"HN","Lempira","HNL"
-69,"HR","Kuna","HRK"
-70,"HT","Gourde","HTG"
-71,"HU","Forint","HUF"
-72,"ID","Rupiah","IDR"
-73,"IL","Shekel","ILS"
-74,"IN","Rupee","INR"
-75,"IQ","Dinar","IQD"
-76,"IS","Krona","ISK"
-77,"JM","Dollar","JMD"
-78,"JO","Dinar","JOD"
-79,"JP","Yen","JPY"
-80,"KE","Schilling","KES"
-81,"KG","Som","KGS"
-82,"KH","Riel","KHR"
-83,"KM","Franc","KMF"
-84,"KR","Won","KRW"
-85,"KW","Dinar","KWD"
-86,"KY","Dollar","KYD"
-87,"KZ","Tenge","KZT"
-88,"LA","Kip","LAK"
-89,"LB","Pound","LBP"
-90,"LK","Rupee","LKR"
-91,"LR","Dollar (US)","LRD"
-92,"LS","Loti","LSL"
-93,"LY","Dinar","LYD"
-94,"MA","Dirham","MAD"
-95,"MD","Leu","MDL"
-96,"MG","Malagasy Ariary","MGA"
-97,"MK","Denar","MKD"
-98,"MM","Kyat","MMK"
-99,"MN","Tugrik","MNT"
-100,"MO","Pataca","MOP"
-101,"MR","Ouguiya","MRO"
-102,"MU","Rupee","MUR"
-103,"MV","Rufiyaa","MVR"
-104,"MW","Kwacha","MWK"
-105,"MX","Mexican Peso","MXN"
-106,"MY","Ringgit","MYR"
-107,"MZ","Metical","MZN"
-108,"NG","Naira","NGN"
-109,"NI","Gold Cordoba","NIO"
-110,"NO","Norwegian Krone","NOK"
-111,"NP","Rupee","NPR"
-112,"NZ","Dollar","NZD"
-113,"OM","Rial","OMR"
-114,"PA","Balboa","PAB"
-115,"PE","New Sol","PEN"
-116,"PG","Kina","PGK"
-117,"PH","Peso","PHP"
-118,"PK","Rupee","PKR"
-119,"PL","Zloty","PLN"
-120,"PY","Guarani","PYG"
-121,"QA","Riyal","QAR"
-122,"RO","New Leu","RON"
-123,"RS","Dinar","RSD"
-124,"RU","Rouble","RUB"
-125,"RW","Franc","RWF"
-126,"SA","Riyal","SAR"
-127,"SB","Dollar","SBD"
-128,"SC","Rupee","SCR"
-129,"SD","Pound","SDG"
-130,"SE","Krona","SEK"
-131,"SG","Dollar","SGD"
-132,"SL","Leone","SLL"
-133,"SO","Schilling","SOS"
-134,"SR","Dollar","SRD"
-135,"ST","Dobra","STD"
-136,"SV","Colon","SVC"
-137,"SZ","Lilangeni","SZL"
-138,"TH","Baht","THB"
-139,"TM","New Manat","TMT"
-140,"TN","Dinar","TND"
-141,"TO","Pa'anga (AUS)","TOP"
-142,"TR","Turkish  Lira","TRY"
-143,"TT","Dollar","TTD"
-144,"TW","Dollar","TWD"
-145,"TZ","Schilling","TZS"
-146,"UA","Hryvnia","UAH"
-147,"UG","Schilling","UGX"
-148,"US","Dollar","USD"
-149,"UY","Peso","UYU"
-150,"UZ","Sum","UZS"
-151,"VE","Bolivar Fuerte","VEF"
-152,"VN","Dong","VND"
-153,"VU","Vatu","VUV"
-154,"WS","Tala","WST"
-155,"CF","CFA Franc","XAF"
-156,"CG","CFA Franc","XAF"
-157,"CM","CFA Franc","XAF"
-158,"GA","CFA Franc","XAF"
-159,"GQ","CFA Franc","XAF"
-160,"TD","CFA Franc","XAF"
-161,"AG","E Caribbean Dollar","XCD"
-162,"DM","E Caribbean Dollar","XCD"
-163,"GD","E Caribbean Dollar","XCD"
-164,"KN","E Caribbean Dollar","XCD"
-165,"LC","E Caribbean Dollar","XCD"
-166,"MS","E Caribbean Dollar","XCD"
-167,"VC","E Caribbean Dollar","XCD"
-168,"BF","CFA Franc","XOF"
-169,"BJ","CFA Franc","XOF"
-170,"CI","CFA Franc","XOF"
-171,"GW","CFA Franc","XOF"
-172,"ML","CFA Franc","XOF"
-173,"NE","CFA Franc","XOF"
-174,"SN","CFA Franc","XOF"
-175,"TG","CFA Franc","XOF"
-176,"NC","CFP Franc","XPF"
-177,"PF","CFP Franc","XPF"
-178,"WF","CFP Franc","XPF"
-179,"YE","Rial","YER"
-180,"ZA","Rand","ZAR"
-181,"ZM","Kwacha","ZMW"
-182,"ZW","Dollar","ZWL"
+id,iso31661alpha2,currency,currency code,countryid,validfrom,validto
+1,AE,Dirham,AED,233,,
+2,AL,Lek,ALL,3,,
+3,AM,Dram,AMD,12,,
+4,AO,Readj Kwanza,AOA,7,,
+5,AR,Peso,ARS,11,,
+6,AU,Dollar,AUD,14,,
+7,AW,Florin,AWG,13,,
+8,AZ,New Manat,AZN,16,,
+9,BA,Marka,BAM,29,,
+10,BB,Dollar,BBD,20,,
+11,BD,Taka,BDT,19,,
+12,BG,Lev,BGN,36,,
+13,BH,Dinar,BHD,18,,
+14,BI,Franc,BIF,38,,
+15,BM,Dollar (US),BMD,25,,
+16,BN,Dollar,BND,35,,
+17,BO,Boliviano,BOB,27,,
+18,BR,Real,BRL,32,,
+19,BS,Dollar,BSD,17,,
+20,BT,Ngultrum,BTN,26,,
+21,BW,Pula,BWP,30,,
+22,BY,Rouble,BYN,21,,
+23,BZ,Dollar,BZD,23,,
+24,CA,Dollar,CAD,42,,
+25,CD,Congo Fr,CDF,64,,
+26,CH,Franc,CHF,216,,
+27,CL,Peso,CLP,46,,
+28,CN,Yuan,CNY,47,,
+29,CO,Peso,COP,52,,
+30,CR,Colon,CRC,56,,
+31,CU,Peso,CUP,58,,
+32,CV,Escudo,CVE,39,,
+33,CZ,Koruna,CZK,61,,
+34,DJ,Franc,DJF,66,,
+35,DK,Krone,DKK,65,,
+36,DO,Peso,DOP,68,,
+37,DZ,Dinar,DZD,4,,
+38,EC,Dollar,ECS,69,,
+39,EG,Pound,EGP,70,,
+40,ER,Nakfa,ERN,73,,
+41,ET,Birr,ETB,75,,
+42,AT,Euro,EUR,15,,
+43,BE,Euro,EUR,22,,
+44,CY,Euro,EUR,60,,
+45,DE,Euro,EUR,87,,
+46,ES,Euro,EUR,208,,
+47,FR,Euro,EUR,80,,
+48,GR,Euro,EUR,90,,
+49,IE,Euro,EUR,110,,
+50,IT,Euro,EUR,113,,
+51,LT,Euro,EUR,130,,
+52,LU,Euro,EUR,131,,
+53,LV,Euro,EUR,124,,
+54,MT,Euro,EUR,137,,
+55,NL,Euro,EUR,155,,
+56,PT,Euro,EUR,175,,
+57,SI,Euro,EUR,202,,
+58,SK,Euro,EUR,201,,
+59,FJ,Dollar,FJD,78,,
+60,GB,Pound,GBP,234,,
+61,GE,Lari,GEL,86,,
+62,GH,Cedi,GHS,88,,
+63,GM,Dalasi,GMD,85,,
+64,GN,Franc,GNF,97,,
+65,GT,Quetzal,GTQ,95,,
+66,GY,Dollar,GYD,99,,
+67,HK,Dollar,HKD,48,,
+68,HN,Lempira,HNL,103,,
+69,HR,Kuna,HRK,57,,
+70,HT,Gourde,HTG,100,,
+71,HU,Forint,HUF,104,,
+72,ID,Rupiah,IDR,107,,
+73,IL,Shekel,ILS,112,,
+74,IN,Rupee,INR,106,,
+75,IQ,Dinar,IQD,109,,
+76,IS,Krona,ISK,105,,
+77,JM,Dollar,JMD,114,,
+78,JO,Dinar,JOD,117,,
+79,JP,Yen,JPY,115,,
+80,KE,Schilling,KES,119,,
+81,KG,Som,KGS,122,,
+82,KH,Riel,KHR,40,,
+83,KM,Franc,KMF,53,,
+84,KR,Won,KRW,178,,
+85,KW,Dinar,KWD,121,,
+86,KY,Dollar,KYD,43,,
+87,KZ,Tenge,KZT,118,,
+88,LA,Kip,LAK,123,,
+89,LB,Pound,LBP,125,,
+90,LK,Rupee,LKR,209,,
+91,LR,Dollar (US),LRD,127,,
+92,LS,Loti,LSL,126,,
+93,LY,Dinar,LYD,128,,
+94,MA,Dirham,MAD,149,,
+95,MD,Leu,MDL,179,,
+96,MG,Malagasy Ariary,MGA,132,,
+97,MK,Denar,MKD,220,,
+98,MM,Kyat,MMK,151,,
+99,MN,Tugrik,MNT,146,,
+100,MO,Pataca,MOP,49,,
+101,MR,Ouguiya,MRO,140,,
+102,MU,Rupee,MUR,141,,
+103,MV,Rufiyaa,MVR,135,,
+104,MW,Kwacha,MWK,133,,
+105,MX,Mexican Peso,MXN,143,,
+106,MY,Ringgit,MYR,134,,
+107,MZ,Metical,MZN,150,,
+108,NG,Naira,NGN,160,,
+109,NI,Gold Cordoba,NIO,158,,
+110,NO,Norwegian Krone,NOK,164,,
+111,NP,Rupee,NPR,154,,
+112,NZ,Dollar,NZD,157,,
+113,OM,Rial,OMR,165,,
+114,PA,Balboa,PAB,168,,
+115,PE,New Sol,PEN,171,,
+116,PG,Kina,PGK,169,,
+117,PH,Peso,PHP,172,,
+118,PK,Rupee,PKR,166,,
+119,PL,Zloty,PLN,174,,
+120,PY,Guarani,PYG,170,,
+121,QA,Riyal,QAR,177,,
+122,RO,New Leu,RON,180,,
+123,RS,Dinar,RSD,196,,
+124,RU,Rouble,RUB,181,,
+125,RW,Franc,RWF,182,,
+126,SA,Riyal,SAR,194,,
+127,SB,Dollar,SBD,203,,
+128,SC,Rupee,SCR,197,,
+129,SD,Pound,SDG,211,,
+130,SE,Krona,SEK,215,,
+131,SG,Dollar,SGD,199,,
+132,SL,Leone,SLL,198,,
+133,SO,Schilling,SOS,204,,
+134,SR,Dollar,SRD,212,,
+135,ST,Dobra,STD,193,,
+136,SV,Colon,SVC,71,,
+137,SZ,Lilangeni,SZL,214,,
+138,TH,Baht,THB,219,,
+139,TM,New Manat,TMT,228,,
+140,TN,Dinar,TND,226,,
+141,TO,Pa'anga (AUS),TOP,224,,
+142,TR,Turkish  Lira,TRY,227,,
+143,TT,Dollar,TTD,225,,
+144,TW,Dollar,TWD,1,,
+145,TZ,Schilling,TZS,235,,
+146,UA,Hryvnia,UAH,232,,
+147,UG,Schilling,UGX,231,,
+148,US,Dollar,USD,238,,
+149,UY,Peso,UYU,239,,
+150,UZ,Sum,UZS,240,,
+151,VE,Bolivar Fuerte,VEF,242,,
+152,VN,Dong,VND,243,,
+153,VU,Vatu,VUV,241,,
+154,WS,Tala,WST,191,,
+155,CF,CFA Franc,XAF,44,,
+156,CG,CFA Franc,XAF,54,,
+157,CM,CFA Franc,XAF,41,,
+158,GA,CFA Franc,XAF,84,,
+159,GQ,CFA Franc,XAF,72,,
+160,TD,CFA Franc,XAF,45,,
+161,AG,E Caribbean Dollar,XCD,10,,
+162,DM,E Caribbean Dollar,XCD,67,,
+163,GD,E Caribbean Dollar,XCD,92,,
+164,KN,E Caribbean Dollar,XCD,186,,
+165,LC,E Caribbean Dollar,XCD,187,,
+166,MS,E Caribbean Dollar,XCD,148,,
+167,VC,E Caribbean Dollar,XCD,190,,
+168,BF,CFA Franc,XOF,37,,
+169,BJ,CFA Franc,XOF,24,,
+170,CI,CFA Franc,XOF,62,,
+171,GW,CFA Franc,XOF,98,,
+172,ML,CFA Franc,XOF,136,,
+173,NE,CFA Franc,XOF,159,,
+174,SN,CFA Franc,XOF,195,,
+175,TG,CFA Franc,XOF,222,,
+176,NC,CFP Franc,XPF,156,,
+177,PF,CFP Franc,XPF,82,,
+178,WF,CFP Franc,XPF,244,,
+179,YE,Rial,YER,246,,
+180,ZA,Rand,ZAR,205,,
+181,ZM,Kwacha,ZMW,247,,
+182,ZW,Dollar,ZWL,248,,
