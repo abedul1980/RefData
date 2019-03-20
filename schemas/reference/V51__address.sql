@@ -7,7 +7,7 @@ CREATE TABLE address (
   geographicregionid int4 NOT NULL REFERENCES geographicregion(id),
   iso31661alpha2 varchar(2)NOT NULL,
   postcode varchar(10),
-  countryid INTEGER NULL,
+  countryid INTEGER NULL REFERENCES country(id),
   validfrom date,
   validto date
 );

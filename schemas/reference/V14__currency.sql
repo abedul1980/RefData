@@ -4,7 +4,7 @@ CREATE TABLE currency (
   iso31661alpha2 CHARACTER VARYING(2) NOT NULL,
   currency CHARACTER VARYING(50) NOT NULL,
   currencycode CHARACTER VARYING(3) NOT NULL,
-  countryid INTEGER NULL,
+  countryid INTEGER NULL REFERENCES country(id),
   validfrom date,
   validto date
 );

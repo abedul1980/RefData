@@ -8,7 +8,7 @@ CREATE TABLE nationality (
   evwoptional BOOLEAN NOT NULL,
   diplomaticexception BOOLEAN NOT NULL,
   specialexception BOOLEAN NOT NULL,
-  countryid INTEGER NULL,
+  countryid INTEGER NULL REFERENCES country(id),
   validfrom date,
   validto date
 );

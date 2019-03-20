@@ -1,0 +1,33 @@
+version: '3'
+services:
+  flyway:
+    build: .
+    image: quay.io/ukhomeofficedigital/refdata
+    container_name: flyway
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_SERVER: postgres_refdata
+      POSTGRES_PORT: 5432
+      FLYWAY_INIT_USER: postgres
+      FLYWAY_INIT_PASSWORD: mysecretpassword
+      FLYWAY_PLACEHOLDERS_REFERENCE_DB_NAME: reference
+      FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_NAME: ownerreference
+      FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_PASSWORD: mysecretpassword
+      FLYWAY_PLACEHOLDERS_REFERENCE_SCHEMA: reference
+      FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_NAME: ownergovernance
+      FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_PASSWORD: mysecretpassword
+      FLYWAY_PLACEHOLDERS_GOVERNANCE_SCHEMA: governance
+      FLYWAY_PLACEHOLDERS_REFERENCE_AUTHENTICATOR_USER: authenticatorreference
+      FLYWAY_PLACEHOLDERS_REFERENCE_AUTHENTICATOR_PASSWORD: auth1234
+      FLYWAY_PLACEHOLDERS_REFERENCE_ANON_USER: webanon
+      FLYWAY_PLACEHOLDERS_REFERENCE_SERVICE_USER: servicereferance
+      FLYWAY_PLACEHOLDERS_REFERENCE_READONLY_USER: readonlyreferance
+      FLYWAY_PLACEHOLDERS_GOVERNANCE_AUTHENTICATOR_USER: authenticatorgovernance
+      FLYWAY_PLACEHOLDERS_GOVERNANCE_AUTHENTICATOR_PASSWORD: auth1234
+      FLYWAY_PLACEHOLDERS_GOVERNANCE_ANON_USER: webanongovernance
+      FLYWAY_PLACEHOLDERS_GOVERNANCE_SERVICE_USER: servicegovernance
+      FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER: readonlygovernance
+networks:
+  default:
+    external:
+      name: local_dev

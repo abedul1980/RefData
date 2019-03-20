@@ -16,7 +16,7 @@ CREATE TABLE "unlocode" (
   "bordercrossing" bool NOT NULL,
   "subdivision" varchar(3),
   "roadterminal" bool NOT NULL,
-  countryid INTEGER NULL,
+  countryid INTEGER NULL REFERENCES country(id),
   validfrom date,
   validto date
 );

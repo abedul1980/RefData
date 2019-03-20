@@ -8,7 +8,7 @@ CREATE TABLE icao (
   geolat numeric NOT NULL,
   geolong numeric NOT NULL,
   type varchar(40),
-  countryid INTEGER NULL,
+  countryid INTEGER NULL REFERENCES country(id),
   validfrom date,
   validto date
 );
