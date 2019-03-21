@@ -3,8 +3,9 @@
 export POSTGRES_DB=${POSTGRES_DB:-postgres}
 export POSTGRES_SERVER=${POSTGRES_SERVER:-postgres_refdata}
 export POSTGRES_PORT=${POSTGRES_PORT:-5432}
-export POSTGRES_OPTIONS=${POSTGRES_OPTIONS}
-export FLYWAY_URL="jdbc:postgresql://${POSTGRES_SERVER}:${POSTGRES_PORT}/${POSTGRES_DB}${POSTGRES_OPTIONS}"
+export POSTGRES_OPTIONS=${POSTGRES_OPTIONS:-}
+export URL="postgresql://${POSTGRES_SERVER}:${POSTGRES_PORT}/${POSTGRES_DB}${POSTGRES_OPTIONS}"
+export FLYWAY_URL="jdbc:${URL}"
 export FLYWAY_INIT_USER=${FLYWAY_INIT_USER:-postgres}
 export FLYWAY_INIT_PASSWORD=${FLYWAY_INIT_PASSWORD:-mysecretpassword}
 export FLYWAY_PLACEHOLDERS_MASTERUSER=${FLYWAY_INIT_USER}
@@ -21,7 +22,7 @@ cd /docker
 echo "Checking if postgres is up and ready for connections"
 export PGPASSWORD=${FLYWAY_INIT_PASSWORD}
 i=0
-pg_isready -d ${POSTGRES_DB} -h ${POSTGRES_SERVER} -p ${POSTGRES_PORT} -U ${FLYWAY_INIT_USER} -t 60
+pg_isready -d ${URL} -U ${FLYWAY_INIT_USER} -t 60
 PG_EXIT=$?
 while [[ "${i}" -lt "5" && ${PG_EXIT} != 0 ]]
 do
@@ -33,7 +34,7 @@ do
         exit 1
     fi
     ((i++))
-    pg_isready -d ${POSTGRES_DB} -h ${POSTGRES_SERVER} -p ${POSTGRES_PORT} -U ${FLYWAY_INIT_USER} -t 60
+    pg_isready -d ${URL} -U ${FLYWAY_INIT_USER} -t 60
     PG_EXIT=$?
 done
 
@@ -43,7 +44,7 @@ export FLYWAY_PASSWORD=${PGPASSWORD}
 
 
 echo "Checking if database exists"
-STATUS=$( psql postgresql://${FLYWAY_INIT_USER}@${POSTGRES_SERVER}:${POSTGRES_PORT}/${POSTGRES_DB} -tc "SELECT 1 FROM pg_database WHERE datname='reference'" | sed -e 's/^[ \t]*//')
+STATUS=$( psql postgresql://${FLYWAY_INIT_USER}@${POSTGRES_SERVER}:${POSTGRES_PORT}/${POSTGRES_DB}${POSTGRES_OPTIONS} -tc "SELECT 1 FROM pg_database WHERE datname='reference'" | sed -e 's/^[ \t]*//')
 if [[ "${STATUS}" == "1" ]]
 then
     echo "Database already exists"
@@ -56,7 +57,7 @@ else
         exit 1
     fi
     yasha bootstrap.j2 -o /tmp/bootstrap.sql
-    psql postgresql://${FLYWAY_INIT_USER}@${POSTGRES_SERVER}:${POSTGRES_PORT}/${POSTGRES_DB} < /tmp/bootstrap.sql
+    psql postgresql://${FLYWAY_INIT_USER}@${POSTGRES_SERVER}:${POSTGRES_PORT}/${POSTGRES_DB}${POSTGRES_OPTIONS} < /tmp/bootstrap.sql
     if [[ "$?" != 0 ]]
     then
         echo "Error: with bootstrapping database"
@@ -73,7 +74,7 @@ then
 fi
 
 echo "Starting migration of reference data"
-export FLYWAY_URL="jdbc:postgresql://${POSTGRES_SERVER}:${POSTGRES_PORT}/${FLYWAY_PLACEHOLDERS_REFERENCE_DB_NAME}"
+export FLYWAY_URL="jdbc:postgresql://${POSTGRES_SERVER}:${POSTGRES_PORT}/${FLYWAY_PLACEHOLDERS_REFERENCE_DB_NAME}${POSTGRES_OPTIONS}"
 export FLYWAY_USER=${FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_NAME}
 export FLYWAY_PASSWORD=${FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_PASSWORD}
 export FLYWAY_SCHEMAS=${FLYWAY_PLACEHOLDERS_REFERENCE_SCHEMA}
@@ -94,7 +95,7 @@ then
 fi
 
 echo "Migrating governance database"
-export FLYWAY_URL="jdbc:postgresql://${POSTGRES_SERVER}:${POSTGRES_PORT}/${FLYWAY_PLACEHOLDERS_REFERENCE_DB_NAME}"
+export FLYWAY_URL="jdbc:postgresql://${POSTGRES_SERVER}:${POSTGRES_PORT}/${FLYWAY_PLACEHOLDERS_REFERENCE_DB_NAME}${POSTGRES_OPTIONS}"
 export FLYWAY_USER=${FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_NAME}
 export FLYWAY_PASSWORD=${FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_PASSWORD}
 export FLYWAY_SCHEMAS=${FLYWAY_PLACEHOLDERS_GOVERNANCE_SCHEMA}
