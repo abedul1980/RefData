@@ -23,10 +23,10 @@ pipeline:
       event: [ push, deployment ]
 
   deploy_to_dev:
-    image: busybox
+    # image: busybox
+    image: quay.io/ukhomeofficedigital/refdata:$${DRONE_COMMIT_SHA}
     commands:
       - /bin/echo hello preprod
-    # image: quay.io/ukhomeofficedigital/refdata:$${DRONE_COMMIT_SHA}
     # commands:
     #   - ./run.sh
     when:
