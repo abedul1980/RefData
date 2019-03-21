@@ -48,6 +48,8 @@ pipeline:
       - DEV_FLYWAY_PLACEHOLDERS_GOVERNANCE_SERVICE_USER
       - DEV_FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER
     image: quay.io/ukhomeofficedigital/refdata:${DRONE_COMMIT_SHA}
+    commands:
+      - ls
     when:
       branch: master
       event: [ push, deployment ]
