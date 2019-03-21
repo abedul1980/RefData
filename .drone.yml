@@ -24,7 +24,7 @@ pipeline:
 
   deploy_to_dev:
     # image: busybox
-    image: quay.io/ukhomeofficedigital/refdata
+    image: quay.io/ukhomeofficedigital/refdata:${DRONE_COMMIT_SHA}
     # image: quay.io/ukhomeofficedigital/refdata:$${DRONE_COMMIT_SHA}
     commands:
       - /bin/echo hello preprod
