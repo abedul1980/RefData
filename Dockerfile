@@ -16,4 +16,5 @@ RUN chmod +x /docker/*.sh
 USER 1000
 
 WORKDIR /docker/
-ENTRYPOINT ./run.sh
+
+ENTRYPOINT ["/run.sh"]
