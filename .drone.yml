@@ -23,7 +23,7 @@ pipeline:
       event: [ push, deployment ]
 
   deploy_to_dev:
-    image: quay.io/ukhomeofficedigital/refdata:$${DRONE_COMMIT_SHA}
+    image: quay.io/ukhomeofficedigital/refdata:${DRONE_COMMIT_SHA}
     secrets:
       - DEV_POSTGRES_DB
       - DEV_POSTGRES_SERVER
