@@ -43,7 +43,7 @@ COMMENT ON COLUMN unlocode.fixedtransport IS '{"label": "Fixed transport", "desc
 COMMENT ON COLUMN unlocode.bordercrossing IS '{"label": "Border crossing", "description": "Is a border crossing point?", "summaryview": "false"}';
 COMMENT ON COLUMN unlocode.subdivision IS '{"label": "County", "description": "Area of port", "summaryview": "false", "aliases": "region"}';
 COMMENT ON COLUMN unlocode.roadterminal IS '{"label": "Road terminal", "description": "Is a road terminal?", "summaryview": "false"}';
-COMMENT ON COLUMN unlocode.countryid IS '{"label": "Linked country id", "description": "Country link to Country dataset", "summaryview": "false", "linkedrecord": "country(id)"';
+COMMENT ON COLUMN unlocode.countryid IS '{"label": "Linked country id", "description": "Country link to Country dataset", "summaryview": "false", "linkedrecord": "country(id)"}';
 COMMENT ON COLUMN unlocode.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN unlocode.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
 COMMENT ON COLUMN unlocode.iso31661alpha2 IS '{"label": "2 digit alpha code", "description": "Country 2 Character alpha code", "summaryview": "true"}';

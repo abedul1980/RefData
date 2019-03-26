@@ -29,6 +29,6 @@ COMMENT ON COLUMN icao.icao IS '{"label": "ICAO code", "description": "ICAO code
 COMMENT ON COLUMN icao.geolat IS '{"label": "Latitude", "description": "Geographic latitude", "summaryview": "false"}';
 COMMENT ON COLUMN icao.geolong IS '{"label": "Longitude", "description": "Geographic longitude", "summaryview": "false"}';
 COMMENT ON COLUMN icao.type IS '{"label": "Port type", "description": "Type of port", "summaryview": "true"}';
-COMMENT ON COLUMN icao.countryid IS '{"label": "Linked country id", "description": "Country link to Country dataset", "summaryview": "false", "linkedrecord": "country(id)"';
+COMMENT ON COLUMN icao.countryid IS '{"label": "Linked country id", "description": "Country link to Country dataset", "summaryview": "false", "linkedrecord": "country(id)"}';
 COMMENT ON COLUMN icao.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN icao.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
