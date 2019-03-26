@@ -87,3 +87,16 @@ pipeline:
     when:
       branch: master
       event: [ push, deployment ]
+
+  steps:
+  - name: slack
+    image: plugins/slack
+    settings:
+      webhook: https://hooks.slack.com/services/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
+      channel: refdata
+      template: >
+        {{#success build.status}}
+          build {{build.number}} succeeded. Good job.
+        {{else}}
+          build {{build.number}} failed. Fix me please.
+        {{/success}}
