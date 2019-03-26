@@ -1,4 +1,4 @@
-FROM digitalpatterns/docker-flyway
+FROM quay.io/digitalpatterns/docker-flyway
 
 COPY --chown=1000 docker/ /docker/
 COPY --chown=1000 schemas /schemas/
