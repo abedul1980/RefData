@@ -88,8 +88,7 @@ pipeline:
       branch: master
       event: [ push, deployment ]
 
-  steps:
-  - name: slack
+  name: slack
     image: plugins/slack
     settings:
       webhook: https://hooks.slack.com/services/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
