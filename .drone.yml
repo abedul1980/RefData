@@ -15,7 +15,7 @@ pipeline:
     # whitelist: CVE_SOMENAME_1,CVE_SOMENAME_2
     # An optional whitelist file containing a list of CSV relative to the repo path
     # whitelist_file: <PATH>
-    fail_on_detection: true
+    fail_on_detection: false
 
   image_to_quay:
     image: quay.io/ukhomeofficedigital/drone-docker
