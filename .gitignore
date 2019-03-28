@@ -2,3 +2,4 @@
 schemas/reference/R__bulkload.sql
 postgrest/*
 .idea/*
+postgres_data_refdata/*

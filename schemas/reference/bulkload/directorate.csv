@@ -1,6 +1,6 @@
 id,name,departmentid
-1,Operational Assurance,1
-2,Border Force Operations,1
-3,Border Systems,1
-4,EU Exit,1
-5,Stratergy and Transformation,1
+1,Operational Assurance,1,OPAS
+2,Border Force Operations,1,BFOPS
+3,Border Systems,1,BSYS
+4,EU Exit,1,EUX
+5,Strategy and Transformation,1,SYTRAN

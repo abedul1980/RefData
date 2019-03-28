@@ -1,25 +1,25 @@
 id,name,directorateid
-1,Stratergy and Policy,5
-2,People Capability,5
-3,Business Planning,5
-4,Industry Partnerships,5
-5,Transformation and Change,5
-6,BF EU Exit Policy,4
-7,BF EU Exit Delivery,4
-8,EU Exit Systems and Contingencies,3
-9,Government Data Protection Regulations,3
-10,Architecture and Engineering,3
-11,Border Systems Technology Projects,3
-12,Digital Passenger Services,3
-13,Digital Permissions Programme,3
-14,Border Systems Portfolio,3
-15,Digital Services at the Border,3
-16,Cyclamen Programme and Detection Services,3
-17,Intelligence,2
-18,South East and Europe,2
-19,Heathrow,2
-20,National Operations,2
-21,South,2
-22,North,2
-23,Central,2
-24,Logistics,2 
+1,Strategy and Policy,5,STRAP
+2,People Capability,5,PPLC
+3,Business Planning,5,BPLN
+4,Industry Partnerships,5,INDPAR
+5,Transformation and Change,5,TRANCH
+6,BF EU Exit Policy,4,BFEUP
+7,BF EU Exit Delivery,4,BFEUD
+8,EU Exit Systems and Contingencies,3,EUXSYS
+9,Government Data Protection Regulations,3,GDPR
+10,Architecture and Engineering,3,ARCHEN
+11,Border Systems Technology Projects,3,BSTP
+12,Digital Passenger Services,3,DIGPAS
+13,Digital Permissions Programme,3,DIGPER
+14,Border Systems Portfolio,3,BSYSP
+15,Digital Services at the Border,3,DIGSER
+16,Cyclamen Programme and Detection Services,3,CYCPRO
+17,Intelligence,2,INTEL
+18,South East and Europe,2,SEEU
+19,Heathrow,2,HROW
+20,National Operations,2,NATOPS
+21,South,2,SOUTH
+22,North,2,NORTH
+23,Central,2,CENT
+24,Logistics,2,LOGIST
