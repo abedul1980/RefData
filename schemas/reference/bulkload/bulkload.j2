@@ -14,7 +14,9 @@ INSERT INTO ministry
     FROM tmpministry
   ON CONFLICT (id) DO
     UPDATE
-      SET name = EXCLUDED.name;
+      SET 
+        name = EXCLUDED.name,
+        code = EXCLUDED.code;
 
 DROP TABLE tmpministry;
 
@@ -38,7 +40,8 @@ ON CONFLICT (id) DO
 UPDATE
   SET
     name = EXCLUDED.name,
-    ministryid = EXCLUDED.ministryid;
+    ministryid = EXCLUDED.ministryid,
+    code = EXCLUDED.code;
 
 DROP TABLE tmpdepartment;
 
@@ -62,7 +65,8 @@ ON CONFLICT (id) DO
 UPDATE
   SET
     name = EXCLUDED.name,
-    departmentid = EXCLUDED.departmentid;
+    departmentid = EXCLUDED.departmentid,
+    code = EXCLUDED.code;
 
 DROP TABLE tmpdirectorate;
 
@@ -86,7 +90,8 @@ ON CONFLICT (id) DO
 UPDATE
   SET
     name = EXCLUDED.name,
-    directorateid = EXCLUDED.directorateid;
+    directorateid = EXCLUDED.directorateid,
+    code = EXCLUDED.code;
 
 DROP TABLE tmpbranch;
 
