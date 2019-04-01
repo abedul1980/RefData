@@ -2,7 +2,7 @@ CREATE TABLE command (
   id int4 NOT NULL PRIMARY KEY,
   name varchar(100)  NOT NULL,
   divisionid int4 NOT NULL REFERENCES division(id),
-  code varchar(6) NOT NULL,
+  code varchar(8) NOT NULL,
   validfrom date,
   validto date
 );

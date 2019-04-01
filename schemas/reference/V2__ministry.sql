@@ -1,7 +1,7 @@
 CREATE TABLE ministry (
   id INTEGER NOT NULL PRIMARY KEY,
   name CHARACTER VARYING(60) NOT NULL,
-  code VARCHAR(6) NOT NULL,
+  code VARCHAR(8) NOT NULL,
   validfrom date,
   validto date
 );

@@ -2,7 +2,7 @@ CREATE TABLE department (
   id INTEGER NOT NULL PRIMARY KEY,
   name CHARACTER VARYING(100) NOT NULL,
   ministryid INTEGER NOT NULL REFERENCES ministry(id),
-  code VARCHAR(6) NOT NULL,
+  code VARCHAR(8) NOT NULL,
   validfrom date,
   validto date
 );

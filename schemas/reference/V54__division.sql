@@ -2,7 +2,7 @@ CREATE TABLE division (
   id int4 NOT NULL PRIMARY KEY,
   name varchar(100) NOT NULL,
   branchid int4 NOT NULL REFERENCES branch(id),
-  code varchar(6) NOT NULL,
+  code varchar(8) NOT NULL,
   validfrom date,
   validto date
 );

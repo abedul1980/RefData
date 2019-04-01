@@ -8,7 +8,7 @@ CREATE TABLE location (
   geolong numeric NOT NULL,
   icaoid uuid REFERENCES icao(id),
   bflocationtypeid uuid REFERENCES bflocationtype(id),
-  code VARCHAR(6) NOT NULL
+  code VARCHAR(8) NOT NULL
 );
 
 -- GRANTs
