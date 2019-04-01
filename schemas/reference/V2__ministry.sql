@@ -10,8 +10,8 @@ COMMENT ON TABLE ministry IS '{"description": "Government ministries", "schemala
 COMMENT ON COLUMN ministry.id IS '{"label": "Identifier", "description": "database unique identity record", "summaryview": "false"}';
 COMMENT ON COLUMN ministry.name IS '{"label": "Name", "description": "Name of branch or region", "summaryview": "true"}';
 COMMENT ON COLUMN ministry.code IS '{"label": "Code", "description": "Code of branch or region", "summaryview": "true"}';
-COMMENT ON COLUMN nationality.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
-COMMENT ON COLUMN nationality.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
+COMMENT ON COLUMN ministry.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
+COMMENT ON COLUMN ministry.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
 
 GRANT SELECT ON ministry TO ${serviceuser};
 GRANT SELECT ON ministry TO ${readonlyuser};

@@ -16,7 +16,9 @@ INSERT INTO ministry
     UPDATE
       SET 
         name = EXCLUDED.name,
-        code = EXCLUDED.code;
+        code = EXCLUDED.code,
+        validfrom = EXCLUDED.validfrom,
+        validto = EXCLUDED.validto;
 
 DROP TABLE tmpministry;
 
@@ -41,7 +43,9 @@ UPDATE
   SET
     name = EXCLUDED.name,
     ministryid = EXCLUDED.ministryid,
-    code = EXCLUDED.code;
+    code = EXCLUDED.code,
+    validfrom = EXCLUDED.validfrom,
+    validto = EXCLUDED.validto;
 
 DROP TABLE tmpdepartment;
 
@@ -66,7 +70,9 @@ UPDATE
   SET
     name = EXCLUDED.name,
     departmentid = EXCLUDED.departmentid,
-    code = EXCLUDED.code;
+    code = EXCLUDED.code,
+    validfrom = EXCLUDED.validfrom,
+    validto = EXCLUDED.validto;
 
 DROP TABLE tmpdirectorate;
 
@@ -91,7 +97,9 @@ UPDATE
   SET
     name = EXCLUDED.name,
     directorateid = EXCLUDED.directorateid,
-    code = EXCLUDED.code;
+    code = EXCLUDED.code,
+    validfrom = EXCLUDED.validfrom,
+    validto = EXCLUDED.validto;
 
 DROP TABLE tmpbranch;
 

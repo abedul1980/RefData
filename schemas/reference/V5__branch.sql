@@ -11,8 +11,8 @@ COMMENT ON TABLE branch IS '{"description": "Branch or Region names", "schemalas
 COMMENT ON COLUMN branch.id IS '{"label": "Identifier", "description": "database unique identity record", "summaryview": "false"}';
 COMMENT ON COLUMN branch.name IS '{"label": "Name", "description": "Name of branch or region", "summaryview": "true", "aliases": "region"}';
 COMMENT ON COLUMN branch.code IS '{"label": "Code", "description": "Code of branch or region", "summaryview": "true"}';
-COMMENT ON COLUMN nationality.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
-COMMENT ON COLUMN nationality.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
+COMMENT ON COLUMN branch.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
+COMMENT ON COLUMN branch.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
 
 
 GRANT SELECT ON branch TO ${serviceuser};
