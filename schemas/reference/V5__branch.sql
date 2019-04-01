@@ -2,7 +2,7 @@ CREATE TABLE branch (
   id INTEGER NOT NULL PRIMARY KEY,
   name CHARACTER VARYING(100) NOT NULL,
   directorateid INTEGER NOT NULL REFERENCES directorate(id),
-  code VARCHAR(6) NOT NULL
+  code VARCHAR(8) NOT NULL
 );
 
 COMMENT ON TABLE branch IS '{"description": "Branch or Region names", "schemalastupdated": "06/03/2019", "dataversion": 1}';

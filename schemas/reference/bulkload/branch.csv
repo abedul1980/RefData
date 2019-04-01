@@ -1,25 +1,25 @@
 id,name,directorateid
-1,Strategy and Policy,5,STRAP
-2,People Capability,5,PPLC
-3,Business Planning,5,BPLN
-4,Industry Partnerships,5,INDPAR
-5,Transformation and Change,5,TRANCH
+1,Strategy and Policy,5,BFSTRP
+2,People Capability,5,BFPPLC
+3,Business Planning,5,BFBPLN
+4,Industry Partnerships,5,BFINDPAR
+5,Transformation and Change,5,BFTRANCH
 6,BF EU Exit Policy,4,BFEUP
 7,BF EU Exit Delivery,4,BFEUD
-8,EU Exit Systems and Contingencies,3,EUXSYS
-9,Government Data Protection Regulations,3,GDPR
-10,Architecture and Engineering,3,ARCHEN
-11,Border Systems Technology Projects,3,BSTP
-12,Digital Passenger Services,3,DIGPAS
-13,Digital Permissions Programme,3,DIGPER
-14,Border Systems Portfolio,3,BSYSP
-15,Digital Services at the Border,3,DIGSER
-16,Cyclamen Programme and Detection Services,3,CYCPRO
-17,Intelligence,2,INTEL
-18,South East and Europe,2,SEEU
-19,Heathrow,2,HROW
-20,National Operations,2,NATOPS
-21,South,2,SOUTH
-22,North,2,NORTH
-23,Central,2,CENT
-24,Logistics,2,LOGIST
+8,EU Exit Systems and Contingencies,3,BFEUX
+9,Government Data Protection Regulations,3,BFGDPR
+10,Architecture and Engineering,3,BFARCHEN
+11,Border Systems Technology Projects,3,BFBSTP
+12,Digital Passenger Services,3,BFDIGPAS
+13,Digital Permissions Programme,3,BFDIGPER
+14,Border Systems Portfolio,3,BFBSYSP
+15,Digital Services at the Border,3,BFDIGSER
+16,Cyclamen Programme and Detection Services,3,BFCYCPRO
+17,Intelligence,2,BFINTEL
+18,South East and Europe,2,BFSEEU
+19,Heathrow,2,BFHROW
+20,National Operations,2,BFNATOPS
+21,South,2,BFSOUTH
+22,North,2,BFNORTH
+23,Central,2,BFCENT
+24,Logistics,2,BFLOGIST
