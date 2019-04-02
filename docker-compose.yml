@@ -1,5 +1,25 @@
 version: '3'
+
+
+volumes:
+  postgres_data_refdata:
+    driver: local
+
+
 services:
+  postgres_refdata:
+    image: postgres:10-alpine
+    restart: on-failure
+    container_name: postgres_refdata
+    volumes:
+      - postgres_data_refdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+    ports:
+      - 5433:5432
+
   flyway:
     build: .
     image: quay.io/ukhomeofficedigital/refdata
@@ -27,6 +47,43 @@ services:
       FLYWAY_PLACEHOLDERS_GOVERNANCE_ANON_USER: webanongovernance
       FLYWAY_PLACEHOLDERS_GOVERNANCE_SERVICE_USER: servicegovernance
       FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER: readonlygovernance
+
+  postgrest_reference:
+    image: quay.io/ukhomeofficedigital/postgrest
+    restart: on-failure
+    container_name: postgrest_reference
+    environment:
+      PGRST_DB_URI: "postgres://authenticatorreference:auth1234@postgres_refdata:5432/reference"
+      PGRST_DB_ANON_ROLE: webanon
+      PGRST_SECRET_IS_BASE64: "false"
+      PGRST_JWT_AUD: postgrest-refdata
+      PGRST_ROLE_CLAIM_KEY: .refdbrole
+      PGRST_DB_SCHEMA: reference
+      PGRST_SERVER_PROXY_URI: "http://localhost:3000/"
+      KEYCLOAK_URL: "http://keycloak:8080/keycloak"
+      KEYCLOAK_REALM: refdata
+    command: /bin/getKeycloakKey.sh
+    depends_on:
+      - postgres_refdata
+
+  postgrest_governance:
+    image: quay.io/ukhomeofficedigital/postgrest
+    restart: on-failure
+    container_name: postgrest_governance
+    environment:
+      PGRST_DB_URI: "postgres://authenticatorgovernance:auth1234@postgres_refdata:5432/reference"
+      PGRST_DB_ANON_ROLE: webanongovernance
+      PGRST_SECRET_IS_BASE64: "false"
+      PGRST_JWT_AUD: postgrest-governance
+      PGRST_ROLE_CLAIM_KEY: .govdbrole
+      PGRST_DB_SCHEMA: governance
+      PGRST_SERVER_PROXY_URI: "http://localhost:3000/"
+      KEYCLOAK_URL: "http://keycloak:8080/keycloak"
+      KEYCLOAK_REALM: refdata
+    command: /bin/getKeycloakKey.sh
+    depends_on:
+      - postgres_refdata
+
 networks:
   default:
     external:
