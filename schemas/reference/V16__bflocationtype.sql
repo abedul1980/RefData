@@ -9,7 +9,9 @@ CREATE TABLE bflocationtype (
   bordercrossing bool NOT NULL,
   roadterminal bool NOT NULL,
   portclassification int2,
-  description varchar(60)  NOT NULL
+  description varchar(60)  NOT NULL,
+  validfrom date,
+  validto date
 );
 
 -- GRANTs
@@ -29,3 +31,5 @@ COMMENT ON COLUMN bflocationtype.bordercrossing IS '{"label": "Border crossing",
 COMMENT ON COLUMN bflocationtype.roadterminal IS '{"label": "Road terminal", "description": "Is location a road terminal?", "summaryview": "false"}';
 COMMENT ON COLUMN bflocationtype.portclassification IS '{"label": "Port classification", "description": "Port classification type", "summaryview": "true"}';
 COMMENT ON COLUMN bflocationtype.description IS '{"label": "Description", "description": "Description of port crossing", "summaryview": "true"}';
+COMMENT ON COLUMN bflocationtype.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
+COMMENT ON COLUMN bflocationtype.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';

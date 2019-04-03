@@ -3,7 +3,9 @@ CREATE TABLE indicators (
   indicator varchar(200),
   ct bool NOT NULL,
   ien bool NOT NULL,
-  referral bool NOT NULL
+  referral bool NOT NULL,
+  validfrom date,
+  validto date
 );
 
 -- GRANTs
@@ -16,3 +18,5 @@ COMMENT ON COLUMN indicators.indicator IS '{"label": "Indicator description", "d
 COMMENT ON COLUMN indicators.ct IS '{"label": "CT", "description": "Valid type for counter terrorism", "summaryview": "true"}';
 COMMENT ON COLUMN indicators.ien IS '{"label": "IEN", "description": "Valid type for immediate event notification", "summaryview": "true"}';
 COMMENT ON COLUMN indicators.referral IS '{"label": "Referral", "description": "Valid types for referrals", "summaryview": "true"}';
+COMMENT ON COLUMN indicators.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
+COMMENT ON COLUMN indicators.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';

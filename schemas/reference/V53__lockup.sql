@@ -3,7 +3,9 @@ CREATE TABLE lockup (
   name varchar(50) NOT NULL,
   description text NOT NULL,
   lockuptypeid int4 NOT NULL REFERENCES lockuptype(id),
-  locationid int4 NOT NULL REFERENCES location(id)
+  locationid int4 NOT NULL REFERENCES location(id),
+  validfrom date,
+  validto date
 );
 
 -- GRANTs
@@ -14,3 +16,5 @@ COMMENT ON TABLE lockup IS '{"description": "Seizure lockup types", "schemalastu
 COMMENT ON COLUMN lockup.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN lockup.name IS '{"label": "Name", "description": "Name of lockup", "summaryview": "true"}';
 COMMENT ON COLUMN lockup.description IS '{"label": "Description", "description": "Description of lockup", "summaryview": "true"}';
+COMMENT ON COLUMN lockup.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
+COMMENT ON COLUMN lockup.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';

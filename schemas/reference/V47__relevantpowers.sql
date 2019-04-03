@@ -3,7 +3,9 @@ CREATE TABLE relevantpowers (
   code varchar(40) NOT NULL,
   description text NOT NULL,
   url varchar(100),
-  sop bool NOT NULL
+  sop bool NOT NULL,
+  validfrom date,
+  validto date
 );
 
 -- GRANTs
@@ -16,3 +18,5 @@ COMMENT ON COLUMN relevantpowers.code IS '{"label": "Legal code", "description":
 COMMENT ON COLUMN relevantpowers.description IS '{"label": "Description", "description": "Short description of power", "summaryview": "true"}';
 COMMENT ON COLUMN relevantpowers.url IS '{"label": "URL", "description": "Link to full power in legislation", "summaryview": "true"}';
 COMMENT ON COLUMN relevantpowers.sop IS '{"label": "sop", "description": "Valid power for search of person", "summaryview": "false"}';
+COMMENT ON COLUMN relevantpowers.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
+COMMENT ON COLUMN relevantpowers.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';

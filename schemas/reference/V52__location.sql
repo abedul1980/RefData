@@ -8,7 +8,9 @@ CREATE TABLE location (
   geolong numeric NOT NULL,
   icaoid uuid REFERENCES icao(id),
   bflocationtypeid uuid REFERENCES bflocationtype(id),
-  code VARCHAR(8) NOT NULL
+  code VARCHAR(8) NOT NULL,
+  validfrom date,
+  validto date
 );
 
 -- GRANTs
@@ -23,3 +25,5 @@ COMMENT ON COLUMN location.geolat IS '{"label": "Latitude", "description": "Geog
 COMMENT ON COLUMN location.geolong IS '{"label": "Longitude", "description": "Geographic longitude", "summaryview": "false"}';
 COMMENT ON COLUMN location.description IS '{"label": "Description", "description": "Description of location", "summaryview": "true"}';
 COMMENT ON COLUMN location.code IS '{"label": "Code", "description": "Code of location", "summaryview": "true"}';
+COMMENT ON COLUMN location.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
+COMMENT ON COLUMN location.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';

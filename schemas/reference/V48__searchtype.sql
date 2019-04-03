@@ -5,7 +5,9 @@ CREATE TABLE searchtype (
   description text,
   usedonobject bool,
   usedonhuman bool,
-  sop bool
+  sop bool,
+  validfrom date,
+  validto date
 );
 
 -- GRANTs
@@ -19,3 +21,5 @@ COMMENT ON COLUMN searchtype.description IS '{"label": "Description", "descripti
 COMMENT ON COLUMN searchtype.usedonobject IS '{"label": "Object", "description": "Allowed to be used on objects", "summaryview": "true"}';
 COMMENT ON COLUMN searchtype.usedonhuman IS '{"label": "Human", "description": "Allowed to be used on humans", "summaryview": "true"}';
 COMMENT ON COLUMN searchtype.sop IS '{"label": "Search of Person", "description": "Valid for search of person", "summaryview": "false"}';
+COMMENT ON COLUMN searchtype.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
+COMMENT ON COLUMN searchtype.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';

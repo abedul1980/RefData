@@ -1,4 +1,4 @@
-id,recordname
-1,Caution
-2,Arrest
-3,"Unspent Conviction"
+id,recordname,validfrom,validto
+1,Caution,,
+2,Arrest,,
+3,"Unspent Conviction",,

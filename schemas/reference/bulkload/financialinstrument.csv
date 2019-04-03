@@ -1,7 +1,7 @@
-id,type,description
-"1","Cash","Notes and Coins"
-"2","Banker's Drafts","NULL"
-"3","Bearer Bonds","NULL"
-"4","Bearer Shares","NULL"
-"5","Cheque","Including Travelers Cheques"
-"6","Postal or Money Order","NULL"
+id,type,description,validfrom,validto
+"1","Cash","Notes and Coins",,
+"2","Banker's Drafts","NULL",,
+"3","Bearer Bonds","NULL",,
+"4","Bearer Shares","NULL",,
+"5","Cheque","Including Travelers Cheques",,
+"6","Postal or Money Order","NULL",,
