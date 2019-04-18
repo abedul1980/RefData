@@ -15,5 +15,5 @@ COMMENT ON TABLE division IS '{"description": "Division", "schemalastupdated": "
 COMMENT ON COLUMN division.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN division.name IS '{"label": "Name", "description": "Division name", "summaryview": "true"}';
 COMMENT ON COLUMN division.code IS '{"label": "Code", "description": "Division code", "summaryview": "true"}';
-COMMENT ON COLUMN nationality.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
-COMMENT ON COLUMN nationality.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
+COMMENT ON COLUMN division.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
+COMMENT ON COLUMN division.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';

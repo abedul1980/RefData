@@ -26,5 +26,5 @@ COMMENT ON COLUMN team.name IS '{"label": "Name", "description": "Name of team",
 COMMENT ON COLUMN team.code IS '{"label": "Code", "description": "Team code", "summaryview": "true"}';
 COMMENT ON COLUMN team.description IS '{"label": "Description", "description": "Description of team", "summaryview": "true"}';
 COMMENT ON COLUMN team.costcentrecode IS '{"label": "Cost centre", "description": "Team cost centre code", "summaryview": "true"}';
-COMMENT ON COLUMN nationality.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
-COMMENT ON COLUMN nationality.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
+COMMENT ON COLUMN team.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
+COMMENT ON COLUMN team.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';

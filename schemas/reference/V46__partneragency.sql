@@ -6,7 +6,9 @@ CREATE TABLE partneragency (
   intelligence bool NOT NULL,
   disclosure bool NOT NULL,
   referralfrom bool NOT NULL,
-  referralto bool NOT NULL
+  referralto bool NOT NULL,
+  validfrom date,
+  validto date
 );
 
 -- GRANTs
@@ -22,3 +24,5 @@ COMMENT ON COLUMN partneragency.intelligence IS '{"label": "Intelligence", "desc
 COMMENT ON COLUMN partneragency.disclosure IS '{"label": "Disclosure", "description": "Valid disclosure partner", "summaryview": "true"}';
 COMMENT ON COLUMN partneragency.referralfrom IS '{"label": "Referral from", "description": "Partner allowed to make referrals", "summaryview": "true"}';
 COMMENT ON COLUMN partneragency.referralto IS '{"label": "Referral to", "description": "Partner allowed to receive referrals", "summaryview": "true"}';
+COMMENT ON COLUMN partneragency.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
+COMMENT ON COLUMN partneragency.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';

@@ -6,7 +6,9 @@ CREATE TABLE goodtype (
   "controlstrategypriority" varchar(1),
   "description" varchar(150),
   "enforcedfrom" date NOT NULL,
-  "enforcedto" date
+  "enforcedto" date,
+  validfrom date,
+  validto date
 );
 
 -- GRANTs
@@ -22,3 +24,5 @@ COMMENT ON COLUMN goodtype.description IS '{"label": "Description", "description
 COMMENT ON COLUMN goodtype.controlstrategypriority IS '{"label": "Control priority", "description": "Priority of control strategy", "summaryview": "false"}';
 COMMENT ON COLUMN goodtype.enforcedfrom IS '{"label": "Enforce from", "description": "Date controlled enforced from", "summaryview": "false"}';
 COMMENT ON COLUMN goodtype.enforcedto IS '{"label": "Enforced to", "description": "Date controlled enforced to", "summaryview": "false"}';
+COMMENT ON COLUMN goodtype.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
+COMMENT ON COLUMN goodtype.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
