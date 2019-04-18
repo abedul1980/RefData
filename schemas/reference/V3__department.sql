@@ -13,7 +13,7 @@ COMMENT ON COLUMN department.name IS '{"description": "Name of department", "sum
 COMMENT ON COLUMN department.code IS '{"description": "Code of department", "summaryview": "true"}';
 COMMENT ON COLUMN department.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN department.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
-
+COMMENT ON COLUMN department.ministryid IS '{"label": "Ministry ID", "description": "Link to ministry entity", "summaryview" : "false"}';
 
 GRANT SELECT ON department TO ${serviceuser};
 GRANT SELECT ON department TO ${readonlyuser};

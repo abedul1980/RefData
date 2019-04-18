@@ -28,3 +28,10 @@ COMMENT ON COLUMN team.description IS '{"label": "Description", "description": "
 COMMENT ON COLUMN team.costcentrecode IS '{"label": "Cost centre", "description": "Team cost centre code", "summaryview": "true"}';
 COMMENT ON COLUMN team.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN team.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
+COMMENT ON COLUMN team.bffunctiontypeid IS '{"label": "Function type ID", "description": "Link to border force functions entity", "summaryview" : "false"}';
+COMMENT ON COLUMN team.ministryid IS '{"label": "Ministry ID", "description": "Link to ministry entity", "summaryview" : "false"}';
+COMMENT ON COLUMN team.departmentid IS '{"label": "Department ID", "description": "Link to department entity", "summaryview" : "false"}';
+COMMENT ON COLUMN team.directorateid IS '{"label": "Directorate ID", "description": "Link to directorate entity", "summaryview" : "false"}';
+COMMENT ON COLUMN team.branchid IS '{"label": "Branch ID", "description": "Link to branch entity", "summaryview" : "false"}';
+COMMENT ON COLUMN team.divisionid IS '{"label": "Division ID", "description": "Link to division entity", "summaryview" : "false"}';
+COMMENT ON COLUMN team.commandid IS '{"label": "Command ID", "description": "Link to command entity", "summaryview" : "false"}';

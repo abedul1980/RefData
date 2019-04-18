@@ -15,3 +15,4 @@ COMMENT ON COLUMN activities.id IS '{"label": "Identifier", "description": "Uniq
 COMMENT ON COLUMN activities.activity IS '{"label": "Activity", "description": "Activity descriptiopn", "summaryview": "true"}';
 COMMENT ON COLUMN activities.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN activities.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
+COMMENT ON COLUMN activities.activitytypeid IS '{"label": "Activity type ID", "description": "Link to activity type entity", "summaryview" : "false"}';

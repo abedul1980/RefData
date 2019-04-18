@@ -17,3 +17,4 @@ COMMENT ON COLUMN division.name IS '{"label": "Name", "description": "Division n
 COMMENT ON COLUMN division.code IS '{"label": "Code", "description": "Division code", "summaryview": "true"}';
 COMMENT ON COLUMN division.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN division.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
+COMMENT ON COLUMN division.branchid IS '{"label": "Branch / Region ID", "description": "link to branch entity", "summaryview" : "false"}';

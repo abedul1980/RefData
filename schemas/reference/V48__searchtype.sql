@@ -23,3 +23,4 @@ COMMENT ON COLUMN searchtype.usedonhuman IS '{"label": "Human", "description": "
 COMMENT ON COLUMN searchtype.sop IS '{"label": "Search of Person", "description": "Valid for search of person", "summaryview": "false"}';
 COMMENT ON COLUMN searchtype.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN searchtype.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
+COMMENT ON COLUMN searchtype.relevantpowerid IS '{"label": "Relevant power ID", "description": "Link to relevant power entity", "summaryview" : "false"}';

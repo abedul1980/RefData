@@ -16,3 +16,4 @@ COMMENT ON COLUMN grade.id IS '{"label": "Identifier", "description": "Unique id
 COMMENT ON COLUMN grade.name IS '{"label": "Grade code", "description": "Civil service grade code", "summaryview": "true"}';
 COMMENT ON COLUMN grade.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN grade.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
+COMMENT ON COLUMN grade.parentgradetypeid IS '{"label": "Parent grade ID", "description": "Link to parent grade", "summaryview" : "false"}';

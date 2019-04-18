@@ -17,3 +17,4 @@ COMMENT ON COLUMN command.name IS '{"label": "Name", "description": "Name of com
 COMMENT ON COLUMN command.code IS '{"label": "Code", "description": "Code of command", "summaryview": "true"}';
 COMMENT ON COLUMN command.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN command.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
+COMMENT ON COLUMN command.divisionid IS '{"label": "Division ID", "description": "Link to division entity", "summaryview" : "false"}';

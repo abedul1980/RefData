@@ -27,3 +27,7 @@ COMMENT ON COLUMN location.description IS '{"label": "Description", "description
 COMMENT ON COLUMN location.code IS '{"label": "Code", "description": "Code of location", "summaryview": "true"}';
 COMMENT ON COLUMN location.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN location.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
+COMMENT ON COLUMN location.unlocodeid IS '{"label": "UN Location Code ID", "description": "Link to unlocode entity", "summaryview" : "false"}';
+COMMENT ON COLUMN location.addressid IS '{"label": "Address ID", "description": "Link to address entity", "summaryview" : "false"}';
+COMMENT ON COLUMN location.icaoid IS '{"label": "ICAO Code ID", "description": "Link to icao entity", "summaryview" : "false"}';
+COMMENT ON COLUMN location.bflocationtypeid IS '{"label": "BF location type ID", "description": "Link to bflocationtype entity", "summaryview" : "false"}';

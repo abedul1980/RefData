@@ -13,7 +13,7 @@ COMMENT ON COLUMN branch.name IS '{"label": "Name", "description": "Name of bran
 COMMENT ON COLUMN branch.code IS '{"label": "Code", "description": "Code of branch or region", "summaryview": "true"}';
 COMMENT ON COLUMN branch.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN branch.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
-
+COMMENT ON COLUMN branch.directorateid IS '{"label": "Directorate ID", "description": "Link to directorate entity", "summaryview" : "false"}';
 
 GRANT SELECT ON branch TO ${serviceuser};
 GRANT SELECT ON branch TO ${readonlyuser};

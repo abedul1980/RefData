@@ -13,7 +13,7 @@ COMMENT ON COLUMN directorate.name IS '{"label": "Name","description": "Name of 
 COMMENT ON COLUMN directorate.code IS '{"label": "Code","description": "Code of directorate", "summaryview": "true"}';
 COMMENT ON COLUMN directorate.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN directorate.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
-
+COMMENT ON COLUMN directorate.departmentid IS '{"label": "Department ID", "description": "Link to department entity", "summaryview" : "false"}';
 
 GRANT SELECT ON directorate TO ${serviceuser};
 GRANT SELECT ON directorate TO ${readonlyuser};

@@ -15,7 +15,7 @@ COMMENT ON COLUMN currency.id IS '{"label": "Identifier", "description": "databa
 COMMENT ON COLUMN currency.iso31661alpha2 IS '{"label": "2 digit alpha code", "description": "Country 2 Character alpha code", "summaryview": "true"}';
 COMMENT ON COLUMN currency.currency IS '{"label": "Currency", "description": "Currency name", "summaryview": "true"}';
 COMMENT ON COLUMN currency.currencycode IS '{"label": "Code", "description": "Currency code", "summaryview": "true"}';
-COMMENT ON COLUMN currency.countryid IS '{"label": "Linked country id", "description": "Country link to Country dataset", "summaryview": "false", "linkedrecord": "country(id)"}';
+COMMENT ON COLUMN currency.countryid IS '{"label": "Linked country id", "description": "Country link to Country dataset", "summaryview": "false"}';
 COMMENT ON COLUMN currency.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN currency.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
 

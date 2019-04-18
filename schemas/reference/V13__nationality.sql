@@ -23,7 +23,7 @@ COMMENT ON COLUMN nationality.visarequired IS '{"label": "Visa required", "descr
 COMMENT ON COLUMN nationality.evwoptional IS '{"label": "Optional - EVW", "description": "Is Electronic Visa Waver optional to visit UK", "summaryview": "false"}';
 COMMENT ON COLUMN nationality.diplomaticexception IS '{"label": "Exception - Diplomatic", "description": "Are there diplomatic exceptions for visiting the UK", "summaryview": "false"}';
 COMMENT ON COLUMN nationality.specialexception IS '{"label": "Exception - Special", "description": "Are there special exceptions for visiting the UK", "summaryview": "false"}';
-COMMENT ON COLUMN nationality.countryid IS '{"label": "Linked country id", "description": "Country link to Country dataset", "summaryview": "false", "linkedrecord": "country(id)"}';
+COMMENT ON COLUMN nationality.countryid IS '{"label": "Linked country id", "description": "Country link to Country dataset", "summaryview": "false"}';
 COMMENT ON COLUMN nationality.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN nationality.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
 
