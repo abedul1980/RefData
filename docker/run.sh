@@ -17,7 +17,8 @@ export FLYWAY_PLACEHOLDERS_GOVERNANCEOWNERNAME=${FLYWAY_PLACEHOLDERS_GOVERNANCE_
 export FLYWAY_PLACEHOLDERS_GOVERNANCEOWNERPASSWORD=${FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_PASSWORD:-mysecretpassword}
 export FLYWAY_PLACEHOLDERS_GOVERNANCESCHEMA=${FLYWAY_PLACEHOLDERS_GOVERNANCE_SCHEMA:-governance}
 
-cd /docker
+export BASEPATH="${PWD}"
+echo "Running from base path: ${BASEPATH}"
 
 echo "Checking if postgres is up and ready for connections"
 export PGPASSWORD=${FLYWAY_INIT_PASSWORD}
@@ -50,12 +51,14 @@ then
     echo "Database already exists"
 else
     echo "Database does not exist creating - Bootstrapping databases"
-    flyway -configFiles=flyway_init_docker.conf migrate
+    export FLYWAY_LOCATIONS="filesystem:${BASEPATH}/schemas/init"
+    flyway -configFiles=${BASEPATH}/docker/flyway_init_docker.conf migrate
     if [[ "$?" != 0 ]]
     then
         echo "Error: initialising database"
         exit 1
     fi
+    cd ${BASEPATH}/docker/
     yasha bootstrap.j2 -o /tmp/bootstrap.sql
     psql postgresql://${FLYWAY_INIT_USER}@${POSTGRES_SERVER}:${POSTGRES_PORT}/${POSTGRES_DB}${POSTGRES_OPTIONS} < /tmp/bootstrap.sql
     if [[ "$?" != 0 ]]
@@ -66,7 +69,7 @@ else
 fi
 
 echo "Converting CSVs into bulk load"
-yasha -v /schemas/reference/bulkload/var.yaml /schemas/reference/bulkload/bulkload.j2 -o /schemas/reference/R__bulkload.sql
+yasha -v ${BASEPATH}/schemas/reference/bulkload/var.yaml ${BASEPATH}/schemas/reference/bulkload/bulkload.j2 -o ${BASEPATH}/schemas/reference/R__bulkload.sql
 if [[ "$?" != 0 ]]
 then
     echo "yasha conversion of csv's to bulk load file failed"
@@ -85,9 +88,9 @@ export FLYWAY_PLACEHOLDERS_AUTHENTICATORPASSWORD=${FLYWAY_PLACEHOLDERS_REFERENCE
 export FLYWAY_PLACEHOLDERS_ANONUSER=${FLYWAY_PLACEHOLDERS_REFERENCE_ANON_USER:-webanon}
 export FLYWAY_PLACEHOLDERS_SERVICEUSER=${FLYWAY_PLACEHOLDERS_REFERENCE_SERVICE_USER:-servicereferance}
 export FLYWAY_PLACEHOLDERS_READONLYUSER=${FLYWAY_PLACEHOLDERS_REFERENCE_READONLY_USER:-readonlyreferance}
+export FLYWAY_LOCATIONS="filesystem:${BASEPATH}/schemas/reference"
 
-
-flyway -configFiles=flyway_reference_docker.conf migrate
+flyway -configFiles=${BASEPATH}/docker/flyway_reference_docker.conf migrate
 if [[ "$?" != 0 ]]
 then
     echo "Error: migration of reference db failed"
@@ -106,8 +109,9 @@ export FLYWAY_PLACEHOLDERS_AUTHENTICATORPASSWORD=${FLYWAY_PLACEHOLDERS_GOVERNANC
 export FLYWAY_PLACEHOLDERS_ANONUSER=${FLYWAY_PLACEHOLDERS_GOVERNANCE_ANON_USER:-webanongovernance}
 export FLYWAY_PLACEHOLDERS_SERVICEUSER=${FLYWAY_PLACEHOLDERS_GOVERNANCE_SERVICE_USER:-servicegovernance}
 export FLYWAY_PLACEHOLDERS_READONLYUSER=${FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER:-readonlygovernance}
+export FLYWAY_LOCATIONS="filesystem:${BASEPATH}/schemas/governance"
 
-flyway -configFiles=flyway_governance_docker.conf migrate
+flyway -configFiles=${BASEPATH}/docker/flyway_governance_docker.conf migrate
 if [[ "$?" != 0 ]]
 then
     echo "Error: migration of governance db failed"
