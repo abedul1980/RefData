@@ -71,7 +71,7 @@ services:
       PGRST_DB_SCHEMA: reference
       PGRST_SERVER_PROXY_URI: "http://localhost:3000/"
       KEYCLOAK_URL: "http://keycloak:8080/keycloak"
-      KEYCLOAK_REALM: refdata
+      KEYCLOAK_REALM: dev
     command: /usr/local/bin/getKeycloakKey.sh
     depends_on:
       - postgres_refdata
@@ -89,7 +89,7 @@ services:
       PGRST_DB_SCHEMA: governance
       PGRST_SERVER_PROXY_URI: "http://localhost:3000/"
       KEYCLOAK_URL: "http://keycloak:8080/keycloak"
-      KEYCLOAK_REALM: refdata
+      KEYCLOAK_REALM: dev
     command: /usr/local/bin/getKeycloakKey.sh
     depends_on:
       - postgres_refdata
