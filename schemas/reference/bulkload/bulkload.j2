@@ -922,17 +922,17 @@ DROP TABLE tmpworkarea;
  SECURITYCLEARANCE
 */
 
-CREATE TEMP TABLE tmpsecurityclearance AS SELECT * FROM securityclearance WITH NO DATA;
+CREATE TEMP TABLE tmpclearancetype AS SELECT * FROM clearancetype WITH NO DATA;
 
-COPY tmpsecurityclearance FROM STDIN CSV HEADER;
-{% include securityclearance %}
+COPY tmpclearancetype FROM STDIN CSV HEADER;
+{% include clearancetype %}
 
 \.
 
 
-INSERT INTO securityclearance
+INSERT INTO clearancetype
   SELECT  *
-  FROM tmpsecurityclearance
+  FROM tmpclearancetype
 ON CONFLICT (id) DO
 UPDATE
   SET
@@ -941,4 +941,4 @@ UPDATE
     validfrom = Excluded.validfrom,
     validto = Excluded.validto;
 
-DROP TABLE tmpsecurityclearance;
+DROP TABLE tmpclearancetype;

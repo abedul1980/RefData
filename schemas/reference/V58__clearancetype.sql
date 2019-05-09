@@ -9,7 +9,6 @@ CREATE TABLE clearancetype (
 -- GRANTs
 GRANT SELECT ON clearancetype TO ${anonuser};
 GRANT SELECT ON clearancetype TO ${serviceuser};
-GRANT SELECT ON technicalprojectstatus TO ${readonlyuser};
 
 COMMENT ON TABLE clearancetype IS '{"description": "Security clearance types", "schemalastupdated": "02/05/2019", "dataversion": 1}';
 COMMENT ON COLUMN clearancetype.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';

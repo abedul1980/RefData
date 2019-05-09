@@ -67,7 +67,6 @@ services:
       - ${PUBLIC_REFDATA_FLYWAY}:/mnt
     depends_on:
       - postgres_refdata
-      - flyway_build
     networks:
       - db
     labels:
