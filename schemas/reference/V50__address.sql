@@ -20,9 +20,9 @@ COMMENT ON TABLE address IS '{"description": "Address list for location", "schem
 COMMENT ON COLUMN address.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN address.line1 IS '{"label": "Address line 1", "description": "First line of address", "summaryview": "true"}';
 COMMENT ON COLUMN address.line2 IS '{"label": "Address line 2", "description": "Second line of address", "summaryview": "false"}';
-COMMENT ON COLUMN address.line3 IS '{"label": "Address line 3" "description": "Third line of address", "summaryview": "false"}';
-COMMENT ON COLUMN address.city IS '{"label": "City", "description": "Town / City", "summaryview": "true", "aliases": "town"}';
-COMMENT ON COLUMN address.postcode IS '{"label": "Post code", "description": "Post Code / ZIP", "summaryview": "true", "aliases": "zip code"}';
+COMMENT ON COLUMN address.line3 IS '{"label": "Address line 3", "description": "Third line of address", "summaryview": "false"}';
+COMMENT ON COLUMN address.city IS '{"label": "City", "description": "Town / City", "summaryview": "true", "aliases": ["town"]}';
+COMMENT ON COLUMN address.postcode IS '{"label": "Post code", "description": "Post Code / ZIP", "summaryview": "true", "aliases": ["zip code"]}';
 COMMENT ON COLUMN address.countryid IS '{"label": "Linked country id", "description": "Country link to Country dataset", "summaryview": "false"}';
 COMMENT ON COLUMN address.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN address.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
