@@ -1,4 +1,4 @@
-id,name,directorateid,validfrom,validto
+id,name,directorateid,code,validfrom,validto
 1,Strategy and Policy,5,BFSTRP,,
 2,People Capability,5,BFPPLC,,
 3,Business Planning,5,BFBPLN,,
@@ -23,3 +23,4 @@ id,name,directorateid,validfrom,validto
 22,North,2,BFNORTH,,
 23,Central,2,BFCENT,,
 24,Logistics,2,BFLOGIST,,
+25,Operational Assurance Directorate,BFOPAS,,
