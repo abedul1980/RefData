@@ -60,7 +60,7 @@ pipeline:
     when:
       event: push
 
-git_tag:
+  git_tag:
     image: alpine/git
     secrets: [ ssh_key ]
     commands:
