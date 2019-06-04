@@ -58,6 +58,7 @@ pipeline:
       - git reset HEAD
       - /docker/run.sh
       - git tag testpassed
+      - git push origin --tags -f
     when:
       event: [ push ]
 
