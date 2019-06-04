@@ -57,10 +57,23 @@ pipeline:
       - git checkout -f master
       - git reset HEAD
       - /docker/run.sh
-      - git tag testpassed
-      - git push origin --tags -f
     when:
-      event: [ push ]
+      event: push
+
+git_tag:
+    image: alpine/git
+    secrets: [ ssh_key ]
+    commands:
+      - mkdir /root/.ssh/ && echo "$SSH_KEY" > /root/.ssh/id_rsa && chmod 0600 /root/.ssh/id_rsa
+      - ssh-keyscan github.com >> /root/.ssh/known_hosts && chmod 600 /root/.ssh/known_hosts
+      - printf  "Host github.com\n   Hostname github.com\n   IdentityFile /root/.ssh/id_rsa\n" > /root/.ssh/config
+      - chmod 0600 /root/.ssh/config
+      - printf "[github]\n[user]\n user = git" > /root/.gitconfig
+      - git remote add tag-origin  git@github.com:UKHomeOffice/RefData.git
+      - git tag --force dataok
+      - git push --force tag-origin dataok
+    when:
+      event: push
 
 #  deploy_to_dev:
 #    image: quay.io/ukhomeofficedigital/refdata:latest
