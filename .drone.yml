@@ -52,7 +52,7 @@ pipeline:
       - export FLYWAY_PLACEHOLDERS_GOVERNANCE_SERVICE_USER="govserviceuser"
       - export FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER="govreadonlyuser"
       - ls -la
-      - git checkout test
+      - git checkout -b test
       - git reset HEAD~1
       - git status
       - /docker/run.sh
