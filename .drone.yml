@@ -54,11 +54,11 @@ pipeline:
       - ls -la
       - git checkout -b test
       - git reset HEAD~1
-      - git status
+      - git log --oneline
       - /docker/run.sh
-      - git checkout master
+      - git checkout -f master
       - git reset HEAD
-      - git status
+      - git log --oneline
       - /docker/run.sh
     when:
       event: [ push ]
