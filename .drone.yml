@@ -51,6 +51,13 @@ pipeline:
       - export FLYWAY_PLACEHOLDERS_GOVERNANCE_ANON_USER="govanonuser"
       - export FLYWAY_PLACEHOLDERS_GOVERNANCE_SERVICE_USER="govserviceuser"
       - export FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER="govreadonlyuser"
+      - git checkout test
+      - git reset HEAD~1
+      - git status
+      - /docker/run.sh
+      - git checkout master
+      - git reset HEAD
+      - git status
       - /docker/run.sh
     when:
       event: [ push ]
