@@ -1,38 +1,32 @@
 pipeline:
 
   build:
-    image: quay.io/ukhomeofficedigital/drone-docker
-    commands:
-      - docker build -t refdata:$${DRONE_COMMIT_SHA} .
-    when:
-      event: push
-
-#  scan:
-#    image: quay.io/ukhomeofficedigital/anchore-submission:latest
-#    image_name: refdata:${DRONE_COMMIT_SHA}
-#    tolarates: medium
-#    fail_on_detection: false
-
-  image_to_quay:
-    image: quay.io/ukhomeofficedigital/drone-docker
-    secrets:
-      - DOCKER_USERNAME
-      - DOCKER_PASSWORD
-    registry: quay.io
-    repo: quay.io/ukhomeofficedigital/refdata
-    tags:
-      - ${DRONE_BUILD_NUMBER}
-      - ${DRONE_COMMIT_SHA}
-      - latest
-    when:
-      branch: master
-      event: [ push, deployment ]
+#    image: quay.io/ukhomeofficedigital/drone-docker
+#    commands:
+#      - docker build -t refdata:$${DRONE_COMMIT_SHA} .
+#    when:
+#      event: push
+#
+#  image_to_quay:
+#    image: quay.io/ukhomeofficedigital/drone-docker
+#    secrets:
+#      - DOCKER_USERNAME
+#      - DOCKER_PASSWORD
+#    registry: quay.io
+#    repo: quay.io/ukhomeofficedigital/refdata
+#    tags:
+#      - ${DRONE_BUILD_NUMBER}
+#      - ${DRONE_COMMIT_SHA}
+#      - latest
+#    when:
+#      branch: master
+#      event: [ push, deployment ]
 
   test:
-    image: quay.io/ukhomeofficedigital/refdata:${DRONE_COMMIT_SHA}
+    image: quay.io/ukhomeofficedigital/refdata:latest
     commands:
       - |
-        until psql -U postgres -d test -h database \
+        until PGPASSWORD=secret psql -U postgres -d postgres -h database \
          -c "SELECT 1;" >/dev/null 2>&1; do sleep 1; done
       - export POSTGRES_DB="postgres"
       - export POSTGRES_SERVER="database"
@@ -62,7 +56,7 @@ pipeline:
       event: [ push ]
 
   deploy_to_dev:
-    image: quay.io/ukhomeofficedigital/refdata:${DRONE_COMMIT_SHA}
+    image: quay.io/ukhomeofficedigital/refdata:latest
     secrets:
       - DEV_POSTGRES_DB
       - DEV_POSTGRES_SERVER
