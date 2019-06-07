@@ -1,17 +1,19 @@
 -- CHANGE name=init-currency-table
 CREATE TABLE currency (
   id INTEGER NOT NULL PRIMARY KEY,
-  iso31661alpha2 CHARACTER VARYING(2) NOT NULL,
-  currency CHARACTER VARYING(50) NOT NULL,
-  currencycode CHARACTER VARYING(3) NOT NULL,
+  iso31661alpha2 VARCHAR(2) NOT NULL,
+  currency VARCHAR(50) NOT NULL,
+  currencycode VARCHAR(3) NOT NULL,
   countryid INTEGER NULL REFERENCES country(id),
-  validfrom date,
-  validto date
+  validfrom TIMESTAMP WITH TIME ZONE,
+  validto TIMESTAMP WITH TIME ZONE
 );
 
 
+-- Table comment
 COMMENT ON TABLE currency IS '{"description": "Currencies", "schemalastupdated": "10/03/2019", "dataversion": 1}';
-COMMENT ON COLUMN currency.id IS '{"label": "Identifier", "description": "database unique identity record", "summaryview": "false"}';
+-- Column comments
+COMMENT ON COLUMN currency.id IS '{"label": "Identifier", "description": "Database unique identity record", "summaryview": "false"}';
 COMMENT ON COLUMN currency.iso31661alpha2 IS '{"label": "2 digit alpha code", "description": "Country 2 Character alpha code", "summaryview": "true"}';
 COMMENT ON COLUMN currency.currency IS '{"label": "Currency", "description": "Currency name", "summaryview": "true"}';
 COMMENT ON COLUMN currency.currencycode IS '{"label": "Code", "description": "Currency code", "summaryview": "true"}';

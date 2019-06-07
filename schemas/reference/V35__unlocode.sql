@@ -1,32 +1,29 @@
 CREATE TABLE "unlocode" (
-  "id" uuid NOT NULL PRIMARY KEY,
-  "iso31661alpha2" varchar(2) NULL,
-  "geolong" numeric,
-  "geolat" numeric,
-  "name" varchar(80) NOT NULL,
-  "namewodiacritics" varchar(80) NOT NULL,
-  "iata" varchar(3),
-  "locode" varchar(3) NOT NULL,
-  "seaport" bool NOT NULL,
-  "railterminal" bool NOT NULL,
-  "airport" bool NOT NULL,
-  "postexchange" bool NOT NULL,
-  "multimodal" bool NOT NULL,
-  "fixedtransport" bool NOT NULL,
-  "bordercrossing" bool NOT NULL,
-  "subdivision" varchar(3),
-  "roadterminal" bool NOT NULL,
+  id UUID NOT NULL PRIMARY KEY,
+  iso31661alpha2 VARCHAR(2) NULL,
+  geolong NUMERIC,
+  geolat NUMERIC,
+  name VARCHAR(80) NOT NULL,
+  namewodiacritics VARCHAR(80) NOT NULL,
+  iata VARCHAR(3),
+  locode VARCHAR(3) NOT NULL,
+  seaport BOOLEAN NOT NULL,
+  railterminal BOOLEAN NOT NULL,
+  airport BOOLEAN NOT NULL,
+  postexchange BOOLEAN NOT NULL,
+  multimodal BOOLEAN NOT NULL,
+  fixedtransport BOOLEAN NOT NULL,
+  bordercrossing BOOLEAN NOT NULL,
+  subdivision VARCHAR(3),
+  roadterminal BOOLEAN NOT NULL,
   countryid INTEGER NULL REFERENCES country(id),
-  validfrom date,
-  validto date
+  validfrom TIMESTAMP WITH TIME ZONE,
+  validto TIMESTAMP WITH TIME ZONE
 );
 
--- GRANTs
-GRANT SELECT ON unlocode TO ${anonuser};
-GRANT SELECT ON unlocode TO ${serviceuser};
-GRANT SELECT ON unlocode TO ${readonlyuser};
-
+-- Table comment
 COMMENT ON TABLE unlocode IS '{"description": "United Nations location code list", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+-- Column comments
 COMMENT ON COLUMN unlocode.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN unlocode.name IS '{"label": "Name", "description": "Location name", "summaryview": "true"}';
 COMMENT ON COLUMN unlocode.geolat IS '{"label": "Latitude", "description": "Geographic latitude", "summaryview": "false"}';
@@ -47,3 +44,8 @@ COMMENT ON COLUMN unlocode.countryid IS '{"label": "Linked country id", "descrip
 COMMENT ON COLUMN unlocode.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN unlocode.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
 COMMENT ON COLUMN unlocode.iso31661alpha2 IS '{"label": "2 digit alpha code", "description": "Country 2 Character alpha code", "summaryview": "true"}';
+
+-- GRANTs
+GRANT SELECT ON unlocode TO ${anonuser};
+GRANT SELECT ON unlocode TO ${serviceuser};
+GRANT SELECT ON unlocode TO ${readonlyuser};

@@ -1,17 +1,19 @@
 CREATE TABLE criminalrecordtype (
-  id int4 NOT NULL PRIMARY KEY,
-  recordname varchar(20) NOT NULL,
-  validfrom date,
-  validto date
+  id INT4 NOT NULL PRIMARY KEY,
+  recordname VARCHAR(20) NOT NULL,
+  validfrom TIMESTAMP WITH TIME ZONE,
+  validto TIMESTAMP WITH TIME ZONE
 );
+
+-- Table comment
+COMMENT ON TABLE criminalrecordtype IS '{"description": "Criminal record type", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+-- Column comments
+COMMENT ON COLUMN criminalrecordtype.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
+COMMENT ON COLUMN criminalrecordtype.recordname IS '{"description": "record category", "summaryview": "true"}';
+COMMENT ON COLUMN criminalrecordtype.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
+COMMENT ON COLUMN criminalrecordtype.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
 
 -- GRANTs
 GRANT SELECT ON criminalrecordtype TO ${anonuser};
 GRANT SELECT ON criminalrecordtype TO ${serviceuser};
 GRANT SELECT ON criminalrecordtype TO ${readonlyuser};
-
-COMMENT ON TABLE criminalrecordtype IS '{"description": "Criminal record type", "schemalastupdated": "06/03/2019", "dataversion": 1}';
-COMMENT ON COLUMN criminalrecordtype.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
-COMMENT ON COLUMN criminalrecordtype.recordname IS '{"description": "record category", "summaryview": "true"}';
-COMMENT ON COLUMN criminalrecordtype.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
-COMMENT ON COLUMN criminalrecordtype.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
