@@ -19,7 +19,7 @@ pipeline:
       - latest
     when:
       branch: master
-      event: [ push ]
+      event: push
 
   test:
     image: quay.io/ukhomeofficedigital/refdata:latest
@@ -110,7 +110,7 @@ pipeline:
       - /docker/run.sh
     when:
       branch: master
-      event: [ push ]
+      event: push
 
   deploy_to_prod:
     image: quay.io/ukhomeofficedigital/refdata:latest
@@ -164,7 +164,8 @@ pipeline:
       - export FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER=$${PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER}
       - /docker/run.sh
     when:
-      event: [ deployment ]
+      event: deployment
+      environment: production
 
 services:
   database:
