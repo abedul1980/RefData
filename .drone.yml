@@ -1,4 +1,25 @@
 pipeline:
+  build:
+    image: quay.io/ukhomeofficedigital/drone-docker
+    commands:
+      - docker build -t refdata:$${DRONE_COMMIT_SHA} .
+    when:
+      event: push
+
+  image_to_quay:
+    image: quay.io/ukhomeofficedigital/drone-docker
+    secrets:
+      - DOCKER_USERNAME
+      - DOCKER_PASSWORD
+    registry: quay.io
+    repo: quay.io/ukhomeofficedigital/refdata
+    tags:
+      - ${DRONE_BUILD_NUMBER}
+      - ${DRONE_COMMIT_SHA}
+      - latest
+    when:
+      branch: master
+      event: [ push ]
 
   test:
     image: quay.io/ukhomeofficedigital/refdata:latest
