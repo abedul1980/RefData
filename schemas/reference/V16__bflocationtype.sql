@@ -1,25 +1,22 @@
 CREATE TABLE bflocationtype (
-  id uuid NOT NULL PRIMARY KEY,
-  seaport bool NOT NULL,
-  railterminal bool NOT NULL,
-  airport bool NOT NULL,
-  postexchange bool NOT NULL,
-  multimodal bool NOT NULL,
-  fixedtransport bool NOT NULL,
-  bordercrossing bool NOT NULL,
-  roadterminal bool NOT NULL,
-  portclassification int2,
-  description varchar(60)  NOT NULL,
-  validfrom date,
-  validto date
+  id UUID NOT NULL PRIMARY KEY,
+  seaport BOOLEAN NOT NULL,
+  railterminal BOOLEAN NOT NULL,
+  airport BOOLEAN NOT NULL,
+  postexchange BOOLEAN NOT NULL,
+  multimodal BOOLEAN NOT NULL,
+  fixedtransport BOOLEAN NOT NULL,
+  bordercrossing BOOLEAN NOT NULL,
+  roadterminal BOOLEAN NOT NULL,
+  portclassification INT2,
+  description VARCHAR(60)  NOT NULL,
+  validfrom TIMESTAMP WITH TIME ZONE,
+  validto TIMESTAMP WITH TIME ZONE
 );
 
--- GRANTs
-GRANT SELECT ON sex TO ${anonuser};
-GRANT SELECT ON sex TO ${serviceuser};
-GRANT SELECT ON sex TO ${readonlyuser};
-
+-- Table comment
 COMMENT ON TABLE bflocationtype IS '{"description": "Detailed list of border port types", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+-- Column comments
 COMMENT ON COLUMN bflocationtype.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN bflocationtype.seaport IS '{"label": "Sea port", "description": "Is location a seaport?", "summaryview": "false"}';
 COMMENT ON COLUMN bflocationtype.railterminal IS '{"label": "Rail terminal", "description": "Is location a rail terminal?", "summaryview": "false"}';
@@ -33,3 +30,8 @@ COMMENT ON COLUMN bflocationtype.portclassification IS '{"label": "Port classifi
 COMMENT ON COLUMN bflocationtype.description IS '{"label": "Description", "description": "Description of port crossing", "summaryview": "true"}';
 COMMENT ON COLUMN bflocationtype.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN bflocationtype.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
+
+-- GRANTs
+GRANT SELECT ON sex TO ${anonuser};
+GRANT SELECT ON sex TO ${serviceuser};
+GRANT SELECT ON sex TO ${readonlyuser};
