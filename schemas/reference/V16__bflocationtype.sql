@@ -32,6 +32,6 @@ COMMENT ON COLUMN bflocationtype.validfrom IS '{"label": "Valid from date", "des
 COMMENT ON COLUMN bflocationtype.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
 
 -- GRANTs
-GRANT SELECT ON sex TO ${anonuser};
-GRANT SELECT ON sex TO ${serviceuser};
-GRANT SELECT ON sex TO ${readonlyuser};
+GRANT SELECT ON bflocationtype TO ${anonuser};
+GRANT SELECT ON bflocationtype TO ${serviceuser};
+GRANT SELECT ON bflocationtype TO ${readonlyuser};
