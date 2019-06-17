@@ -1,22 +1,20 @@
 CREATE TABLE address (
-  id uuid NOT NULL PRIMARY KEY,
-  line1 varchar(60)NOT NULL,
-  line2 varchar(60),
-  line3 varchar(60),
-  city varchar(60)NOT NULL,
-  geographicregionid int4 NOT NULL REFERENCES geographicregion(id),
-  iso31661alpha2 varchar(2)NOT NULL,
-  postcode varchar(10),
+  id UUID NOT NULL PRIMARY KEY,
+  line1 VARCHAR(60) NOT NULL,
+  line2 VARCHAR(60),
+  line3 VARCHAR(60),
+  city VARCHAR(60) NOT NULL,
+  geographicregionid INT4 NOT NULL REFERENCES geographicregion(id),
+  iso31661alpha2 VARCHAR(2) NOT NULL,
+  postcode VARCHAR(10),
   countryid INTEGER NULL REFERENCES country(id),
-  validfrom date,
-  validto date
+  validfrom TIMESTAMP WITH TIME ZONE,
+  validto TIMESTAMP WITH TIME ZONE
 );
 
--- GRANTs
-GRANT SELECT ON address TO ${serviceuser};
-GRANT SELECT ON address TO ${readonlyuser};
-
+-- Table comment
 COMMENT ON TABLE address IS '{"description": "Address list for location", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+-- Column comments
 COMMENT ON COLUMN address.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN address.line1 IS '{"label": "Address line 1", "description": "First line of address", "summaryview": "true"}';
 COMMENT ON COLUMN address.line2 IS '{"label": "Address line 2", "description": "Second line of address", "summaryview": "false"}';
@@ -28,3 +26,7 @@ COMMENT ON COLUMN address.validfrom IS '{"label": "Valid from date", "descriptio
 COMMENT ON COLUMN address.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
 COMMENT ON COLUMN address.iso31661alpha2 IS '{"label": "2 digit alpha code", "description": "Country 2 Character alpha code", "summaryview": "true"}';
 COMMENT ON COLUMN address.geographicregionid IS '{"label": "County", "description": "Link to geographic region entity", "summaryview": "true"}';
+
+-- GRANTs
+GRANT SELECT ON address TO ${serviceuser};
+GRANT SELECT ON address TO ${readonlyuser};
