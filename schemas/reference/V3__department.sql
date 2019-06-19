@@ -8,7 +8,7 @@ CREATE TABLE department (
 );
 
 -- Table comment
-COMMENT ON TABLE department IS '{"description": "Department names", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE department IS '{"label": "Department names", description": "Name of the ministerial departments", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN department.id IS '{"description": "Database unique identity record", "summaryview": "false"}';
 COMMENT ON COLUMN department.name IS '{"description": "Name of department", "summaryview": "true"}';
