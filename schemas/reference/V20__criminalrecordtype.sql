@@ -6,7 +6,7 @@ CREATE TABLE criminalrecordtype (
 );
 
 -- Table comment
-COMMENT ON TABLE criminalrecordtype IS '{"description": "Criminal record type", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE criminalrecordtype IS '{"label": "Criminal record", "description": "Criminal record type and description", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN criminalrecordtype.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN criminalrecordtype.recordname IS '{"description": "record category", "summaryview": "true"}';
