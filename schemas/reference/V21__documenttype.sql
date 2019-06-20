@@ -8,7 +8,7 @@ CREATE TABLE "documenttype" (
 );
 
 -- Table comment
-COMMENT ON TABLE documenttype IS '{"description": "Identity document type", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE documenttype IS '{"label": "Identity document type", "description": "Type of identification document", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN documenttype.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN documenttype.code IS '{"label": "Code", "description": "Document system code", "summaryview": "true"}';

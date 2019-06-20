@@ -6,7 +6,7 @@ CREATE TABLE employmenttypes (
 );
 
 -- Table comment
-COMMENT ON TABLE employmenttypes IS '{"description": "Employment types", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE employmenttypes IS '{"label": "Employment type", "description": "Description of individuals employment", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN employmenttypes.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN employmenttypes.name IS '{"label": "Name", "description": "Employment / job name", "summaryview": "true"}';

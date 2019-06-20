@@ -7,7 +7,7 @@ CREATE TABLE "dogrole" (
 );
 
 -- Table comment
-COMMENT ON TABLE dogrole IS '{"description": "Dog roles", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE dogrole IS '{"label": "Dog role", "description": "Description of the role played by dog team", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN dogrole.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN dogrole.code IS '{"label": "Code", "description": "Dog role codes", "summaryview": "true"}';
