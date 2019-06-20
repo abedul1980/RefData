@@ -9,7 +9,7 @@ CREATE TABLE geographicregion (
 );
 
 -- Table comment
-COMMENT ON TABLE geographicregion IS '{"description": "Geographic regions", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE geographicregion IS '{"label": "Geographic regions", "description": "Codes and descriptions associated with geographic regions", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN geographicregion.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN geographicregion.code IS '{"label": "County code", "description": "International region code", "summaryview": "true"}';

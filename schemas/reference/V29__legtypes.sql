@@ -6,7 +6,7 @@ CREATE TABLE legtypes (
 );
 
 -- Table comment
-COMMENT ON TABLE legtypes IS '{"description": "Mode of leg journey", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE legtypes IS '{"label": "Mode of leg journey", "description": "Description of journey leg type", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN legtypes.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN legtypes.description IS '{"label": "Description", "description": "Description of journey type", "summaryview": "true"}';
