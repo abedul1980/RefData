@@ -6,7 +6,7 @@ CREATE TABLE workarea (
 );
 
 -- Table comment
-COMMENT ON TABLE workarea IS '{"description": "Working areas", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE workarea IS '{"label": "Working areas", "description": "List of working areas", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN workarea.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN workarea.area IS '{"label": "Area", "description": "Work area short description", "summaryview": "true"}';

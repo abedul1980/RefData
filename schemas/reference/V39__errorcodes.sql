@@ -7,7 +7,7 @@ CREATE TABLE errorcodes (
 );
 
 -- Table comment
-COMMENT ON TABLE errorcodes IS '{"description": "Error messages", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE errorcodes IS '{"label": "Error codes", "description": "Error messages and descriptions", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN errorcodes.id IS '{"label": "Identifier", "description": "Unique error code", "summaryview": "false"}';
 COMMENT ON COLUMN errorcodes.message IS '{"label": "Message", "description": "System error message", "summaryview": "true"}';

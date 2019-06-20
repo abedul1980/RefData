@@ -7,7 +7,7 @@ CREATE TABLE eventpeopletype (
 );
 
 -- Table comment
-COMMENT ON TABLE eventpeopletype IS '{"description": "Types of people in an event", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE eventpeopletype IS '{"label": "Types of people", "description": "Types of people in an event", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN eventpeopletype.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN eventpeopletype.type IS '{"label": "People type", "description": "Category of people in event", "summaryview": "true"}';
