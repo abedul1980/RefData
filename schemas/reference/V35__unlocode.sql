@@ -22,7 +22,7 @@ CREATE TABLE "unlocode" (
 );
 
 -- Table comment
-COMMENT ON TABLE unlocode IS '{"description": "United Nations location code list", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE unlocode IS '{"label": "United Nations location code", "description": "United Nations location code list as defined in the ISO 3166-1 Standard", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN unlocode.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN unlocode.name IS '{"label": "Name", "description": "Location name", "summaryview": "true"}';

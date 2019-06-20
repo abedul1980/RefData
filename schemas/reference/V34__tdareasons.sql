@@ -6,7 +6,7 @@ CREATE TABLE tdareasons (
 );
 
 -- Table comment
-COMMENT ON TABLE tdareasons IS '{"description": "Reasons for governance request", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE tdareasons IS '{"label": "Reasons for governance request", "description": "Outcomes set by the Technical Design Authority", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN tdareasons.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN tdareasons.reason IS '{"label": "Reason", "description": "Reason for request", "summaryview": "true"}';
