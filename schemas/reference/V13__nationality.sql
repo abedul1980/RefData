@@ -15,7 +15,7 @@ CREATE TABLE nationality (
 
 
 -- Table comment
-COMMENT ON TABLE nationality IS '{"description": "Nationalities", "schemalastupdated": "10/03/2019", "dataversion": 1}';
+COMMENT ON TABLE nationality IS '{"label": "Nationalities", "description": "Lits of nationalities and accompanying visa requirements", "schemalastupdated": "10/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN nationality.id IS '{"label": "Identifier", "description": "Database unique identity record", "summaryview": "false"}';
 COMMENT ON COLUMN nationality.nationality IS '{"label": "Identifier", "description": "Nationality names", "summaryview": "true"}';
