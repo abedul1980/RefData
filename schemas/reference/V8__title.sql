@@ -6,7 +6,7 @@ CREATE TABLE title (
 );
 
 -- Table comment
-COMMENT ON TABLE title IS '{"description": "Person titles", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE title IS '{"label": "Title", "description": "Titles and other words associated with an individual", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN title.id IS '{"label": "Identifier", "description": "Database unique identity record", "summaryview": "false"}';
 COMMENT ON COLUMN title.title IS '{"label": "Title", "description": "Name of title", "summaryview": "true"}';

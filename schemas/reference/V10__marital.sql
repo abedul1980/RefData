@@ -8,7 +8,7 @@ CREATE TABLE marital (
 );
 
 -- Table comment
-COMMENT ON TABLE marital IS '{"description": "Marital statuses", "schemalastupdated": "10/03/2019", "dataversion": 1}';
+COMMENT ON TABLE marital IS '{"label": "Marital status", "description": "Legally defined marital state", "schemalastupdated": "10/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN marital.id IS '{"label": "Identifier", "description": "Database unique identity record", "summaryview": "false"}';
 COMMENT ON COLUMN marital.code IS '{"label": "Short Code", "description": "Short code", "summaryview": "true"}';

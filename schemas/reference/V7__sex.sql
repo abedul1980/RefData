@@ -6,7 +6,7 @@ CREATE TABLE sex (
 );
 
 -- Table comment
-COMMENT ON TABLE sex IS '{"description": "Sex reference list", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE sex IS '{"label": "Sex", "description": "Sex reference list", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN sex.name IS '{"label": "Name", "description": "Name of sex", "summaryview": "true"}';
 COMMENT ON COLUMN sex.id IS '{"label": "Identifier", "description": "Character unique identity reference","summaryview": "true", "aliases": "sexcharacter"}';
