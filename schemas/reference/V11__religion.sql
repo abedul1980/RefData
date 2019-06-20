@@ -7,7 +7,7 @@ CREATE TABLE religion (
 );
 
 -- Table comment
-COMMENT ON TABLE religion IS '{"label": "Religion", "description": "Religious beliefs held by the individual", "schemalastupdated": "10/03/2019", "dataversion": 1}';
+COMMENT ON TABLE religion IS '{"label": "Religion", "description": "List of religious affiliations", "schemalastupdated": "10/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN religion.id IS '{"label": "Identifier", "description": "Database unique identity record", "summaryview": "false"}';
 COMMENT ON COLUMN religion.name IS '{"label": "Name", "description": "Religion name", "summaryview": "true"}';

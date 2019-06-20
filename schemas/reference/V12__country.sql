@@ -12,7 +12,7 @@ CREATE TABLE country (
 );
 
 -- Table comment
-COMMENT ON TABLE country IS '{"label": "Countries", "description": "List of counties and associated codes", "schemalastupdated": "10/03/2019", "dataversion": 1}';
+COMMENT ON TABLE country IS '{"label": "Countries", "description": "List of countries as defined in the ISO 3166-1 Standard", "schemalastupdated": "10/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN country.id IS '{"label": "Identifier", "description": "Database unique identity record", "summaryview": "false"}';
 COMMENT ON COLUMN country.name IS '{"label": "Country name", "description": "Country name", "summaryview": "true"}';
