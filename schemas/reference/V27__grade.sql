@@ -7,7 +7,7 @@ CREATE TABLE grade (
 );
 
 -- Table comment
-COMMENT ON TABLE grade IS '{"label": "Civil service grades", "description": "List of civil service grade codes", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE grade IS '{"label": "Civil service grades", "description": "A list of civil service grade codes", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN grade.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN grade.name IS '{"label": "Grade code", "description": "Civil service grade code", "summaryview": "true"}';

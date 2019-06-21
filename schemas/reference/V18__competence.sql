@@ -7,7 +7,7 @@ CREATE TABLE competence (
 );
 
 -- Table comment
-COMMENT ON TABLE competence IS '{"label": "Competence", "description": "List of competence states", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE competence IS '{"label": "Competence", "description": "A list of competence states", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN competence.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN competence.description IS '{"label": "description", "description": "description of competence or impairment", "summaryview": "true"}';

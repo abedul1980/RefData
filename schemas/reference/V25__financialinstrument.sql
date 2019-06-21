@@ -7,7 +7,7 @@ CREATE TABLE financialinstrument (
 );
 
 -- Table comment
-COMMENT ON TABLE financialinstrument IS '{"label": "Financial currency types", "description": "List of financial instruments", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE financialinstrument IS '{"label": "Financial currency types", "description": "A list of financial instruments", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN financialinstrument.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN financialinstrument.type IS '{"label": "Status", "description": "Type of currency", "summaryview": "true"}';
