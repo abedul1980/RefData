@@ -7,7 +7,7 @@ CREATE TABLE teamlocations (
 );
 
 -- Table comment
-COMMENT ON TABLE teamlocations IS '{"description": "Team to location mapping", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE teamlocations IS '{"label": "Team locations", "description": "A list of team to location mappings", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN teamlocations.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
 COMMENT ON COLUMN teamlocations.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';

@@ -7,7 +7,7 @@ CREATE TABLE clearancetype (
 );
 
 -- Table comment
-COMMENT ON TABLE clearancetype IS '{"description": "Security clearance types", "schemalastupdated": "02/05/2019", "dataversion": 1}';
+COMMENT ON TABLE clearancetype IS '{"label": "Clearance types", "description": "A list of security clearance types", "schemalastupdated": "02/05/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN clearancetype.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN clearancetype.name IS '{"label": "Name", "description": "Name / Level of security clearance", "summaryview": "true"}';
