@@ -6,7 +6,7 @@ CREATE TABLE eventtype (
 );
 
 -- Table comment
-COMMENT ON TABLE eventtype IS '{"label": "Event types", "description": "List of defferent event types", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE eventtype IS '{"label": "Event types", "description": "A list of defferent event types", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN eventtype.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN eventtype.type IS '{"label": "Event types", "description": "Description of the different event types", "summaryview": "true"}';
