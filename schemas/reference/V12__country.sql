@@ -15,12 +15,12 @@ CREATE TABLE country (
 COMMENT ON TABLE country IS '{"label": "Countries", "description": "A list of countries as defined in the ISO 3166-1 Standard.", "schemalastupdated": "10/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN country.id IS '{"label": "Identifier", "description": "Database unique identity record.", "summaryview": "false"}';
-COMMENT ON COLUMN country.name IS '{"label": "Country name", "description": "Country name.", "summaryview": "true"}';
-COMMENT ON COLUMN country.iso31661alpha2 IS '{"label": "2 digit alpha code", "description": "Country 2 Character alpha code.", "summaryview": "true"}';
-COMMENT ON COLUMN country.iso31661alpha3 IS '{"label": "3 digit alpha code", "description": "Country 3 Character alpha code.", "summaryview": "true"}';
-COMMENT ON COLUMN country.continent IS '{"label": "Continent", "description": "Countinent country is part of.", "summaryview": "true"}';
-COMMENT ON COLUMN country.dial IS '{"label": "Phone dial code", "description": "Country dialing prefix.", "summaryview": "true"}';
-COMMENT ON COLUMN country.iso31661numeric IS '{"label": "3 digit numeric code", "description": "Country numeric ISO code.", "summaryview": "true"}';
+COMMENT ON COLUMN country.name IS '{"label": "Country name", "description": "The name of the country.", "summaryview": "true"}';
+COMMENT ON COLUMN country.iso31661alpha2 IS '{"label": "2 digit alpha code", "description": "The countries 2 Character alpha code.", "summaryview": "true"}';
+COMMENT ON COLUMN country.iso31661alpha3 IS '{"label": "3 digit alpha code", "description": "The countries 3 Character alpha code.", "summaryview": "true"}';
+COMMENT ON COLUMN country.continent IS '{"label": "Continent", "description": "The countinent the country is part of.", "summaryview": "true"}';
+COMMENT ON COLUMN country.dial IS '{"label": "Phone dial code", "description": "The countries dialing prefix.", "summaryview": "true"}';
+COMMENT ON COLUMN country.iso31661numeric IS '{"label": "3 digit numeric code", "description": "The countries numeric ISO code.", "summaryview": "true"}';
 COMMENT ON COLUMN country.validfrom IS '{"label": "Valid from date", "description": "Item valid from date.", "summaryview" : "false"}';
 COMMENT ON COLUMN country.validto IS '{"label": "Valid to date", "description": "Item valid to date.", "summaryview" : "false"}';
 
