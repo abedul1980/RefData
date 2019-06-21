@@ -7,7 +7,7 @@ CREATE TABLE lockuptype (
 );
 
 -- Table comment
-COMMENT ON TABLE lockuptype IS '{"description": "Types of lockup", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE lockuptype IS '{"label": "Types of lockup", "description": "Types of lockup and associated codes", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN lockuptype.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN lockuptype.name IS '{"label": "Name", "description": "Class of lockup", "summaryview": "true"}';

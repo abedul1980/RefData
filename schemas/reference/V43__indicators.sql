@@ -9,7 +9,7 @@ CREATE TABLE indicators (
 );
 
 -- Table comment
-COMMENT ON TABLE indicators IS '{"description": "Intelligence indicators", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE indicators IS '{"label": "Intelligence indicators", "description": "A list of intelligence indicator types", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN indicators.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN indicators.indicator IS '{"label": "Indicator description", "description": "Type of indicator", "summaryview": "true"}';

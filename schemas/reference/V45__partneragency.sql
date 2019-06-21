@@ -12,7 +12,7 @@ CREATE TABLE partneragency (
 );
 
 -- Table comment
-COMMENT ON TABLE partneragency IS '{"description": "Partner agencies", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE partneragency IS '{"label": "Partner agencies", "description": "A list of partner agencies and associated permissions", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN partneragency.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN partneragency.name IS '{"label": "Name", "description": "Partner agency name", "summaryview": "true"}';
