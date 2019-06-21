@@ -7,7 +7,7 @@ CREATE TABLE targetcat (
 );
 
 -- Table comment
-COMMENT ON TABLE targetcat IS '{"description": "Targeting types", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE targetcat IS '{"label": "Targeting types", description": "A list of targeting types", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN targetcat.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN targetcat.type IS '{"label": "Target type", "description": "Type of target", "summaryview": "true"}';

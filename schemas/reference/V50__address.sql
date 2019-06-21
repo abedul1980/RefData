@@ -13,7 +13,7 @@ CREATE TABLE address (
 );
 
 -- Table comment
-COMMENT ON TABLE address IS '{"description": "Address list for location", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE address IS '{"label": "Address list", "description": "A list of addresses for locations", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN address.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN address.line1 IS '{"label": "Address line 1", "description": "First line of address", "summaryview": "true"}';

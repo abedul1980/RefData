@@ -11,7 +11,7 @@ CREATE TABLE searchtype (
 );
 
 -- Table comment
-COMMENT ON TABLE searchtype IS '{"description": "Types of search that can be performed", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE searchtype IS '{"label": "Search type", "description": "Types of search that can be performed", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN searchtype.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN searchtype.type IS '{"label": "Search type", "description": "Type of search", "summaryview": "true"}';
