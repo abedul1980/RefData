@@ -11,7 +11,7 @@ CREATE TABLE currency (
 
 
 -- Table comment
-COMMENT ON TABLE currency IS '{"label": "Currencies", "description": "List of global currencies", "schemalastupdated": "10/03/2019", "dataversion": 1}';
+COMMENT ON TABLE currency IS '{"label": "Currencies", "description": "A list of global currencies", "schemalastupdated": "10/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN currency.id IS '{"label": "Identifier", "description": "Database unique identity record", "summaryview": "false"}';
 COMMENT ON COLUMN currency.iso31661alpha2 IS '{"label": "2 digit alpha code", "description": "Country 2 Character alpha code", "summaryview": "true"}';

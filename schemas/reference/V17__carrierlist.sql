@@ -11,7 +11,7 @@ CREATE TABLE carrierlist (
 );
 
 -- Table comment
-COMMENT ON TABLE carrierlist IS '{"label": "Carriers", "description": "List of Carriers", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE carrierlist IS '{"label": "Carriers", "description": "A list of Carriers", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN carrierlist.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN carrierlist.name IS '{"label": "Carrier name", "description": "Name of carrier", "summaryview": "true"}';
