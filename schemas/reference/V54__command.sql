@@ -8,7 +8,7 @@ CREATE TABLE command (
 );
 
 -- Table comment
-COMMENT ON TABLE command IS '{"description": "Command list", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE command IS '{"label": "Command list", "description": "A list of commands and their associated codes", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN command.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN command.name IS '{"label": "Name", "description": "Name of command", "summaryview": "true"}';

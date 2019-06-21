@@ -17,7 +17,7 @@ CREATE TABLE team (
 );
 
 -- Table comment
-COMMENT ON TABLE team IS '{"description": "Teams", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE team IS '{"label": "Teams", "description": "A list of border force teams", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN team.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
 COMMENT ON COLUMN team.name IS '{"label": "Name", "description": "Name of team", "summaryview": "true"}';
