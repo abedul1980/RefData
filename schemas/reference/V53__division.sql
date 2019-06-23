@@ -8,14 +8,14 @@ CREATE TABLE division (
 );
 
 -- Table comment
-COMMENT ON TABLE division IS '{"label": "Devisions", "description": "A list of border force divisions and associated codes", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE division IS '{"label": "Devisions", "description": "A list of border force divisions and their associated codes.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
-COMMENT ON COLUMN division.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
-COMMENT ON COLUMN division.name IS '{"label": "Name", "description": "Division name", "summaryview": "true"}';
-COMMENT ON COLUMN division.code IS '{"label": "Code", "description": "Division code", "summaryview": "true"}';
-COMMENT ON COLUMN division.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
-COMMENT ON COLUMN division.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
-COMMENT ON COLUMN division.branchid IS '{"label": "Branch / Region ID", "description": "link to branch entity", "summaryview" : "false"}';
+COMMENT ON COLUMN division.id IS '{"label": "Identifier", "description": "Unique identifying column.", "summaryview": "false"}';
+COMMENT ON COLUMN division.name IS '{"label": "Name", "description": "The division name.", "summaryview": "true"}';
+COMMENT ON COLUMN division.code IS '{"label": "Code", "description": "The division code.", "summaryview": "true"}';
+COMMENT ON COLUMN division.branchid IS '{"label": "Branch / Region ID", "description": "link to branch entity.", "summaryview" : "false"}';
+COMMENT ON COLUMN division.validfrom IS '{"label": "Valid from date", "description": "Item valid from date.", "summaryview" : "false"}';
+COMMENT ON COLUMN division.validto IS '{"label": "Valid to date", "description": "Item valid to date.", "summaryview" : "false"}';
 
 -- GRANTs
 GRANT SELECT ON division TO ${serviceuser};
