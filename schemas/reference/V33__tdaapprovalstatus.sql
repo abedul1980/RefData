@@ -6,12 +6,12 @@ CREATE TABLE tdaapprovalstatus (
 );
 
 -- Table comment
-COMMENT ON TABLE tdaapprovalstatus IS '{"label": "Governance approval", "description": "A list detailing governance approval status", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE tdaapprovalstatus IS '{"label": "Governance approval", "description": "A list detailing governance approval status.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
-COMMENT ON COLUMN tdaapprovalstatus.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
-COMMENT ON COLUMN tdaapprovalstatus.status IS '{"label": "Status", "description": "Governance status of request", "summaryview": "true"}';
-COMMENT ON COLUMN tdaapprovalstatus.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
-COMMENT ON COLUMN tdaapprovalstatus.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
+COMMENT ON COLUMN tdaapprovalstatus.id IS '{"label": "Identifier", "description": "Unique identifying column.", "summaryview": "false"}';
+COMMENT ON COLUMN tdaapprovalstatus.status IS '{"label": "Status", "description": "The governance status of the request.", "summaryview": "true"}';
+COMMENT ON COLUMN tdaapprovalstatus.validfrom IS '{"label": "Valid from date", "description": "Item valid from date.", "summaryview" : "false"}';
+COMMENT ON COLUMN tdaapprovalstatus.validto IS '{"label": "Valid to date", "description": "Item valid to date.", "summaryview" : "false"}';
 
 -- GRANTs
 GRANT SELECT ON tdaapprovalstatus TO ${anonuser};
