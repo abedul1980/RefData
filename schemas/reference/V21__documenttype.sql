@@ -8,14 +8,14 @@ CREATE TABLE "documenttype" (
 );
 
 -- Table comment
-COMMENT ON TABLE documenttype IS '{"label": "Identity document type", "description": "Type of identification document", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE documenttype IS '{"label": "Identity document type", "description": "A list of identification document types.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
-COMMENT ON COLUMN documenttype.id IS '{"label": "Identifier", "description": "Unique identifying column", "summaryview": "false"}';
-COMMENT ON COLUMN documenttype.code IS '{"label": "Code", "description": "Document system code", "summaryview": "true"}';
-COMMENT ON COLUMN documenttype.shortdescription IS '{"label": "Short description", "description": "Document code short description", "summaryview": "true"}';
-COMMENT ON COLUMN documenttype.shortdescription IS '{"label": "Long description", "description": "Document code long description", "summaryview": "true"}';
-COMMENT ON COLUMN documenttype.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
-COMMENT ON COLUMN documenttype.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
+COMMENT ON COLUMN documenttype.id IS '{"label": "Identifier", "description": "Unique identifying column.", "summaryview": "false"}';
+COMMENT ON COLUMN documenttype.code IS '{"label": "Code", "description": "System codes associated with the document.", "summaryview": "true"}';
+COMMENT ON COLUMN documenttype.shortdescription IS '{"label": "Short description", "description": "Short description of the documane code.", "summaryview": "true"}';
+COMMENT ON COLUMN documenttype.shortdescription IS '{"label": "Long description", "description": "Long description of the document code.", "summaryview": "true"}';
+COMMENT ON COLUMN documenttype.validfrom IS '{"label": "Valid from date", "description": "Item valid from date.", "summaryview" : "false"}';
+COMMENT ON COLUMN documenttype.validto IS '{"label": "Valid to date", "description": "Item valid to date.", "summaryview" : "false"}';
 
 -- GRANTs
 GRANT SELECT ON documenttype TO ${anonuser};
