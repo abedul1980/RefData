@@ -6,7 +6,7 @@ CREATE TABLE modetypes (
 );
 
 -- Table comment
-COMMENT ON TABLE modetypes IS '{"label": "Class of trasnport", "description": "A list of transport types.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE modetypes IS '{"label": "Class of transport", "description": "A list of transport types.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN modetypes.id IS '{"label": "Identifier", "description": "Unique identifying column.", "summaryview": "false"}';
 COMMENT ON COLUMN modetypes.class IS '{"label": "Class", "description": "Type of transport class.", "summaryview": "true"}';
