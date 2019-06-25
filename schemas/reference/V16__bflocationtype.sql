@@ -15,7 +15,7 @@ CREATE TABLE bflocationtype (
 );
 
 -- Table comment
-COMMENT ON TABLE bflocationtype IS '{"label": "Border port types", "description": "Detailed list of border port types", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE bflocationtype IS '{"label": "Border port types", "description": "A detailed list of border port types", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN bflocationtype.id IS '{"label": "Identifier", "description": "Unique identifying column.", "summaryview": "false"}';
 COMMENT ON COLUMN bflocationtype.seaport IS '{"label": "Sea port", "description": "Is the location a seaport?", "summaryview": "false"}';
