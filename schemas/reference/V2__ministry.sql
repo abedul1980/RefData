@@ -7,7 +7,7 @@ CREATE TABLE ministry (
 );
 
 -- Table comment
-COMMENT ON TABLE ministry IS '{"label": "Government ministries", description": "Departments, agencies and public bodies.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE ministry IS '{"label": "Government ministries", description": "A list of departments, agencies and public bodies.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN ministry.id IS '{"label": "Identifier", "description": "Database unique identity record.", "summaryview": "false"}';
 COMMENT ON COLUMN ministry.name IS '{"label": "Name", "description": "The name of the branch or region.", "summaryview": "true"}';

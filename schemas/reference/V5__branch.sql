@@ -8,7 +8,7 @@ CREATE TABLE branch (
 );
 
 -- Table comment
-COMMENT ON TABLE branch IS '{"label": "Branch/Region names", "description": "A list of different Branches and Regions, associated by directorate.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE branch IS '{"label": "Branch/Region names", "description": "A list of different branches and regions, associated by directorate.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN branch.id IS '{"label": "Identifier", "description": "Database unique identity record.", "summaryview": "false"}';
 COMMENT ON COLUMN branch.name IS '{"label": "Name", "description": "The name of the branch or region.", "summaryview": "true", "aliases": "region"}';
