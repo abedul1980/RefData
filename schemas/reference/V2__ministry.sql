@@ -10,8 +10,8 @@ CREATE TABLE ministry (
 COMMENT ON TABLE ministry IS '{"label": "Government ministries", description": "Departments, agencies and public bodies.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN ministry.id IS '{"label": "Identifier", "description": "Database unique identity record.", "summaryview": "false"}';
-COMMENT ON COLUMN ministry.name IS '{"label": "Name", "description": "Name of branch or region.", "summaryview": "true"}';
-COMMENT ON COLUMN ministry.code IS '{"label": "Code", "description": "Code of branch or region.", "summaryview": "true"}';
+COMMENT ON COLUMN ministry.name IS '{"label": "Name", "description": "The name of the branch or region.", "summaryview": "true"}';
+COMMENT ON COLUMN ministry.code IS '{"label": "Code", "description": "The code associated with the branch or region.", "summaryview": "true"}';
 COMMENT ON COLUMN ministry.validfrom IS '{"label": "Valid from date", "description": "Item valid from date.", "summaryview" : "false"}';
 COMMENT ON COLUMN ministry.validto IS '{"label": "Valid to date", "description": "Item valid to date.", "summaryview" : "false"}';
 
