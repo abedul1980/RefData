@@ -14,7 +14,7 @@ CREATE TABLE icao (
 );
 
 -- Table comment
-COMMENT ON TABLE icao IS '{"label": "ICAO list", "description": "The ICAO worldwide port/location list", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE icao IS '{"label": "ICAO list", "description": "The ICAO worldwide port/location list.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN icao.id IS '{"label": "Identifier", "description": "Unique identifying column.", "summaryview": "false"}';
 COMMENT ON COLUMN icao.iso31661alpha2 IS '{"label": "2 digit alpha code", "description": "The countries 2 Character alpha code.", "summaryview": "true"}';
