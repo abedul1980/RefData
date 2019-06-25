@@ -11,7 +11,7 @@ CREATE TABLE technicalprojects (
 COMMENT ON TABLE technicalprojects IS '{"label": "Technical Projects", "description": "A list of technical Projects and their associated teams.", "schemalastupdated": "02/05/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN technicalprojects.id IS '{"label": "Identifier", "description": "Unique identifying column.", "summaryview": "false"}';
-COMMENT ON COLUMN technicalprojects.name IS '{"label": "Name", "description": "Project name.", "summaryview": "true"}';
+COMMENT ON COLUMN technicalprojects.name IS '{"label": "Name", "description": "The name of the project.", "summaryview": "true"}';
 COMMENT ON COLUMN technicalprojects.teamid IS '{"label": "Team", "description": "The team the project belongs to.", "summaryview": "true"}';
 COMMENT ON COLUMN technicalprojects.code IS '{"label": "Project code", "description": "The short code for the project.", "summaryview": "true"}';
 COMMENT ON COLUMN technicalprojects.validfrom IS '{"label": "Valid from date", "description": "Item valid from date.", "summaryview" : "false"}';
