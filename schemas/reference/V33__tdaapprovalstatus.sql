@@ -6,7 +6,7 @@ CREATE TABLE tdaapprovalstatus (
 );
 
 -- Table comment
-COMMENT ON TABLE tdaapprovalstatus IS '{"label": "Governance approval", "description": "A list detailing Technical Design Authority approval status.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE tdaapprovalstatus IS '{"label": "Governance approval", "description": "A list detailing the Technical Design Authority approval status.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN tdaapprovalstatus.id IS '{"label": "Identifier", "description": "Unique identifying column.", "summaryview": "false"}';
 COMMENT ON COLUMN tdaapprovalstatus.status IS '{"label": "Status", "description": "Outcomes set by the Technical Design Authority.", "summaryview": "true"}';

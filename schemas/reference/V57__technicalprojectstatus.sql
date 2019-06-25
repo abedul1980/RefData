@@ -6,7 +6,7 @@ CREATE TABLE technicalprojectstatus (
 );
 
 -- Table comment
-COMMENT ON TABLE technicalprojectstatus IS '{"label": "Technical project status", "description": "A list of technical project statuses.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE technicalprojectstatus IS '{"label": "Technical project status", "description": "A list of statuses that may be assigned to a technical project.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN technicalprojectstatus.id IS '{"label": "Identifier", "description": "Unique identifying column.", "summaryview": "false"}';
 COMMENT ON COLUMN technicalprojectstatus.status IS '{"label": "Status", "description": "The status of the project.", "summaryview": "true"}';
