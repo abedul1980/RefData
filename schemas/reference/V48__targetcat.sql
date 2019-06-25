@@ -11,7 +11,7 @@ COMMENT ON TABLE targetcat IS '{"label": "Targeting types", description": "A lis
 -- Column comments
 COMMENT ON COLUMN targetcat.id IS '{"label": "Identifier", "description": "Unique identifying column.", "summaryview": "false"}';
 COMMENT ON COLUMN targetcat.type IS '{"label": "Target type", "description": "The type of target.", "summaryview": "true"}';
-COMMENT ON COLUMN targetcat.oar IS '{"label": "OAR", "description": "Valid for Operational activities reporting.", "summaryview": "true"}';
+COMMENT ON COLUMN targetcat.oar IS '{"label": "OAR", "description": "Valid for operational activities reporting.", "summaryview": "true"}';
 COMMENT ON COLUMN targetcat.validfrom IS '{"label": "Valid from date", "description": "Item valid from date.", "summaryview" : "false"}';
 COMMENT ON COLUMN targetcat.validto IS '{"label": "Valid to date", "description": "Item valid to date.", "summaryview" : "false"}';
 
