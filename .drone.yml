@@ -21,44 +21,44 @@ pipeline:
       branch: master
       event: push
 
-  test:
-    image: quay.io/ukhomeofficedigital/refdata:latest
-    commands:
-      - |
-        until PGPASSWORD=secret psql -U postgres -d postgres -h database \
-         -c "SELECT 1;" >/dev/null 2>&1; do sleep 1; done
-      - export POSTGRES_DB="postgres"
-      - export POSTGRES_SERVER="database"
-      - export POSTGRES_PORT="5432"
-      - export POSTGRES_OPTIONS=""
-      - export FLYWAY_INIT_USER="postgres"
-      - export FLYWAY_INIT_PASSWORD="secret"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_DB_NAME="refdata"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_NAME="ownerofdataref"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_PASSWORD="test"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_SCHEMA="reference"
-      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_NAME="ownerofgovdata"
-      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_PASSWORD="test1"
-      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_SCHEMA="governance"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_AUTHENTICATOR_USER="defref1"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_AUTHENTICATOR_PASSWORD="test2"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_ANON_USER="refanonuser"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_SERVICE_USER="refserviceuser"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_READONLY_USER="refreadonlyuser"
-      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_AUTHENTICATOR_USER="govuser1"
-      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_AUTHENTICATOR_PASSWORD="test3"
-      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_ANON_USER="govanonuser"
-      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_SERVICE_USER="govserviceuser"
-      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER="govreadonlyuser"
-      - git checkout -f master
-      - /docker/run.sh
-      - git reset --hard $DRONE_COMMIT
-      - /docker/run.sh
-    when:
-      branch:
-        exclude:
-        - master
-      event: push
+  # test:
+  #   image: quay.io/ukhomeofficedigital/refdata:latest
+  #   commands:
+  #     - |
+  #       until PGPASSWORD=secret psql -U postgres -d postgres -h database \
+  #        -c "SELECT 1;" >/dev/null 2>&1; do sleep 1; done
+  #     - export POSTGRES_DB="postgres"
+  #     - export POSTGRES_SERVER="database"
+  #     - export POSTGRES_PORT="5432"
+  #     - export POSTGRES_OPTIONS=""
+  #     - export FLYWAY_INIT_USER="postgres"
+  #     - export FLYWAY_INIT_PASSWORD="secret"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_DB_NAME="refdata"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_NAME="ownerofdataref"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_PASSWORD="test"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_SCHEMA="reference"
+  #     - export FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_NAME="ownerofgovdata"
+  #     - export FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_PASSWORD="test1"
+  #     - export FLYWAY_PLACEHOLDERS_GOVERNANCE_SCHEMA="governance"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_AUTHENTICATOR_USER="defref1"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_AUTHENTICATOR_PASSWORD="test2"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_ANON_USER="refanonuser"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_SERVICE_USER="refserviceuser"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_READONLY_USER="refreadonlyuser"
+  #     - export FLYWAY_PLACEHOLDERS_GOVERNANCE_AUTHENTICATOR_USER="govuser1"
+  #     - export FLYWAY_PLACEHOLDERS_GOVERNANCE_AUTHENTICATOR_PASSWORD="test3"
+  #     - export FLYWAY_PLACEHOLDERS_GOVERNANCE_ANON_USER="govanonuser"
+  #     - export FLYWAY_PLACEHOLDERS_GOVERNANCE_SERVICE_USER="govserviceuser"
+  #     - export FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER="govreadonlyuser"
+  #     - git checkout -f master
+  #     - /docker/run.sh
+  #     - git reset --hard $DRONE_COMMIT
+  #     - /docker/run.sh
+  #   when:
+  #     branch:
+  #       exclude:
+  #       - master
+  #     event: push
 
   deploy_to_dev:
     image: quay.io/ukhomeofficedigital/refdata:latest
@@ -170,10 +170,10 @@ pipeline:
       event: deployment
       environment: production
 
-services:
-  database:
-    image: postgres
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=postgres
-      - POSTGRES_PASSWORD=secret
+# services:
+#   database:
+#     image: postgres
+#     environment:
+#       - POSTGRES_USER=postgres
+#       - POSTGRES_DB=postgres
+#       - POSTGRES_PASSWORD=secret
