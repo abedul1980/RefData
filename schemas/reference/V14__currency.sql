@@ -11,15 +11,15 @@ CREATE TABLE currency (
 
 
 -- Table comment
-COMMENT ON TABLE currency IS '{"description": "Currencies", "schemalastupdated": "10/03/2019", "dataversion": 1}';
+COMMENT ON TABLE currency IS '{"label": "Currencies", "description": "A list of global currencies.", "schemalastupdated": "10/03/2019", "dataversion": 1}';
 -- Column comments
-COMMENT ON COLUMN currency.id IS '{"label": "Identifier", "description": "Database unique identity record", "summaryview": "false"}';
-COMMENT ON COLUMN currency.iso31661alpha2 IS '{"label": "2 digit alpha code", "description": "Country 2 Character alpha code", "summaryview": "true"}';
-COMMENT ON COLUMN currency.currency IS '{"label": "Currency", "description": "Currency name", "summaryview": "true"}';
-COMMENT ON COLUMN currency.currencycode IS '{"label": "Code", "description": "Currency code", "summaryview": "true"}';
-COMMENT ON COLUMN currency.countryid IS '{"label": "Linked country id", "description": "Country link to Country dataset", "summaryview": "false"}';
-COMMENT ON COLUMN currency.validfrom IS '{"label": "Valid from date", "description": "Item valid from date", "summaryview" : "false"}';
-COMMENT ON COLUMN currency.validto IS '{"label": "Valid to date", "description": "Item valid to date", "summaryview" : "false"}';
+COMMENT ON COLUMN currency.id IS '{"label": "Identifier", "description": "Database unique identity record.", "summaryview": "false"}';
+COMMENT ON COLUMN currency.iso31661alpha2 IS '{"label": "2 digit alpha code", "description": "The countries 2 Character alpha code.", "summaryview": "true"}';
+COMMENT ON COLUMN currency.currency IS '{"label": "Currency", "description": "The name of the currency.", "summaryview": "true"}';
+COMMENT ON COLUMN currency.currencycode IS '{"label": "Code", "description": "The code associated with the currency.", "summaryview": "true"}';
+COMMENT ON COLUMN currency.countryid IS '{"label": "Linked country id", "description": "The countries link to the Country dataset.", "summaryview": "false"}';
+COMMENT ON COLUMN currency.validfrom IS '{"label": "Valid from date", "description": "Item valid from date.", "summaryview" : "false"}';
+COMMENT ON COLUMN currency.validto IS '{"label": "Valid to date", "description": "Item valid to date.", "summaryview" : "false"}';
 
 -- GRANTs
 GRANT SELECT ON currency TO ${anonuser};
