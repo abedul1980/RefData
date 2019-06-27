@@ -24,7 +24,7 @@ COMMENT ON COLUMN team.name IS '{"label": "Name", "description": "The name of th
 COMMENT ON COLUMN team.code IS '{"label": "Code", "description": "The team code.", "summaryview": "true"}';
 COMMENT ON COLUMN team.description IS '{"label": "Description", "description": "A description of the team.", "summaryview": "true"}';
 COMMENT ON COLUMN team.costcentrecode IS '{"label": "Cost centre", "description": "The teams cost centre code.", "summaryview": "true"}';
-COMMENT ON COLUMN team.parentteamid IS '{"label": "Parent Team ID", "description": "The unique ID of the parten team.", "summaryview": "false"}'
+COMMENT ON COLUMN team.parentteamid IS '{"label": "Parent Team ID", "description": "The unique ID of the parten team.", "summaryview": "false"}';
 COMMENT ON COLUMN team.bffunctiontypeid IS '{"label": "Function type ID", "description": "Link to border force functions entity.", "summaryview" : "false"}';
 COMMENT ON COLUMN team.ministryid IS '{"label": "Ministry ID", "description": "Link to ministry entity.", "summaryview" : "false"}';
 COMMENT ON COLUMN team.departmentid IS '{"label": "Department ID", "description": "Link to department entity.", "summaryview" : "false"}';
