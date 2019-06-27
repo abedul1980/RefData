@@ -1,62 +1,64 @@
 pipeline:
-
-#  build:
-#    image: quay.io/ukhomeofficedigital/drone-docker
-#    commands:
-#      - docker build -t refdata:$${DRONE_COMMIT_SHA} .
-#    when:
-#      event: push
-#
-#  image_to_quay:
-#    image: quay.io/ukhomeofficedigital/drone-docker
-#    secrets:
-#      - DOCKER_USERNAME
-#      - DOCKER_PASSWORD
-#    registry: quay.io
-#    repo: quay.io/ukhomeofficedigital/refdata
-#    tags:
-#      - ${DRONE_BUILD_NUMBER}
-#      - ${DRONE_COMMIT_SHA}
-#      - latest
-#    when:
-#      branch: master
-#      event: [ push, deployment ]
-
-  test:
-    image: quay.io/ukhomeofficedigital/refdata:latest
+  build:
+    image: quay.io/ukhomeofficedigital/drone-docker
     commands:
-      - |
-        until PGPASSWORD=secret psql -U postgres -d postgres -h database \
-         -c "SELECT 1;" >/dev/null 2>&1; do sleep 1; done
-      - export POSTGRES_DB="postgres"
-      - export POSTGRES_SERVER="database"
-      - export POSTGRES_PORT="5432"
-      - export POSTGRES_OPTIONS=""
-      - export FLYWAY_INIT_USER="postgres"
-      - export FLYWAY_INIT_PASSWORD="secret"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_DB_NAME="refdata"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_NAME="ownerofdataref"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_PASSWORD="test"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_SCHEMA="reference"
-      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_NAME="ownerofgovdata"
-      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_PASSWORD="test1"
-      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_SCHEMA="governance"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_AUTHENTICATOR_USER="defref1"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_AUTHENTICATOR_PASSWORD="test2"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_ANON_USER="refanonuser"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_SERVICE_USER="refserviceuser"
-      - export FLYWAY_PLACEHOLDERS_REFERENCE_READONLY_USER="refreadonlyuser"
-      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_AUTHENTICATOR_USER="govuser1"
-      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_AUTHENTICATOR_PASSWORD="test3"
-      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_ANON_USER="govanonuser"
-      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_SERVICE_USER="govserviceuser"
-      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER="govreadonlyuser"
-      - git checkout -f master
-      - /docker/run.sh
-      - git reset --hard $DRONE_COMMIT
-      - /docker/run.sh
+      - docker build -t refdata:$${DRONE_COMMIT_SHA} .
     when:
       event: push
+
+  image_to_quay:
+    image: quay.io/ukhomeofficedigital/drone-docker
+    secrets:
+      - DOCKER_USERNAME
+      - DOCKER_PASSWORD
+    registry: quay.io
+    repo: quay.io/ukhomeofficedigital/refdata
+    tags:
+      - ${DRONE_BUILD_NUMBER}
+      - ${DRONE_COMMIT_SHA}
+      - latest
+    when:
+      branch: master
+      event: push
+
+  # test:
+  #   image: quay.io/ukhomeofficedigital/refdata:latest
+  #   commands:
+  #     - |
+  #       until PGPASSWORD=secret psql -U postgres -d postgres -h database \
+  #        -c "SELECT 1;" >/dev/null 2>&1; do sleep 1; done
+  #     - export POSTGRES_DB="postgres"
+  #     - export POSTGRES_SERVER="database"
+  #     - export POSTGRES_PORT="5432"
+  #     - export POSTGRES_OPTIONS=""
+  #     - export FLYWAY_INIT_USER="postgres"
+  #     - export FLYWAY_INIT_PASSWORD="secret"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_DB_NAME="refdata"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_NAME="ownerofdataref"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_PASSWORD="test"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_SCHEMA="reference"
+  #     - export FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_NAME="ownerofgovdata"
+  #     - export FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_PASSWORD="test1"
+  #     - export FLYWAY_PLACEHOLDERS_GOVERNANCE_SCHEMA="governance"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_AUTHENTICATOR_USER="defref1"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_AUTHENTICATOR_PASSWORD="test2"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_ANON_USER="refanonuser"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_SERVICE_USER="refserviceuser"
+  #     - export FLYWAY_PLACEHOLDERS_REFERENCE_READONLY_USER="refreadonlyuser"
+  #     - export FLYWAY_PLACEHOLDERS_GOVERNANCE_AUTHENTICATOR_USER="govuser1"
+  #     - export FLYWAY_PLACEHOLDERS_GOVERNANCE_AUTHENTICATOR_PASSWORD="test3"
+  #     - export FLYWAY_PLACEHOLDERS_GOVERNANCE_ANON_USER="govanonuser"
+  #     - export FLYWAY_PLACEHOLDERS_GOVERNANCE_SERVICE_USER="govserviceuser"
+  #     - export FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER="govreadonlyuser"
+  #     - git checkout -f master
+  #     - /docker/run.sh
+  #     - git reset --hard $DRONE_COMMIT
+  #     - /docker/run.sh
+  #   when:
+  #     branch:
+  #       exclude:
+  #       - master
+  #     event: push
 
   deploy_to_dev:
     image: quay.io/ukhomeofficedigital/refdata:latest
@@ -111,13 +113,67 @@ pipeline:
       - /docker/run.sh
     when:
       branch: master
-      event: [ push, deployment ]
+      event: push
 
+  deploy_to_prod:
+    image: quay.io/ukhomeofficedigital/refdata:latest
+    secrets:
+      - PROD_POSTGRES_DB
+      - PROD_POSTGRES_SERVER
+      - PROD_POSTGRES_PORT
+      - PROD_POSTGRES_OPTIONS
+      - PROD_FLYWAY_INIT_USER
+      - PROD_FLYWAY_INIT_PASSWORD
+      - PROD_FLYWAY_PLACEHOLDERS_REFERENCE_DB_NAME
+      - PROD_FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_NAME
+      - PROD_FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_PASSWORD
+      - PROD_FLYWAY_PLACEHOLDERS_REFERENCE_SCHEMA
+      - PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_NAME
+      - PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_PASSWORD
+      - PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_SCHEMA
+      - PROD_FLYWAY_PLACEHOLDERS_REFERENCE_AUTHENTICATOR_USER
+      - PROD_FLYWAY_PLACEHOLDERS_REFERENCE_AUTHENTICATOR_PASSWORD
+      - PROD_FLYWAY_PLACEHOLDERS_REFERENCE_ANON_USER
+      - PROD_FLYWAY_PLACEHOLDERS_REFERENCE_SERVICE_USER
+      - PROD_FLYWAY_PLACEHOLDERS_REFERENCE_READONLY_USER
+      - PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_AUTHENTICATOR_USER
+      - PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_AUTHENTICATOR_PASSWORD
+      - PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_ANON_USER
+      - PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_SERVICE_USER
+      - PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER
+    commands:
+      - export POSTGRES_DB=$${PROD_POSTGRES_DB}
+      - export POSTGRES_SERVER=$${PROD_POSTGRES_SERVER}
+      - export POSTGRES_PORT=$${PROD_POSTGRES_PORT}
+      - export POSTGRES_OPTIONS=$${PROD_POSTGRES_OPTIONS}
+      - export FLYWAY_INIT_USER=$${PROD_FLYWAY_INIT_USER}
+      - export FLYWAY_INIT_PASSWORD=$${PROD_FLYWAY_INIT_PASSWORD}
+      - export FLYWAY_PLACEHOLDERS_REFERENCE_DB_NAME=$${PROD_FLYWAY_PLACEHOLDERS_REFERENCE_DB_NAME}
+      - export FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_NAME=$${PROD_FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_NAME}
+      - export FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_PASSWORD=$${PROD_FLYWAY_PLACEHOLDERS_REFERENCE_OWNER_PASSWORD}
+      - export FLYWAY_PLACEHOLDERS_REFERENCE_SCHEMA=$${PROD_FLYWAY_PLACEHOLDERS_REFERENCE_SCHEMA}
+      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_NAME=$${PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_NAME}
+      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_PASSWORD=$${PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_OWNER_PASSWORD}
+      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_SCHEMA=$${PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_SCHEMA}
+      - export FLYWAY_PLACEHOLDERS_REFERENCE_AUTHENTICATOR_USER=$${PROD_FLYWAY_PLACEHOLDERS_REFERENCE_AUTHENTICATOR_USER}
+      - export FLYWAY_PLACEHOLDERS_REFERENCE_AUTHENTICATOR_PASSWORD=$${PROD_FLYWAY_PLACEHOLDERS_REFERENCE_AUTHENTICATOR_PASSWORD}
+      - export FLYWAY_PLACEHOLDERS_REFERENCE_ANON_USER=$${PROD_FLYWAY_PLACEHOLDERS_REFERENCE_ANON_USER}
+      - export FLYWAY_PLACEHOLDERS_REFERENCE_SERVICE_USER=$${PROD_FLYWAY_PLACEHOLDERS_REFERENCE_SERVICE_USER}
+      - export FLYWAY_PLACEHOLDERS_REFERENCE_READONLY_USER=$${PROD_FLYWAY_PLACEHOLDERS_REFERENCE_READONLY_USER}
+      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_AUTHENTICATOR_USER=$${PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_AUTHENTICATOR_USER}
+      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_AUTHENTICATOR_PASSWORD=$${PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_AUTHENTICATOR_PASSWORD}
+      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_ANON_USER=$${PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_ANON_USER}
+      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_SERVICE_USER=$${PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_SERVICE_USER}
+      - export FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER=$${PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER}
+      - /docker/run.sh
+    when:
+      event: deployment
+      environment: production
 
-services:
-  database:
-    image: postgres
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=postgres
-      - POSTGRES_PASSWORD=secret
+# services:
+#   database:
+#     image: postgres
+#     environment:
+#       - POSTGRES_USER=postgres
+#       - POSTGRES_DB=postgres
+#       - POSTGRES_PASSWORD=secret
