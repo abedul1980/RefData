@@ -18,3 +18,4 @@ COMMENT ON COLUMN clearancetype.validto IS '{"label": "Valid to date", "descript
 -- GRANTs
 GRANT SELECT ON clearancetype TO ${anonuser};
 GRANT SELECT ON clearancetype TO ${serviceuser};
+GRANT SELECT ON clearancetype TO ${readonlyuser};
