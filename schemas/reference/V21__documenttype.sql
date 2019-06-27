@@ -13,7 +13,7 @@ COMMENT ON TABLE documenttype IS '{"label": "Identity document type", "descripti
 COMMENT ON COLUMN documenttype.id IS '{"label": "Identifier", "description": "Unique identifying column.", "summaryview": "false"}';
 COMMENT ON COLUMN documenttype.code IS '{"label": "Code", "description": "System codes associated with the document.", "summaryview": "true"}';
 COMMENT ON COLUMN documenttype.shortdescription IS '{"label": "Short description", "description": "Short description of the documane code.", "summaryview": "true"}';
-COMMENT ON COLUMN documenttype.shortdescription IS '{"label": "Long description", "description": "Long description of the document code.", "summaryview": "true"}';
+COMMENT ON COLUMN documenttype.longdescription IS '{"label": "Long description", "description": "Long description of the document code.", "summaryview": "true"}';
 COMMENT ON COLUMN documenttype.validfrom IS '{"label": "Valid from date", "description": "Item valid from date.", "summaryview" : "false"}';
 COMMENT ON COLUMN documenttype.validto IS '{"label": "Valid to date", "description": "Item valid to date.", "summaryview" : "false"}';
 
