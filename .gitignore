@@ -4,3 +4,5 @@ postgrest/*
 .idea/*
 postgres_data_refdata/*
 *.env
+
+.DS_Store
