@@ -8,7 +8,7 @@ CREATE TABLE division (
 );
 
 -- Table comment
-COMMENT ON TABLE division IS '{"label": "Devisions", "description": "A list of border force divisions and their associated codes.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE division IS '{"label": "Divisions", "description": "A list of border force divisions and their associated codes.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN division.id IS '{"label": "Identifier", "description": "Unique identifying column.", "summaryview": "false"}';
 COMMENT ON COLUMN division.name IS '{"label": "Name", "description": "The division name.", "summaryview": "true"}';
