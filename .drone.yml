@@ -113,7 +113,8 @@ pipeline:
       - /docker/run.sh
     when:
       branch: master
-      event: push
+      event: deployment
+      environment: dev
 
   deploy_to_staging:
     image: quay.io/ukhomeofficedigital/refdata:latest
@@ -167,6 +168,7 @@ pipeline:
       - export FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER=$${STAGING_FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER}
       - /docker/run.sh
     when:
+      branch: master
       event: deployment
       environment: staging
 
@@ -222,6 +224,7 @@ pipeline:
       - export FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER=$${PROD_FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER}
       - /docker/run.sh
     when:
+      branch: master
       event: deployment
       environment: production
 
