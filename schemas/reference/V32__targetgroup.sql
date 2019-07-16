@@ -1,19 +1,19 @@
-CREATE TABLE targetgroup (
+CREATE TABLE targetmode (
   id INT4 NOT NULL PRIMARY KEY,
-  type VARCHAR(60) NOT NULL,
+  mode VARCHAR(60) NOT NULL,
   validfrom TIMESTAMP WITH TIME ZONE,
   validto TIMESTAMP WITH TIME ZONE
 );
 
 -- Table comment
-COMMENT ON TABLE targetgroup IS '{"label": "Target Groups", "description": "A list of target groups.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
+COMMENT ON TABLE targetmode IS '{"label": "Target Modes", "description": "A list of target modes.", "schemalastupdated": "06/03/2019", "dataversion": 1}';
 -- Column comments
-COMMENT ON COLUMN targetgroup.id IS '{"label": "Identifier", "description": "Unique identifying column.", "summaryview": "false"}';
-COMMENT ON COLUMN targetgroup.type IS '{"label": "Target type", "description": "The target group type.", "summaryview": "true"}';
-COMMENT ON COLUMN targetgroup.validfrom IS '{"label": "Valid from date", "description": "Item valid from date.", "summaryview" : "false"}';
-COMMENT ON COLUMN targetgroup.validto IS '{"label": "Valid to date", "description": "Item valid to date.", "summaryview" : "false"}';
+COMMENT ON COLUMN targetmode.id IS '{"label": "Identifier", "description": "Unique identifying column.", "summaryview": "false"}';
+COMMENT ON COLUMN targetmode.type IS '{"label": "Target mode", "description": "The targeting mode type.", "summaryview": "true"}';
+COMMENT ON COLUMN targetmode.validfrom IS '{"label": "Valid from date", "description": "Item valid from date.", "summaryview" : "false"}';
+COMMENT ON COLUMN targetmode.validto IS '{"label": "Valid to date", "description": "Item valid to date.", "summaryview" : "false"}';
 
 -- GRANTs
-GRANT SELECT ON targetgroup TO ${anonuser};
-GRANT SELECT ON targetgroup TO ${serviceuser};
-GRANT SELECT ON targetgroup TO ${readonlyuser};
+GRANT SELECT ON targetmode TO ${anonuser};
+GRANT SELECT ON targetmode TO ${serviceuser};
+GRANT SELECT ON targetmode TO ${readonlyuser};
