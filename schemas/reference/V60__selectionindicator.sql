@@ -1,4 +1,4 @@
-CREATE TABLE selectionindicator(
+CREATE TABLE selectionindicator (
   id INTEGER NOT NULL PRIMARY KEY, 
   mode VARCHAR NOT NULL REFERENCES modeoftransport(id),
   indicator VARCHAR NOT NULL,
