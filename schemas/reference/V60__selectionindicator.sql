@@ -1,6 +1,6 @@
 CREATE TABLE selectionindicator (
   id INTEGER NOT NULL PRIMARY KEY, 
-  mode VARCHAR NOT NULL REFERENCES modeoftransport(id),
+  mode VARCHAR NOT NULL REFERENCES targetmode(id),
   indicator VARCHAR NOT NULL,
   validfrom TIMESTAMP WITH TIME ZONE,
   validto TIMESTAMP WITH TIME ZONE
