@@ -89,7 +89,7 @@ pipeline:
       - /mnt/docker/reset.sh
     when:
       branch: master
-      event: reset
+      event: deployment
       environment: dev
 
   deploy_to_dev:
