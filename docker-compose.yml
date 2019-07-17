@@ -1,18 +1,10 @@
 version: '3.7'
 
-
-volumes:
-  postgres_data_refdata:
-    driver: local
-
-
 services:
   postgres_refdata:
     image: postgres:10-alpine
     restart: on-failure
     container_name: postgres_refdata
-    volumes:
-      - postgres_data_refdata:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
@@ -27,16 +19,9 @@ services:
       - 5433:5432
     networks:
       - db
-    labels:
-      - "traefik.enable=false"
-
-  flyway_build:
-    build: .
-    container_name: flyway_build
-    image: quay.io/ukhomeofficedigital/refdata:latest
 
   public_refdata_flyway:
-    image: quay.io/ukhomeofficedigital/refdata:latest
+    image: quay.io/ukhomeofficedigital/docker-flyway:0c81630decc5d7f6c6ec9070d7475b3f3f084153
     container_name: public_refdata_flyway
     command: /mnt/docker/run.sh
     working_dir: /mnt
@@ -69,70 +54,8 @@ services:
       - postgres_refdata
     networks:
       - db
-    labels:
-      - "traefik.enable=false"
-
-  postgrest_reference:
-    image: quay.io/ukhomeofficedigital/postgrest
-    restart: on-failure
-    container_name: postgrest_reference
-    environment:
-      PGRST_DB_URI: "postgres://authenticatorreference:auth1234@postgres_refdata:5432/reference"
-      PGRST_DB_ANON_ROLE: webanon
-      PGRST_SECRET_IS_BASE64: "false"
-      PGRST_JWT_AUD: postgrest-refdata
-      PGRST_ROLE_CLAIM_KEY: .refdbrole
-      PGRST_DB_SCHEMA: reference
-      PGRST_SERVER_PROXY_URI: "http://localhost:3000/"
-      KEYCLOAK_URL: "${SCHEME}://keycloak.${DOMAINNAME}"
-      KEYCLOAK_REALM: dev
-    command: /usr/local/bin/getKeycloakKey.sh
-    depends_on:
-      - postgres_refdata
-      - public_refdata_flyway
-    networks:
-      - web
-      - db
-    labels:
-      - "traefik.enable=true"
-      - "traefik.frontend.rule=Host:postgrest_reference.${DOMAINNAME}"
-      - "traefik.port=3000"
-      - "traefik.protocol=http"
-      - "traefik.docker.network=web"
-
-  postgrest_governance:
-    image: quay.io/ukhomeofficedigital/postgrest
-    restart: on-failure
-    container_name: postgrest_governance
-    environment:
-      PGRST_DB_URI: "postgres://authenticatorgovernance:auth1234@postgres_refdata:5432/reference"
-      PGRST_DB_ANON_ROLE: webanongovernance
-      PGRST_SECRET_IS_BASE64: "false"
-      PGRST_JWT_AUD: postgrest-governance
-      PGRST_ROLE_CLAIM_KEY: .govdbrole
-      PGRST_DB_SCHEMA: governance
-      PGRST_SERVER_PROXY_URI: "http://localhost:3000/"
-      KEYCLOAK_URL: "${SCHEME}://keycloak.${DOMAINNAME}"
-      KEYCLOAK_REALM: dev
-    command: /usr/local/bin/getKeycloakKey.sh
-    depends_on:
-      - postgres_refdata
-      - public_refdata_flyway
-    networks:
-      - web
-      - db
-    labels:
-      - "traefik.enable=true"
-      - "traefik.frontend.rule=Host:postgrest_governance.${DOMAINNAME}"
-      - "traefik.port=3000"
-      - "traefik.protocol=http"
-      - "traefik.docker.network=web"
-
 
 networks:
   db:
     external:
       name: db
-  web:
-    external:
-      name: web

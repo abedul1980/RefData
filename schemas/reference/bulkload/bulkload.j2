@@ -780,52 +780,29 @@ DROP TABLE tmpmodeoftransport;
 
 
 /*
- MODETYPES
+ BORDERCROSSINGMODE
 */
 
-CREATE TEMP TABLE tmpmodetypes AS SELECT * FROM modetypes WITH NO DATA;
+CREATE TEMP TABLE tmpbordercrossingmode AS SELECT * FROM bordercrossingmode WITH NO DATA;
 
-COPY tmpmodetypes FROM STDIN CSV HEADER;
-{% include modetypes %}
+COPY tmpbordercrossingmode FROM STDIN CSV HEADER;
+{% include bordercrossingmode %}
 
 \.
 
-INSERT INTO modetypes
+INSERT INTO bordercrossingmode
   SELECT  *
-  FROM tmpmodetypes
+  FROM tmpbordercrossingmode
 ON CONFLICT (id) DO
 UPDATE
   SET
-    class = EXCLUDED.class,
-    validfrom = EXCLUDED.validfrom,
-    validto = EXCLUDED.validto;
-
-DROP TABLE tmpmodetypes;
-
-
-
-/*
- TARGETGROUP
-*/
-
-CREATE TEMP TABLE tmptargetgroup AS SELECT * FROM targetgroup WITH NO DATA;
-
-COPY tmptargetgroup FROM STDIN CSV HEADER;
-{% include targetgroup %}
-
-\.
-
-INSERT INTO targetgroup
-  SELECT  *
-  FROM tmptargetgroup
-ON CONFLICT (id) DO
-UPDATE
-  SET
+    border = EXCLUDED.border,
     type = EXCLUDED.type,
+    personorfreight = EXCLUDED.personorfreight,
     validfrom = EXCLUDED.validfrom,
     validto = EXCLUDED.validto;
 
-DROP TABLE tmptargetgroup;
+DROP TABLE tmpbordercrossingmode;
 
 
 
