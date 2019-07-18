@@ -96,9 +96,10 @@ pipeline:
       - export FLYWAY_PLACEHOLDERS_GOVERNANCE_SERVICE_USER=$${DEV_FLYWAY_PLACEHOLDERS_GOVERNANCE_SERVICE_USER}
       - export FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER=$${DEV_FLYWAY_PLACEHOLDERS_GOVERNANCE_READONLY_USER}
       - export PRIVATE_KEY=$${PRIVATE_GIT_KEY}
-      - /usr/bin/create_ssh_key.sh $${PRIVATE_KEY}
+      - export PRIVATE_GIT_URL="ssh://git@$${PRIVATE_GIT_SERVER}:$${PRIVATE_GIT_PORT}/$${PRIVATE_GIT_REPO}.git private-refdata"
+      - /usr/bin/create_ssh_key.sh
       - /usr/bin/ssh-keyscan -T 10 -p $${PRIVATE_GIT_PORT} $${PRIVATE_GIT_SERVER}  >> ~/.ssh/known_hosts
-      - git clone ssh://git@$${PRIVATE_GIT_SERVER}:$${PRIVATE_GIT_PORT}/$${PRIVATE_GIT_REPO}.git private-refdata
+      - git clone ${PRIVATE_GIT_URL}
       - /mnt/docker/reset.sh
       - /mnt/docker/run.sh
       - /mnt/private-refdata/docker/run.sh
