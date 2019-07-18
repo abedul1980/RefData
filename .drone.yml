@@ -103,6 +103,7 @@ pipeline:
       - git clone $${PRIVATE_GIT_URL}
       - /mnt/docker/reset.sh
       - /mnt/docker/run.sh
+      - cd /mnt/private-refdata
       - /mnt/private-refdata/docker/run.sh
     when:
       branch: master
