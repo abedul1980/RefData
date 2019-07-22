@@ -11,11 +11,12 @@ CREATE OR REPLACE VIEW items AS
     level3.cites,
     level3.seizure_qty,
     level3.ien_qty,
+    level3.unitid,
     level3.validfrom,
     level3.validto
-  FROM itemlevel3
-    INNER JOIN itemlevel2 ON itemlevel2.id = itemlevel3.level2id
-    INNER JOIN itemlevel1 ON itemlevel1.id = itemlevel2.level1id
+  FROM itemlevel3 AS level3
+    INNER JOIN itemlevel2 AS level2 ON level2.id = level3.level2id
+    INNER JOIN itemlevel1 AS level1 ON level1.id = level2.level1id;
 
 -- GRANT Creation
 GRANT SELECT ON items TO ${serviceuser};
