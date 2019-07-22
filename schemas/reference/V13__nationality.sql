@@ -1,7 +1,7 @@
 -- CHANGE name=init-nationality-table
 CREATE TABLE nationality (
   id INTEGER NOT NULL PRIMARY KEY,
-  nationality VARCHAR(330) NOT NULL,
+  nationality VARCHAR(50) NOT NULL,
   description VARCHAR(350) NULL,
   iso31661alpha3 VARCHAR(3) NULL,
   iso31661alpha2 VARCHAR(2) NULL,

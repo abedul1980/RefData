@@ -284,7 +284,7 @@ id,nationality,description,iso31661alpha3,iso31661alpha2,visarequired,evwoptiona
 310,Sateless person - XXA,Stateless person as defined in Article 1 of the 1954 Convention Relating to the Status of Stateless Persons,XXA,,FALSE,FALSE,FALSE,FALSE,,,
 311,Refugee - XXB,"Refugee, as defined in Article 1 of the 1951 Convention Relating to the Status of Refugees as amended by the 1967 Protocol",XXB,,FALSE,FALSE,FALSE,FALSE,,,
 312,Refugee - XXC,"Refugee, other than as defined under the code XXB",XXC,,FALSE,FALSE,FALSE,FALSE,,,
-313,Unspecified nationality,Person of unspecified nationality for whom issuing State does not consider it necessary to specify any of the codes XXA XXB or XXC above whatever that personâ€™s status may be. This category may include a person who is neither stateless nor a refugee but who is of unknown nationality and legally residing in the State of issue.,XXX,,FALSE,FALSE,FALSE,FALSE,,,
+313,Unspecified nationality,Person of unspecified nationality for whom issuing State does not consider it necessary to specify any of the codes XXA XXB or XXC above whatever that personâ €™s status may be. This category may include a person who is neither stateless nor a refugee but who is of unknown nationality and legally residing in the State of issue.,XXX,,FALSE,FALSE,FALSE,FALSE,,,
 314,Stateless Hong kong,,XXH,,FALSE,FALSE,FALSE,FALSE,,,
 315,Stateless Palestinian,,XXP,,FALSE,FALSE,FALSE,FALSE,,,
 316,Turkish Republic of Northern Cyprus,,XXT,,FALSE,FALSE,FALSE,FALSE,,,
