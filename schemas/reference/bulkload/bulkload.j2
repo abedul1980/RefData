@@ -971,3 +971,28 @@ UPDATE
     validto = Excluded.validto;
 
 DROP TABLE tmpclearancetype;
+
+
+/*
+ UNIT
+*/
+
+CREATE TEMP TABLE tmpunit AS SELECT * FROM unit WITH NO DATA;
+
+COPY tmpunit FROM STDIN CSV HEADER;
+{% include unit %}
+
+\.
+
+
+INSERT INTO unit
+  SELECT  *
+  FROM tmpunit
+ON CONFLICT (id) DO
+UPDATE
+  SET
+    unit = EXCLUDED.unit,
+    validfrom = Excluded.validfrom,
+    validto = Excluded.validto;
+
+DROP TABLE tmpunit;
