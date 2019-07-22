@@ -1,8 +1,8 @@
 CREATE TABLE concealmentmethod (
   id INTEGER NOT NULL PRIMARY KEY,
   mode INT4 NOT NULL REFERENCES targetmode(id),
-  method VARCHAR NOT NULL, 
-  type VARCHAR NOT NULL,
+  method VARCHAR(80) NOT NULL, 
+  type VARCHAR(10) NOT NULL,
   person BOOLEAN NOT NULL,
   maritime BOOLEAN NOT NULL,
   land BOOLEAN NOT NULL,
