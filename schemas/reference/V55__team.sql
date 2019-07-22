@@ -32,7 +32,7 @@ COMMENT ON COLUMN team.directorateid IS '{"label": "Directorate ID", "descriptio
 COMMENT ON COLUMN team.branchid IS '{"label": "Branch ID", "description": "Link to branch entity.", "summaryview" : "false"}';
 COMMENT ON COLUMN team.divisionid IS '{"label": "Division ID", "description": "Link to division entity.", "summaryview" : "false"}';
 COMMENT ON COLUMN team.commandid IS '{"label": "Command ID", "description": "Link to command entity.", "summaryview" : "false"}';
-COMMENT ON COLUMN team.validfrom IS '{"label": "Valid from date", "description": "Item valid from dat.e", "summaryview" : "false"}';
+COMMENT ON COLUMN team.validfrom IS '{"label": "Valid from date", "description": "Item valid from date.", "summaryview" : "false"}';
 COMMENT ON COLUMN team.validto IS '{"label": "Valid to date", "description": "Item valid to date.", "summaryview" : "false"}';
 
 -- GRANTs
