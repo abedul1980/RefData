@@ -2,6 +2,7 @@
 CREATE TABLE nationality (
   id INTEGER NOT NULL PRIMARY KEY,
   nationality VARCHAR(330) NOT NULL,
+  description VARCHAR(350) NULL,
   iso31661alpha3 VARCHAR(3) NULL,
   iso31661alpha2 VARCHAR(2) NULL,
   visarequired BOOLEAN NOT NULL,
@@ -19,6 +20,7 @@ COMMENT ON TABLE nationality IS '{"label": "Nationalities", "description": "A li
 -- Column comments
 COMMENT ON COLUMN nationality.id IS '{"label": "Identifier", "description": "Database unique identity record.", "summaryview": "false"}';
 COMMENT ON COLUMN nationality.nationality IS '{"label": "Nationality", "description": "The name of the nationality.", "summaryview": "true"}';
+COMMENT ON COLUMN nationality.description IS '{"label": "Description", "description": "Descriptions nationality.", "summaryview": "true"}';
 COMMENT ON COLUMN nationality.iso31661alpha3 IS '{"label": "3 digit alpha code", "description": "The countries 3 Character alpha code.", "summaryview": "true"}';
 COMMENT ON COLUMN nationality.iso31661alpha2 IS '{"label": "2 digit alpha code", "description": "The countries 2 Character alpha code.", "summaryview": "true"}';
 COMMENT ON COLUMN nationality.visarequired IS '{"label": "Visa required", "description": "Is VISA required to visit UK?", "summaryview": "false"}';
