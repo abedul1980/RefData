@@ -20,7 +20,8 @@ CREATE TABLE itemlevel3 (
   name VARCHAR(40) NOT NULL,
   description VARCHAR(100) NOT NULL,
   level2id INTEGER REFERENCES itemlevel2(id) NOT NULL,
-  cites BOOLEAN NOT NULL, 
+  cites BOOLEAN NOT NULL,
+  poao BOOLEAN NOT NULL,
   seizure_qty NUMERIC(5,2) NOT NULL,
   ien_qty NUMERIC(5,2) NOT NULL,
   unitid INTEGER NOT NULL REFERENCES unit(id),
@@ -55,6 +56,7 @@ COMMENT ON COLUMN itemlevel3.name IS '{"label": "Identifier", "description": "Le
 COMMENT ON COLUMN itemlevel3.description IS '{"label": "Description of Level 3 Item name", "description": "Description of Item", "summaryview": "true"}';
 COMMENT ON COLUMN itemlevel3.level2id IS '{"label": "Level 2 ID", "description": "Link to level 2 Item list", "summaryview": "true"}';
 COMMENT ON COLUMN itemlevel3.cites IS '{"label": "Is this item considered CITES", "description": "Convention on International Trade in Endangered Species of Wild Fauna and Flora", "summaryview": "true"}';
+COMMENT ON COLUMN itemlevel3.poao IS '{"label": "Is this item considered POAO", "description": "Product of Animal Origin", "summaryview": "true"}';
 COMMENT ON COLUMN itemlevel3.seizure_qty IS '{"label": "Quantity required for Seizure", "description": "Amount required to trigger seizure", "summaryview": "true"}';
 COMMENT ON COLUMN itemlevel3.ien_qty IS '{"label": "Does this require an IEN?", "description": "Quantity required to trigger an immediate event notification", "summaryview": "true"}';
 COMMENT ON COLUMN itemlevel3.unitid IS '{"label": "Unit", "description": "IEN or Seizure Unit type", "summaryview": "true"}';
