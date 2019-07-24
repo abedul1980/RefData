@@ -9,7 +9,7 @@ CREATE TABLE itemlevel1 (
 CREATE TABLE itemlevel2 (
   id INTEGER NOT NULL PRIMARY KEY, 
   name VARCHAR(40) NOT NULL,
-  description VARCHAR(100) NOT NULL,
+  description VARCHAR(100) NULL,
   level1id INTEGER REFERENCES itemlevel1(id) NOT NULL,
   validfrom TIMESTAMP WITH TIME ZONE,
   validto TIMESTAMP WITH TIME ZONE
@@ -18,12 +18,12 @@ CREATE TABLE itemlevel2 (
 CREATE TABLE itemlevel3 (
   id INTEGER NOT NULL PRIMARY KEY, 
   name VARCHAR(40) NOT NULL,
-  description VARCHAR(100) NOT NULL,
+  description VARCHAR(100) NULL,
   level2id INTEGER REFERENCES itemlevel2(id) NOT NULL,
   cites BOOLEAN NOT NULL,
   poao BOOLEAN NOT NULL,
-  seizure_qty NUMERIC(5,2) NOT NULL,
-  ien_qty NUMERIC(5,2) NOT NULL,
+  seizure_qty NUMERIC(5,2) NULL,
+  ien_qty NUMERIC(5,2) NULL,
   unitid INTEGER NOT NULL REFERENCES unit(id),
   validfrom TIMESTAMP WITH TIME ZONE,
   validto TIMESTAMP WITH TIME ZONE
