@@ -169,7 +169,6 @@ pipeline:
       - /usr/bin/create_ssh_key.sh
       - /usr/bin/ssh-keyscan -T 10 -p $${PRIVATE_GIT_PORT} $${PRIVATE_GIT_SERVER}  >> ~/.ssh/known_hosts
       - git clone $${PRIVATE_GIT_URL}
-      - #/mnt/docker/reset.sh
       - /mnt/docker/run.sh
       - cd /mnt/private-refdata
       - /mnt/private-refdata/docker/run.sh
