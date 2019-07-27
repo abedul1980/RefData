@@ -1121,3 +1121,27 @@ UPDATE
     validto = EXCLUDED.validto;
 
 DROP TABLE tmptypesofillegals;
+
+
+/*
+ MEDICALASSISTANCE
+*/
+
+CREATE TEMP TABLE tmpmedicalassistance AS SELECT * FROM medicalassistance WITH NO DATA;
+
+COPY tmpmedicalassistance FROM STDIN CSV HEADER;
+{% include medicalassistance %}
+
+\.
+
+INSERT INTO medicalassistance
+  SELECT  *
+  FROM tmpmedicalassistance
+ON CONFLICT (id) DO
+UPDATE
+  SET
+    name = EXCLUDED.name,
+    validfrom = EXCLUDED.validfrom,
+    validto = EXCLUDED.validto;
+
+DROP TABLE tmpmedicalassistance;

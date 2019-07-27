@@ -14,6 +14,5 @@ COMMENT ON COLUMN profileindicatorletters.validfrom IS '{"label": "Valid from da
 COMMENT ON COLUMN profileindicatorletters.validto IS '{"label": "Valid to date", "description": "Item valid to date.", "summaryview" : "false"}';
 
 -- GRANTs
-GRANT SELECT ON profileindicatorletters TO ${anonuser};
 GRANT SELECT ON profileindicatorletters TO ${serviceuser};
 GRANT SELECT ON profileindicatorletters TO ${readonlyuser};

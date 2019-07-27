@@ -20,6 +20,5 @@ COMMENT ON COLUMN laststopbeforeport.validfrom IS '{"label": "Valid from date", 
 COMMENT ON COLUMN laststopbeforeport.validto IS '{"label": "Valid to date", "description": "Item valid to date.", "summaryview" : "false"}';
 
 -- GRANTs
-GRANT SELECT ON laststopbeforeport TO ${anonuser};
 GRANT SELECT ON laststopbeforeport TO ${serviceuser};
 GRANT SELECT ON laststopbeforeport TO ${readonlyuser};
