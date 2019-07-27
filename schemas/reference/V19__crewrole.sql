@@ -1,4 +1,4 @@
-CREATE TABLE "crewrole" (
+CREATE TABLE crewrole (
   id INT4 NOT NULL PRIMARY KEY,
   name VARCHAR(40) NOT NULL,
   description VARCHAR(60),
