@@ -11,7 +11,7 @@ CREATE TABLE concealmentmethod (
 );
 
 -- Table comment
-COMMENT ON TABLE concealmentmethod IS '{"label": "Method of goods concealment", "description": "A list containing descriptions of the methods by which goods and people are concealed.", "schemalastupdated": "10/07/2019", "dataversion": 1}';
+COMMENT ON TABLE concealmentmethod IS '{"label": "Concealment methods", "description": "A list containing descriptions of the methods by which items and people are concealed.", "schemalastupdated": "10/07/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN concealmentmethod.id IS '{"label": "Identifier", "description": "Database unique identity record.", "summaryview": "false"}';
 COMMENT ON COLUMN concealmentmethod.method IS '{"label": "Concealment", "description": "The method of concealment.", "summaryview": "true"}';
