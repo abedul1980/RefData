@@ -31,4 +31,4 @@ export REFDB_URL="postgresql://${GOVERNANCE_OWNERNAME}:${GOVERNANCE_OWNERPASSWOR
 psql ${REFDB_URL} -c "drop database ${REFDB_DBNAME};"
 
 # Clear roles and schemas
-psql ${ROOT_URL} -c "drop table flyway_schema_history; drop role ${GOVERNANCE_AUTHENTICATORUSER}; drop role ${REFERENCE_AUTHENTICATORUSER}; drop role ${GOVERNANCE_ANONUSER}; drop role ${GOVERNANCE_SERVICEUSER}; drop role ${GOVERNANCE_READONLYUSER}; drop role ${GOVERNANCE_OWNERNAME}; drop role ${REFERENCE_OWNERNAME}; drop role ${REFERENCE_ANONUSER}; drop role ${REFERENCE_SERVICEUSER}; drop role ${REFERENCE_READONLYUSER};"
+psql ${ROOT_URL} -c "drop table flyway_schema_history flyway_schema_history; drop role if exists ${GOVERNANCE_AUTHENTICATORUSER}; drop role if exists ${REFERENCE_AUTHENTICATORUSER}; drop role if exists ${GOVERNANCE_ANONUSER}; drop role if exists ${GOVERNANCE_SERVICEUSER}; drop role if exists ${GOVERNANCE_READONLYUSER}; drop role if exists ${GOVERNANCE_OWNERNAME}; drop role if exists ${REFERENCE_OWNERNAME}; drop role if exists ${REFERENCE_ANONUSER}; drop role if exists ${REFERENCE_SERVICEUSER}; drop role if exists ${REFERENCE_READONLYUSER};"
