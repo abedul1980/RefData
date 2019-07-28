@@ -5,7 +5,9 @@ CREATE TABLE carrierlist (
   designator INT4,
   alliance VARCHAR(60) ,
   aviation BOOLEAN NOT NULL,
-  maritime BOOLEAN NOT NULL,
+  sea BOOLEAN NOT NULL,
+  land BOOLEAN NOT NULL,
+  rail BOOLEAN NOT NULL,
   validfrom TIMESTAMP WITH TIME ZONE,
   validto TIMESTAMP WITH TIME ZONE
 );
@@ -19,7 +21,9 @@ COMMENT ON COLUMN carrierlist.twolettercode IS '{"label": "Two letter code", "de
 COMMENT ON COLUMN carrierlist.designator IS '{"label": "Airline designator", "description": "The airline designator code.", "summaryview": "true"}';
 COMMENT ON COLUMN carrierlist.alliance IS '{"label": "Alliance code", "description": "The alliance partnership code.", "summaryview": "true"}';
 COMMENT ON COLUMN carrierlist.aviation IS '{"label": "Aviation", "description": "Aviation carrier?", "summaryview": "true"}';
-COMMENT ON COLUMN carrierlist.maritime IS '{"label": "Maritime", "description": "Maritime carrier?", "summaryview": "true"}';
+COMMENT ON COLUMN carrierlist.sea IS '{"label": "Sea", "description": "Maritime carrier?", "summaryview": "true"}';
+COMMENT ON COLUMN carrierlist.land IS '{"label": "Land", "description": "Land carrier?", "summaryview": "true"}';
+COMMENT ON COLUMN carrierlist.rail IS '{"label": "Rail", "description": "Rail carrier?", "summaryview": "true"}';
 COMMENT ON COLUMN carrierlist.validfrom IS '{"label": "Valid from date", "description": "Item valid from date.", "summaryview" : "false"}';
 COMMENT ON COLUMN carrierlist.validto IS '{"label": "Valid to date", "description": "Item valid to date.", "summaryview" : "false"}';
 
