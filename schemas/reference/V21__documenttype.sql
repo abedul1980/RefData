@@ -1,4 +1,4 @@
-CREATE TABLE "documenttype" (
+CREATE TABLE documenttype (
   id INT4 NOT NULL PRIMARY KEY,
   code VARCHAR(2) NOT NULL,
   shortdescription VARCHAR(40) NOT NULL,

@@ -1,4 +1,4 @@
-CREATE TABLE "dogrole" (
+CREATE TABLE dogrole (
   id INT4 NOT NULL PRIMARY KEY,
   code VARCHAR(2) NOT NULL,
   description VARCHAR(60) NOT NULL,

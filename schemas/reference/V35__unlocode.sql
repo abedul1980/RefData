@@ -1,4 +1,4 @@
-CREATE TABLE "unlocode" (
+CREATE TABLE unlocode (
   id UUID NOT NULL PRIMARY KEY,
   iso31661alpha2 VARCHAR(2) NULL,
   geolong NUMERIC,
