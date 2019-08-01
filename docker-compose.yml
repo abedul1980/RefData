@@ -1,5 +1,9 @@
 version: '3.7'
 
+volumes:
+  postgres_data_refdata:
+    driver: local
+
 services:
   postgres_refdata:
     image: postgres:10-alpine
@@ -21,7 +25,7 @@ services:
       - db
 
   public_refdata_flyway:
-    image: quay.io/ukhomeofficedigital/docker-flyway:0c81630decc5d7f6c6ec9070d7475b3f3f084153
+    image: quay.io/ukhomeofficedigital/docker-flyway:latest
     container_name: public_refdata_flyway
     command: /mnt/docker/run.sh
     working_dir: /mnt
