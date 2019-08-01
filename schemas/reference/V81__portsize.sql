@@ -11,7 +11,7 @@ COMMENT ON TABLE portsize IS '{"label": "Port Size", "description": "A scale cat
 -- Column comments
 COMMENT ON COLUMN portsize.id IS '{"label": "Identifier", "description": "Unique identifying column.", "summaryview": "false"}';
 COMMENT ON COLUMN portsize.rating IS '{"label": "Rating", "description": "Port Size Rating", "summaryview": "true"}';
-COMMENT ON COLUMN portsize.description IS '{"label": "Description", "description": "Definition of the rating", "summaryview": "false"}';
+COMMENT ON COLUMN portsize.description IS '{"label": "Description", "description": "A definition of the rating", "summaryview": "false"}';
 COMMENT ON COLUMN portsize.validfrom IS '{"label": "Valid from date", "description": "Item valid from date.", "summaryview" : "false"}';
 COMMENT ON COLUMN portsize.validto IS '{"label": "Valid to date", "description": "Item valid to date.", "summaryview" : "false"}';
 

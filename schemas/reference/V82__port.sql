@@ -25,7 +25,7 @@ COMMENT ON COLUMN port.commandid IS '{"label": "Command ID", "description": "ID 
 COMMENT ON COLUMN port.name IS '{"label": "Name", "description": "Name of the port.", "summaryview": "true"}';
 COMMENT ON COLUMN port.addressid IS '{"label": "Address", "description": "Link to the postal address of the port.", "summaryview" : "false"}';
 COMMENT ON COLUMN port.portsizeid IS '{"label": "Port Size ID", "description": "Link to the Port Size entity.", "summaryview" : "true"}';
-COMMENT ON COLUMN port.bffunctiontypesid IS '{"label": "Function Type ID", "description": "Link to the list of transport functions.", "summaryview" : "false"}';
+COMMENT ON COLUMN port.bffunctiontypesid IS '{"label": "Function Type ID", "description": "Link to the list of transport mode functions.", "summaryview" : "false"}';
 COMMENT ON COLUMN port.helipad IS '{"label": "Helipad", "description": "Does this port have a helipad?", "summaryview" : "false"}';
 COMMENT ON COLUMN port.unlocodeid IS '{"label": "UN Location Code ID", "description": "Link to unlocode entity.", "summaryview" : "false"}';
 COMMENT ON COLUMN port.localcode IS '{"label": "BF local code", "description": "A unique local reference code.", "summaryview" : "false"}';
