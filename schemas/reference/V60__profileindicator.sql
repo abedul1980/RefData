@@ -13,7 +13,7 @@ CREATE TABLE profileindicator (
 );
 
 -- Table comment
-COMMENT ON TABLE profileindicator IS '{"label": "Selection Indicator", "description": "A list of reasons for conducting a search on a particular vehicle.", "schemalastupdated": "15/07/2019", "dataversion": 1}';
+COMMENT ON TABLE profileindicator IS '{"label": "Profile Indicator", "description": "A list of reasons for conducting a search on a particular vehicle.", "schemalastupdated": "15/07/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN profileindicator.id IS '{"label": "Identifier", "description": "Database unique identity record.", "summaryview": "false"}';
 COMMENT ON COLUMN profileindicator.description IS '{"label": "Indicator", "description": "Reason for selecting the vehicle to search.", "summaryview": "true"}';
