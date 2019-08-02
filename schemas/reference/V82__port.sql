@@ -48,7 +48,7 @@ COMMENT ON COLUMN port.iata IS '{"label": "IATA", "description": "IATA code", "s
 COMMENT ON COLUMN port.icao IS '{"label": "ICAO code", "description": "ICAO code", "summaryview": "true"}';
 COMMENT ON COLUMN port.localcode IS '{"label": "Local code", "description": "A site code given for ports which do not have iata/icao or unlocode", "summaryview": "true"}';
 COMMENT ON COLUMN port.unlocode IS '{"label": "UN location code", "description": "UN location code", "summaryview": "true"}';
-COMMENT ON COLUMN port.helipad IS '{"label": "Helipad", "description": "Item valid from date.", "summaryview" : "false"}';
+COMMENT ON COLUMN port.helipad IS '{"label": "Helipad", "description": "Ii this a helipad.", "summaryview" : "false"}';
 COMMENT ON COLUMN port.fixedpcp IS '{"label": "Fixed PCP", "description": "Fixed PCP location.", "summaryview" : "false"}';
 COMMENT ON COLUMN port.portablepcp IS '{"label": "Portable PCP", "description": "Portable PCP location.", "summaryview" : "false"}';
 COMMENT ON COLUMN port.egates IS '{"label": "Egates", "description": "Egate location.", "summaryview" : "false"}';
