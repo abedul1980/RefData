@@ -36,7 +36,7 @@ COMMENT ON COLUMN port.commandid IS '{"label": "Linked command id", "description
 COMMENT ON COLUMN port.locationid IS '{"label": "Linked location id", "description": "Border force location link to location dataset.", "summaryview": "false"}';
 COMMENT ON COLUMN port.name IS '{"label": "Name", "description": "Site name", "summaryview": "true"}';
 COMMENT ON COLUMN port.addressid IS '{"label": "Linked address id", "description": "Links to non Home Office addresses.", "summaryview": "true"}';
-COMMENT ON COLUMN unlocode.subdivision IS '{"label": "County Unlocode", "description": "County from unlocode list", "summaryview": "false", "aliases": "region"}';
+COMMENT ON COLUMN port.subdivision IS '{"label": "County Unlocode", "description": "County from unlocode list", "summaryview": "false", "aliases": "region"}';
 COMMENT ON COLUMN port.municipality IS '{"label": "City IATA", "description": "Municipality/region from IATA", "summaryview": "true", "aliases": ["city", "region"]}';
 COMMENT ON COLUMN port.geolat IS '{"label": "Latitude", "description": "Geographic latitude", "summaryview": "false"}';
 COMMENT ON COLUMN port.geolong IS '{"label": "Longitude", "description": "Geographic longitude", "summaryview": "false"}';
@@ -46,6 +46,7 @@ COMMENT ON COLUMN port.sea IS '{"label": "Sea", "description": "Maritime port of
 COMMENT ON COLUMN port.rail IS '{"label": "Rail", "description": "Rail  port of entry.", "summaryview": "true"}';
 COMMENT ON COLUMN port.iata IS '{"label": "IATA", "description": "IATA code", "summaryview": "true"}';
 COMMENT ON COLUMN port.icao IS '{"label": "ICAO code", "description": "ICAO code", "summaryview": "true"}';
+COMMENT ON COLUMN port.localcode IS '{"label": "Local code", "description": "A site code given for ports which do not have iata/icao or unlocode", "summaryview": "true"}';
 COMMENT ON COLUMN port.unlocode IS '{"label": "UN location code", "description": "UN location code", "summaryview": "true"}';
 COMMENT ON COLUMN port.helipad IS '{"label": "Helipad", "description": "Item valid from date.", "summaryview" : "false"}';
 COMMENT ON COLUMN port.fixedpcp IS '{"label": "Fixed PCP", "description": "Fixed PCP location.", "summaryview" : "false"}';
