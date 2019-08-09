@@ -1,6 +1,6 @@
 CREATE TABLE partneragency (
   id INT4 NOT NULL PRIMARY KEY,
-  name VARCHAR(50) NOT NULL,
+  name VARCHAR(60) NOT NULL,
   abbreviatedname VARCHAR(50) NOT NULL,
   seizure BOOLEAN NOT NULL,
   intelligence BOOLEAN NOT NULL,
