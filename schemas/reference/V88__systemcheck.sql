@@ -1,6 +1,6 @@
 CREATE TABLE systemcheck (
   id INTEGER NOT NULL PRIMARY KEY,
-  name VARCHAR(40),
+  name VARCHAR(50),
   validfrom TIMESTAMP WITH TIME ZONE,
   validto TIMESTAMP WITH TIME ZONE
 );

@@ -1,7 +1,7 @@
 CREATE TABLE producttype (
   id INTEGER NOT NULL PRIMARY KEY,
   name VARCHAR(40) NOT NULL,
-  description VARCHAR(100),
+  description VARCHAR(200),
   incoming boolean,
   outgoing boolean,
   outgoinganalyst boolean,

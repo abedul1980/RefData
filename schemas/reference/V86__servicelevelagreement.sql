@@ -1,6 +1,6 @@
 CREATE TABLE servicelevelagreement (
   id INTEGER NOT NULL PRIMARY KEY,
-  description VARCHAR(100),
+  description VARCHAR(200),
   validfrom TIMESTAMP WITH TIME ZONE,
   validto TIMESTAMP WITH TIME ZONE
 );
