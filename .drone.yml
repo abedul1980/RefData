@@ -69,11 +69,11 @@ pipeline:
       - export GIT_REPO_PRIVATE_URL=$${DEV_GIT_REPO_PRIVATE_URL}
       - export GIT_REPO_PRIVATE_GITURL=$${DEV_GIT_REPO_PRIVATE_GITURL}
       - export PRIVATE_KEY=$${DEV_DB_REF_PRIVATE_GITKEY}
-      - export PRIVATE_GIT_URL="$${DEV_GIT_REPO_PRIVATE_GITURL}/$${DEV_DB_REF_PRIVATE_GITREPO}.git private-refdata"
+      - export PRIVATE_GIT_URL="$${DEV_GIT_REPO_PRIVATE_GITURL}/$${DEV_DB_REF_PRIVATE_GITREPO}.git"
       - /usr/bin/create_ssh_key.sh
       - /usr/bin/ssh-keyscan -T 10 -p $${DEV_GIT_REPO_PRIVATE_PORT} $${DEV_GIT_REPO_PRIVATE_URL}  >> ~/.ssh/known_hosts
       - env
-      - git clone $${PRIVATE_GIT_URL}
+      - git clone $${PRIVATE_GIT_URL} private-refdata
       - /mnt/docker/reset.sh
       - /mnt/docker/run.sh
       - cd /mnt/private-refdata
@@ -148,10 +148,10 @@ pipeline:
       - export GIT_REPO_PRIVATE_URL=$${STAGING_GIT_REPO_PRIVATE_URL}
       - export GIT_REPO_PRIVATE_GITURL=$${STAGING_GIT_REPO_PRIVATE_GITURL}
       - export PRIVATE_KEY=$${STAGING_DB_REF_PRIVATE_GITKEY}
-      - export PRIVATE_GIT_URL="$${STAGING_GIT_REPO_PRIVATE_GITURL}/$${STAGING_DB_REF_PRIVATE_GITREPO}.git private-refdata"
+      - export PRIVATE_GIT_URL="$${STAGING_GIT_REPO_PRIVATE_GITURL}/$${STAGING_DB_REF_PRIVATE_GITREPO}.git"
       - /usr/bin/create_ssh_key.sh
       - /usr/bin/ssh-keyscan -T 10 -p $${STAGING_GIT_REPO_PRIVATE_PORT} $${STAGING_GIT_REPO_PRIVATE_URL}  >> ~/.ssh/known_hosts
-      - git clone $${PRIVATE_GIT_URL}
+      - git clone $${PRIVATE_GIT_URL} private-refdata
       - /mnt/docker/reset.sh
       - /mnt/docker/run.sh
       - cd /mnt/private-refdata
@@ -226,10 +226,10 @@ pipeline:
       - export GIT_REPO_PRIVATE_URL=$${PRODUCTION_GIT_REPO_PRIVATE_URL}
       - export GIT_REPO_PRIVATE_GITURL=$${PRODUCTION_GIT_REPO_PRIVATE_GITURL}
       - export PRIVATE_KEY=$${PRODUCTION_DB_REF_PRIVATE_GITKEY}
-      - export PRIVATE_GIT_URL="$${PRODUCTION_GIT_REPO_PRIVATE_GITURL}/$${PRODUCTION_DB_REF_PRIVATE_GITREPO}.git private-refdata"
+      - export PRIVATE_GIT_URL="$${PRODUCTION_GIT_REPO_PRIVATE_GITURL}/$${PRODUCTION_DB_REF_PRIVATE_GITREPO}.git"
       - /usr/bin/create_ssh_key.sh
       - /usr/bin/ssh-keyscan -T 10 -p $${PRODUCTION_GIT_REPO_PRIVATE_PORT} $${PRODUCTION_GIT_REPO_PRIVATE_URL}  >> ~/.ssh/known_hosts
-      - git clone $${PRIVATE_GIT_URL}
+      - git clone $${PRIVATE_GIT_URL} private-refdata
       - /mnt/docker/reset.sh
       - /mnt/docker/run.sh
       - cd /mnt/private-refdata
