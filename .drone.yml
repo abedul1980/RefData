@@ -81,7 +81,7 @@ pipeline:
       branch: master
       event: deployment
       environment: dev
-  
+
   deploy_to_staging:
     image: quay.io/ukhomeofficedigital/docker-flyway:9b4c62ed90c599a9bc3282ef06b58818b24762f9
     secrets:
@@ -237,6 +237,24 @@ pipeline:
       branch: master
       event: deployment
       environment: production
+
+  notify:
+    image: plugins/slack
+    secrets: [ SLACK_WEBHOOK ]
+    channel: cop-deployments
+    username: Drone Build Watcher
+    template: >
+      {{#build.deployTo}}
+        *{{repo.name}} - Build {{build.number}} - {{uppercasefirst build.deployTo}} - {{uppercase build.status}}*
+        {{build.link}}
+      {{else}}
+        *{{repo.name}} - Build {{build.number}} - Development - {{uppercase build.status}}*
+        {{build.link}}
+      {{/build.deployTo}}
+    when:
+      branch: master
+      event: [ push, deployment ]
+      status: [ success, failure ]
 
 # services:
 #   database:
