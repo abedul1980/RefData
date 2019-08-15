@@ -72,6 +72,7 @@ pipeline:
       - export PRIVATE_GIT_URL="$${DEV_GIT_REPO_PRIVATE_GITURL}/$${DEV_DB_REF_PRIVATE_GITREPO}.git private-refdata"
       - /usr/bin/create_ssh_key.sh
       - /usr/bin/ssh-keyscan -T 10 -p $${DEV_GIT_REPO_PRIVATE_PORT} $${DEV_GIT_REPO_PRIVATE_URL}  >> ~/.ssh/known_hosts
+      - echo "Cloning: ${PRIVATE_GIT_URL}"
       - git clone $${PRIVATE_GIT_URL}
       - /mnt/docker/reset.sh
       - /mnt/docker/run.sh
