@@ -43,7 +43,7 @@ COMMENT ON TABLE itemlevel2 IS '{"label": "Level 2 Items", "description": "A lis
 -- Column comments
 COMMENT ON COLUMN itemlevel2.id IS '{"label": "Identifier", "description": "Database unique identity record.", "summaryview": "false"}';
 COMMENT ON COLUMN itemlevel2.name IS '{"label": "Identifier", "description": "Level 2 Item name", "summaryview": "false"}';
-COMMENT ON COLUMN itemlevel2.description IS '{"label": "Description of Level 12Item name", "description": "Description of Item", "summaryview": "true"}';
+COMMENT ON COLUMN itemlevel2.description IS '{"label": "Description of Level 2 Item name", "description": "Description of Item", "summaryview": "true"}';
 COMMENT ON COLUMN itemlevel2.level1id IS '{"label": "Level 1 ID", "description": "Link to level 1 Item list", "summaryview": "true"}';
 COMMENT ON COLUMN itemlevel2.validfrom IS '{"label": "Valid from date", "description": "Item valid from date.", "summaryview" : "false"}';
 COMMENT ON COLUMN itemlevel2.validto IS '{"label": "Valid to date", "description": "Item valid to date.", "summaryview" : "false"}';
