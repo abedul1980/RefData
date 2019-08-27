@@ -31,10 +31,10 @@ CREATE TABLE itemlevel3 (
 
 CREATE TABLE itemlevel4 (
   id INTEGER NOT NULL PRIMARY KEY, 
-  name VARCHAR(4) NOT NULL,
+  name VARCHAR(40) NOT NULL,
   description VARCHAR(100) NULL,
   level3id INTEGER REFERENCES itemlevel3(id) NOT NULL,
-  controlstrategyid INTEGER REFERENCES controlstrategy(id) NULL,
+  controlstrategyid INTEGER NULL,
   validfrom TIMESTAMP WITH TIME ZONE,
   validto TIMESTAMP WITH TIME ZONE
 );

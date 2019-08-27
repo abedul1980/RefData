@@ -4,3 +4,5 @@ id, unit, validform, validto
 3, Kilogram (kg),,
 4, Litre (L),,
 5, item,,
+6, gram (g),,
+7, millilitre (ml),,

@@ -1,5 +1,5 @@
 CREATE TABLE controlstrategy (
-  id VARCHAR(1) NOT NULL PRIMARY KEY,
+  id int4 NOT NULL PRIMARY KEY,
   strategy VARCHAR(60) NOT NULL,
   priority VARCHAR(1) NOT NULL,
   validfrom TIMESTAMP WITH TIME ZONE,
@@ -18,3 +18,6 @@ COMMENT ON COLUMN controlstrategy.validto IS '{"label": "Valid to date", "descri
 -- GRANTs
 GRANT SELECT ON controlstrategy TO ${serviceuser};
 GRANT SELECT ON controlstrategy TO ${readonlyuser};
+
+ALTER TABLE itemlevel4
+  ADD CONSTRAINT controlstrategyitem4 FOREIGN KEY (controlstrategyid) REFERENCES controlstrategy(id);

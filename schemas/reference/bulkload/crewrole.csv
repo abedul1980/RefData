@@ -5,7 +5,7 @@
 "4","Third Officer",,,
 "5","Flight Engineer",,,
 "6","Purser",,,
-"7","Cabin Crew",,,
+"7","Crew",,,
 "8","Doctor",,,
 "9","Loadmaster",,,
 "10","1st Mate",,,
@@ -30,3 +30,4 @@
 "29","Able Seaman",,,
 "31","Retail Staff",,,
 "32","Entertainer",,,
+33,Passenger,,,
