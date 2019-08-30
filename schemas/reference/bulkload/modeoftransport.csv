@@ -34,4 +34,21 @@ id,type,validfrom,validto
 33,HGV tanker,,
 34,Road train,,
 35,Unaccompanied trailer,,
-46,Bulk Carrier (Canvas covered),,
+36,Bulk Carrier (Canvas covered),,
+37,Airship,,
+38,Glider,,
+39,Hand glider,,
+40,Mirco light,,
+41,Gyroplane,,
+42,Business jet,,
+43,Single engine light aircraft
+44,Twin engine light aircraft
+45,Other unspecified aircraft
+46,Cruise liner,,
+47,General cargo,,
+48,Ferry,,
+49,Fishing board,,
+50,Reefer,,
+51,Support vessel (e.g. tug),,
+52,Tanker,,
+53,Vehicle carrier,,
