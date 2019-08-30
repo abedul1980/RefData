@@ -7,7 +7,7 @@ CREATE TABLE controlstrategy (
 );
 
 -- Table comment
-COMMENT ON TABLE controlstrategy IS '{"label": "Control strategy", "description": "Details of the control strategy as set by ... ", "schemalastupdated": "21/08/2019", "dataversion": 1}';
+COMMENT ON TABLE controlstrategy IS '{"label": "Control strategy", "description": "Details of the control strategy as set by Border Force.", "schemalastupdated": "21/08/2019", "dataversion": 1}';
 -- Column comments
 COMMENT ON COLUMN controlstrategy.id IS '{"label": "Identifier", "description": "Unique identifying column.", "summaryview": "false"}';
 COMMENT ON COLUMN controlstrategy.strategy IS '{"label": "Strategy", "description": "The strategy descriptor.", "summaryview": "true"}';
